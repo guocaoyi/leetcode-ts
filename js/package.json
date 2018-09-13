@@ -1,0 +1,15 @@
+{
+  "name": "js-algorithms-subject",
+  "version": "1.0.0",
+  "description": "some solution of algorithms subject,answer in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "algorithms",
+    "javascript"
+  ],
+  "author": "gcy[guocaoyi@gmail.com]",
+  "license": "MIT"
+}
