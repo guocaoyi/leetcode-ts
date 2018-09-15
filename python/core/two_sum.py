@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
@@ -19,3 +21,4 @@ class TwoSum:
         :type nums2: List[int]
         :rtype: float
         """
+    print("Hello, World!")
