@@ -4,6 +4,7 @@
   "description": "some solution of algorithms subject,answer in javascript",
   "main": "index.js",
   "scripts": {
+    "test": "mocha",
     "p": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -11,5 +12,8 @@
     "javascript"
   ],
   "author": "gcy[guocaoyi@gmail.com]",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
 }
