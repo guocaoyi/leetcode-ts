@@ -20,8 +20,9 @@ class LengthOfLongestSubstring {
    * @param {string} s
    * @return {number}
    */
-  slutionOne = () => {
-    let maxSub = '', currentSub = '';
+  slution1 = () => {
+    let maxSub = '',
+      currentSub = '';
     const arr = s.split('');
     arr.forEach(s => {
       if (currentSub.includes(s)) {
@@ -41,6 +42,23 @@ class LengthOfLongestSubstring {
       }
     });
     return maxSub.length;
+  }
+
+  /**
+   * @param {string} s
+   * @return {number}
+   */
+  slution2 = () => {
+    const obj = {
+      subStr: '',
+      maxLen: 0,
+    };
+    for (let i = 0; i < s.length; i++) {
+      let strArray = obj.subStr.split(s[i]);
+      obj.subStr = strArray[strArray.length - 1] + s[i];
+      obj.maxLen = Math.max(obj.maxLen, obj.subStr.length);
+    }
+    return obj.maxLen;
   }
 
 }
