@@ -19,6 +19,7 @@ class LengthOfLongestSubstring {
   /**
    * @param {string} s
    * @return {number}
+   * 987test case,132ms
    */
   slution1 = () => {
     let maxSub = '',
@@ -47,6 +48,7 @@ class LengthOfLongestSubstring {
   /**
    * @param {string} s
    * @return {number}
+   * 987test case,184ms
    */
   slution2 = () => {
     const obj = {
