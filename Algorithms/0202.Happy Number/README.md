@@ -1,5 +1,10 @@
 # Happy Number
 
+## Tips
+
+- Hash Table
+- Math
+
 ## Description
 
 Write an algorithm to determine if a number is "happy".
@@ -12,19 +17,23 @@ A happy number is a number defined by the following process: Starting with any p
 Input: 19
 Output: true
 Explanation:
-12 + 92 = 82
-82 + 22 = 68
-62 + 82 = 100
-12 + 02 + 02 = 1
+1^2 + 9^2 = 82
+8^2 + 2^2 = 68
+6^2 + 8^2 = 100
+1^2 + 0^2 + 0^2 = 1
 ```
 
 ## Solution
 
 ### [方案一](https://leetcode-cn.com/submissions/detail/14013924/)
 
-- state: 超出时间限制
+一开始以为这题很简单，也没仔细考虑；使用了 Array.reduce() 和 While 控制语句完事；跑测试用例时才发现，第二条用例就没有通过。问题出在时间复杂度上，这里必须对死循环进行处理。
 
-一开始以为这题很简单，也没仔细考虑；使用了 Array.reduce() 和 While 控制语句完事；跑测试用例时才发现，第二条用例都没有通过，问题出在时间复杂度上。
+- State: 超出时间限制3
+- Time: N/A
+- Memory: N/A
+- Ranking: N/A
+- Language: javascript
 
 ```javascript
 var isHappy = function(n) {
@@ -38,4 +47,17 @@ var isHappy = function(n) {
   }
   return true;
 };
+```
+
+### [方案二](https://)
+
+- State: N/A
+- Time: N/A
+- Memory: N/A
+- Ranking: N/A
+- Language: python
+
+```python
+class Solution:
+  def isHappy(self, n: int) -> bool:
 ```
