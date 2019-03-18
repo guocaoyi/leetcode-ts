@@ -1,4 +1,4 @@
-# 000. Name
+# {{name}}
 
 ## Related Topics
 
@@ -24,8 +24,6 @@
 
 ### I: \*\*\*
 
-<!-- I、II、III、IV、V、VI、VII、VIII、IX、X	 -->
-
 \*\*\*
 
 - language: \*
@@ -38,5 +36,7 @@
 ```javascript
 var solution = function() {};
 ```
+
+<!-- I、II、III、IV、V、VI、VII、VIII、IX、X	 -->
 
 ## Solutions

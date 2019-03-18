@@ -30,7 +30,7 @@ Output: ["h","a","n","n","a","H"]
 
 模拟 Array.reverse() 的实现；在
 
-## Solutions
+## Submissions
 
 ### I: Array\#reverse
 
@@ -85,14 +85,12 @@ Output: [9,5,7,8,4,6,18,17,1]
 var reverseString = function(s) {};
 ```
 
-## Unaccepted Submissions
-
 ## III: Extra Array
 
 创建一个新的组件，反向顺序遍历数组并取值存到新的数组中；这里犯了一个错误，题目规定不得分配额外的空间内存；
 
-- language: javascript
-- status: Wrong Answer
+- language: N/A
+- status: N/A
 - runtime: N/A
 - runtime distribution: N/A
 - memory usage: N/A
@@ -112,4 +110,4 @@ var reverseString = function(s) {
 };
 ```
 
-## Others' Solution
+## Solutions

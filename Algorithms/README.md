@@ -2,7 +2,7 @@
 
 ## Problems
 
-\# | Title | Solutions | Difficulty
+\# | Title | Submissions | Difficulty
 :-- | :-------- | :-- | :----: |
 1|Two Sum|[JS](/js/src/two-sum.js),[Java](/java/src/TwoSum.java) |
 2 |Add Tow Numbers |[JS](./Add&#32;Tow&#32;Numbers/add_tow_numbers.py)|
