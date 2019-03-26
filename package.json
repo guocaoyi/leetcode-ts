@@ -1,0 +1,28 @@
+{
+  "name": "leetcode-cn",
+  "version": "1.0.0",
+  "description": "## Problems",
+  "main": "index.js",
+  "dependencies": {
+    "cz-conventional-changelog": "^2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guocaoyi/leetcode-cn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guocaoyi/leetcode-cn/issues"
+  },
+  "homepage": "https://github.com/guocaoyi/leetcode-cn#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
