@@ -94,9 +94,8 @@ var longestCommonPrefix = function(strs) {
 
 ### III: 单次遍历
 
-使用`strs[0]`作为初始前缀串，逐一遍历`strs[]`元素进行比较，如`String.indexOf === -1`则自减长度 1，直至为 0 成立后继续访问下面的元素。
+使用 `strs[0]` 作为初始前缀串，逐一遍历 `strs[]` 元素进行比较，如 `String.indexOf !== 0` 则自减长度 1，直至成立后继续访问后面的元素。
 
-- language: javascript
 - status: Accepted
 - runtime: 60 ms
 - runtime distribution: >92.74%
@@ -125,5 +124,6 @@ var longestCommonPrefix = function(strs) {
 ```
 
 <!-- I、II、III、IV、V、VI、VII、VIII、IX、X	 -->
+<!-- XI  XII XIII XIV XV XVI XVII XVIII XIX XX-->
 
 ## Solutions
