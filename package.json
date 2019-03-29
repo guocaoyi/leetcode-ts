@@ -11,14 +11,14 @@
   "bugs": {
     "url": "https://github.com/guocaoyi/leetcode-cn/issues"
   },
-  "homepage": "https://github.com/guocaoyi/leetcode-cn#readme",
+  "homepage": "https://www.yalda.cn/leetcode-cn",
   "scripts": {
     "new": ""
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "cz-conventional-changelog": "^2.1.0"
   },
-  "devDependencies": {},
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
