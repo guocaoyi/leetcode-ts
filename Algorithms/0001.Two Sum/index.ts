@@ -4,7 +4,10 @@
  * @param {number} target
  * @return {number[]}
  */
-const onTwiceBubble = (nums: Array<number>, target: number): Array<number> => {
+export function onTwiceBubble(
+  nums: Array<number>,
+  target: number
+): Array<number> {
   for (let i = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; j++) {
       if (nums[i] + nums[j] == target) {
@@ -12,7 +15,7 @@ const onTwiceBubble = (nums: Array<number>, target: number): Array<number> => {
       }
     }
   }
-};
+}
 
 /**
  * 方案二：两次哈希遍历
@@ -20,10 +23,10 @@ const onTwiceBubble = (nums: Array<number>, target: number): Array<number> => {
  * @param {number} target
  * @return {number[]}
  */
-const onTwiceIteratorHash = (
+export function onTwiceIteratorHash(
   nums: Array<number>,
   target: number
-): Array<number> => {
+): Array<number> {
   const map: any = {};
   const length = nums.length;
   // 使用Array.forEach在性能上会有点损耗(测试用例:61ms到59ms)
@@ -36,7 +39,7 @@ const onTwiceIteratorHash = (
       return [i, map[x]];
     }
   }
-};
+}
 
 /**
  * 方案三：一次哈希遍历
@@ -44,7 +47,10 @@ const onTwiceIteratorHash = (
  * @param {number} target
  * @return {number[]}
  */
-const onIteratorHash = (nums: Array<number>, target: number): Array<number> => {
+export function onIteratorHash(
+  nums: Array<number>,
+  target: number
+): Array<number> {
   const map: any = {};
   const length = nums.length;
   for (let i = 0; i < length; i++) {
@@ -54,4 +60,4 @@ const onIteratorHash = (nums: Array<number>, target: number): Array<number> => {
     }
     map[nums[i]] = i;
   }
-};
+}
