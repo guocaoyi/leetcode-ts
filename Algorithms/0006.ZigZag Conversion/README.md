@@ -1,11 +1,8 @@
-"use strict"
+# 将字符串 "PAYPALISHIRING" 以 Z 字形排列成给定的行数：
 
-/**
- * 将字符串 "PAYPALISHIRING" 以Z字形排列成给定的行数：
-
-P   A   H   N
+P A H N
 A P L S I I G
-Y   I   R
+Y I R
 之后从左往右，逐行读取字符："PAHNAPLSIIGYIR"
 
 实现一个将字符串进行指定行数变换的函数:
@@ -21,10 +18,7 @@ string convert(string s, int numRows);
 输出: "PINALSIGYAHRPI"
 解释:
 
-P     I    N
-A   L S  I G
-Y A   H R
-P     I
-*/
-
-
+P I N
+A L S I G
+Y A H R
+P I

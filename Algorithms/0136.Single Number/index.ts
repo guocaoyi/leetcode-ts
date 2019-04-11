@@ -3,11 +3,9 @@
  * @memory 37.3 MB
  * @sort 58.49%
  * @commit https://leetcode-cn.com/submissions/detail/13915968/
- * @param {number[]} nums
- * @return {number}
  */
-var singleNumber = function(nums) {
-  let map = {};
+var singleNumber = (nums: Array<number>): any => {
+  let map: any = {};
   nums.forEach(n => {
     if (n in map) {
       // map 已经存在 n
@@ -30,13 +28,11 @@ var singleNumber = function(nums) {
  * @memory 36.9 MB
  * @sort 55.12%
  * @commit https://leetcode-cn.com/submissions/detail/13916397/
- * @param {number[]} nums
- * @return {number}
  */
-var singleNumber2 = function(nums) {
-  let map = {};
-  nums.forEach(n => {
-    if ((n in map) & (map[n] == 1)) {
+var singleNumber2 = (nums: Array<number>): any => {
+  let map: any = {};
+  nums.forEach((n: number) => {
+    if (n in map && map[n] == 1) {
       // 已经存在 且 == 1
       delete map[n];
     } else {

@@ -1,6 +1,6 @@
-var letterCombinations = function(digits) {
+var letterCombinations = function(digits: string) {
   // 拨号键盘
-  const keymap = {
+  const keymap: any = {
     2: ["a", "b", "c"], // 2
     3: ["d", "e", "f"], // 3
     4: ["g", "h", "i"], // 4
