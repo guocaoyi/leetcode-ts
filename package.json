@@ -11,14 +11,16 @@
   "bugs": {
     "url": "https://github.com/guocaoyi/leetcode-cn/issues"
   },
-  "homepage": "https://github.com/guocaoyi/leetcode-cn#readme",
+  "homepage": "https://www.yalda.cn/leetcode-cn",
   "scripts": {
     "new": ""
   },
-  "dependencies": {
-    "cz-conventional-changelog": "^2.1.0"
+  "devDependencies": {
+    "@types/node": "^11.12.1",
+    "byots": "^2.9.0-dev.20180411.1.10",
+    "cz-conventional-changelog": "^2.1.0",
+    "typescript": "^3.3.3"
   },
-  "devDependencies": {},
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
