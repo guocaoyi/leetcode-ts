@@ -1,5 +1,7 @@
 # LeetCode Problems
 
+LeetCode problems' solutions with TypeScript
+
 ## Topics
 
 [Array](./TOPICS.md#array)×100
@@ -42,11 +44,11 @@
 
 ## Algorithms
 
-| \#  | Title                                          | Submissions                                                       | Difficulty |
-| :-- | :--------------------------------------------- | :---------------------------------------------------------------- | :--------: |
-| 1   | Two Sum                                        | [JS](/js/src/two-sum.js),[Java](/java/src/TwoSum.java)            |
-| 2   | Add Tow Numbers                                | [JS](<./Add Tow Numbers/add_tow_numbers.py>)                      |
-| 3   | Longest Substring Without Repeating Characters | [JS](<./Longest Substring Without Repeating Characters/index.js>) |
-| 4   | Median of Two Sorted Arrays                    |                                                                   |
-| 6   | ZigZag Conversion                              |
-| 14  | Longest Common Prefix                          |
+| \#  | Title                                          |   Topics   | Difficulty |
+| :-- | :--------------------------------------------- | :--------: | :--------: |
+| 1   | Two Sum                                        | String,Map |            |
+| 2   | Add Tow Numbers                                |            |            |
+| 3   | Longest Substring Without Repeating Characters |            |     😋     |
+| 4   | Median of Two Sorted Arrays                    |            |     😶     |
+| 6   | ZigZag Conversion                              |            |     😯     |
+| 14  | Longest Common Prefix                          |            |            |

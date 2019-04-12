@@ -1,17 +1,17 @@
 {
-  "name": "leetcode-cn",
+  "name": "leetcode-ts",
   "version": "1.0.0",
   "description": "## Problems",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guocaoyi/leetcode-cn.git"
+    "url": "git+https://github.com/guocaoyi/leetcode-ts.git"
   },
   "author": "gcy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/guocaoyi/leetcode-cn/issues"
+    "url": "https://github.com/guocaoyi/leetcode-ts/issues"
   },
-  "homepage": "https://www.yalda.cn/leetcode-cn",
+  "homepage": "https://www.yalda.cn/leetcode-ts",
   "scripts": {
     "new": ""
   },
