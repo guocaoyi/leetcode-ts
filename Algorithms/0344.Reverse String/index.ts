@@ -1,6 +1,6 @@
 /**
- * @param {character[]} s
+ *
  */
-var reverseString = (s: string[]): void => {
+export function reverseString(s: string[]): void {
   s.reverse();
-};
+}

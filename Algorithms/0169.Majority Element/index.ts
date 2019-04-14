@@ -1,10 +1,6 @@
 /**
- * @param {number[]} nums
- * @return {number}
- * @time 116 ms
+ * @runtime 116ms > 37.93%
  * @momory 37.2 MB
- * @sort 37.93%
- * @commit https://leetcode-cn.com/submissions/detail/14004956/
  */
 var majorityElement = (nums: Array<number>) => {
   let map: any = {};

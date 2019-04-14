@@ -1,8 +1,5 @@
 /**
- * @param {number} n
- * @return {boolean}
- * @time outoftime
- * @commit https://leetcode-cn.com/submissions/detail/14013924/
+ * @status OutOfTime
  */
 var isHappy = (n: number): boolean => {
   let result: number = n;

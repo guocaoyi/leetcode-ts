@@ -1,8 +1,6 @@
 /**
- * @time 104 ms
- * @memory 37.3 MB
- * @sort 58.49%
- * @commit https://leetcode-cn.com/submissions/detail/13915968/
+ * @runtime 104ms < 58.49%
+ * @memory 37.3mb
  */
 var singleNumber = (nums: Array<number>): any => {
   let map: any = {};
@@ -24,10 +22,8 @@ var singleNumber = (nums: Array<number>): any => {
 
 /**
  * @description 这里已经没有优化空间了，想想其他方法
- * @time 108 ms
- * @memory 36.9 MB
- * @sort 55.12%
- * @commit https://leetcode-cn.com/submissions/detail/13916397/
+ * @runtime 108ms > 
+ * @memory 36.9mb <
  */
 var singleNumber2 = (nums: Array<number>): any => {
   let map: any = {};

@@ -2,9 +2,8 @@
  * @param {number[]} nums
  *  [1, 7, 3, 6, 5, 6]
  * @return {number}
- *
  */
-var pivotIndex = (nums: Array<number>) => {
+var pivotIndex = (nums: Array<number>): number => {
   // nums.length >= 3,否则返回0
 
   // initial
@@ -21,11 +20,13 @@ var pivotIndex = (nums: Array<number>) => {
   // step3：左和>右和
   //    step3-0：右标达到数组长度；return -1
   //    step3-1：右标未达到数组长度,右标继续遍历
+  return nums.length;
 };
 
 /**
+ *
  */
-const pivotIndex2 = (nums: Array<number>) => {
+export function pivotIndex2(nums: Array<number>): number {
   const _len = nums.length;
   let lSum = 0; // 左和
   let rSum = 0; // 右和
@@ -44,4 +45,4 @@ const pivotIndex2 = (nums: Array<number>) => {
     }
     return -1;
   }
-};
+}

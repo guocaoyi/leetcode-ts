@@ -23,13 +23,13 @@ Explanation:
 1^2 + 0^2 + 0^2 = 1
 ```
 
-## Solution
+## Submissions
 
 ### [方案一](https://leetcode-cn.com/submissions/detail/14013924/)
 
 一开始以为这题很简单，也没仔细考虑；使用了 Array.reduce() 和 While 控制语句完事；跑测试用例时才发现，第二条用例就没有通过。问题出在时间复杂度上，这里必须对死循环进行处理。
 
-- State: 超出时间限制3
+- State: 超出时间限制 3
 - Time: N/A
 - Memory: N/A
 - Ranking: N/A
@@ -61,3 +61,5 @@ var isHappy = function(n) {
 class Solution:
   def isHappy(self, n: int) -> bool:
 ```
+
+## Solutions

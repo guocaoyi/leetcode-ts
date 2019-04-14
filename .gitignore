@@ -3,6 +3,6 @@
 node_modules
 
 ## files
-**/*.class
+**/*.js
+**/yarn-lock.json
 **/package-lock.json
-**/.code.pen.js

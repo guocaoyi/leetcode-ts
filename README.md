@@ -46,9 +46,9 @@ LeetCode problems' solutions with TypeScript
 
 | \#  | Title                                          |   Topics   | Difficulty |
 | :-- | :--------------------------------------------- | :--------: | :--------: |
-| 1   | Two Sum                                        | String,Map |            |
-| 2   | Add Tow Numbers                                |            |            |
-| 3   | Longest Substring Without Repeating Characters |            |     😋     |
-| 4   | Median of Two Sorted Arrays                    |            |     😶     |
-| 6   | ZigZag Conversion                              |            |     😯     |
-| 14  | Longest Common Prefix                          |            |            |
+| 1   | Two Sum                                        | String,Map |     ❗     |
+| 2   | Add Tow Numbers                                |            |     ❗     |
+| 3   | Longest Substring Without Repeating Characters |            |     ❗     |
+| 4   | Median of Two Sorted Arrays                    |            |    ❗❗    |
+| 6   | ZigZag Conversion                              |            |   ❗❗❗   |
+| 14  | Longest Common Prefix                          |            |    ❗❗    |
