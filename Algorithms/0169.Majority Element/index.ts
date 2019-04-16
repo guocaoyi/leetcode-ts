@@ -1,4 +1,8 @@
 /**
+ * 通用解法
+ * @description
+ * @status
+ * @date
  * @runtime 116ms > 37.93%
  * @momory 37.2 MB
  */

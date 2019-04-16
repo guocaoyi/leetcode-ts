@@ -1,25 +1,29 @@
 {
   "name": "leetcode-ts",
-  "version": "1.0.0",
-  "description": "## Problems",
+  "version": "0.0.1",
+  "description": "LeetCode problems' solutions with TypeScript",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/guocaoyi/leetcode-ts.git"
   },
   "author": "gcy",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/guocaoyi/leetcode-ts/issues"
   },
   "homepage": "https://www.yalda.cn/leetcode-ts",
   "scripts": {
-    "new": ""
+    "cr": "echo 'create new \n'"
+  },
+  "dependencies": {
+    "ntypescript": "^1.201706190042.1"
   },
   "devDependencies": {
     "@types/node": "^11.12.1",
     "byots": "^2.9.0-dev.20180411.1.10",
     "cz-conventional-changelog": "^2.1.0",
-    "typescript": "^3.3.3"
+    "typescript": "^3.3.3",
+    "ts-node": "^8.0.3"
   },
   "config": {
     "commitizen": {
