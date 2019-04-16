@@ -7,7 +7,6 @@ export class Mark {
     "# {{name}}\n\n## Related Topics\n\n- ...\n\n## Description\n\n...\n\n## Example\n\n```bash\n➜\n```\n\n## Note\n\n## Thinking\n\n...\n";
   private readonly roma: string = "I,II,III,IV,V,VI,VII,VIII,IX,X";
   private readonly fileName: string = "README.md";
-  private folderName: string;
   private md: string; //
   private filePath: string; //
 

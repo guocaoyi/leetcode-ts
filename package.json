@@ -1,6 +1,9 @@
 {
   "name": "leetcode-ts",
   "version": "0.0.1",
+  "bin": {
+    "leet": "./script/.bin/leet"
+  },
   "description": "LeetCode problems' solutions with TypeScript",
   "repository": {
     "type": "git",
@@ -13,17 +16,20 @@
   },
   "homepage": "https://www.yalda.cn/leetcode-ts",
   "scripts": {
-    "cr": "echo 'create new \n'"
+    "create": "",
+    "watch": "",
+    "doc": "",
+    "index": "",
+    "deploy": ""
   },
   "dependencies": {
     "ntypescript": "^1.201706190042.1"
   },
   "devDependencies": {
     "@types/node": "^11.12.1",
-    "byots": "^2.9.0-dev.20180411.1.10",
     "cz-conventional-changelog": "^2.1.0",
-    "typescript": "^3.3.3",
-    "ts-node": "^8.0.3"
+    "ts-node": "^8.0.3",
+    "typescript": "^3.3.3"
   },
   "config": {
     "commitizen": {
