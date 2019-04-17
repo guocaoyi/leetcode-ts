@@ -1,9 +1,13 @@
+import * as fs from "fs";
+import * as path from "path";
 import { Parser } from "./parser";
 import { Mark } from "./mark";
 
 const filePath = "./algorithms/0014.Longest Common Prefix";
 
-class Leet {
+export default class Bin {}
+
+export class Leet {
   private readonly tempCode: string =
     "/**\n *\n * @description\n * @time\n * @status\n * @runtime\n * @memory\n */\nvar subm = (target: any): any => {};\n";
   private readonly draftCode: string =
@@ -13,7 +17,7 @@ class Leet {
    * leet create 0724. Find Pivot Indexs
    */
   create() {
-    // step1:
+    // step1:README.md
     // step2:index.ts
     // step3:.draft.ts
   }
@@ -21,12 +25,14 @@ class Leet {
   /**
    * leet watch 0724
    */
-  watch() {}
+  watch() {
+    //
+  }
 
   /**
    * leet doc 0001 | all
    */
-  doc() {
+  doc(filePath: string) {
     const submissions = new Parser().load({ filePath }).getSourse;
 
     new Mark()
@@ -39,7 +45,9 @@ class Leet {
   /**
    * leet index 制作索引
    */
-  index() {}
+  summary(): any {
+    fs.writeFileSync("", "", { encoding: "utf8" });
+  }
 
   /**
    * leet deploy 发布

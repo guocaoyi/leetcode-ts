@@ -1,12 +1,12 @@
 /**
  * 通用解法
- * @description
- * @status
- * @date
- * @runtime 116ms > 37.93%
- * @momory 37.2 MB
+ * @description 
+ * @status Accepted
+ * @time 2019.03.01
+ * @runtime 68ms > 87.42%
+ * @momory 37.2MB < 88.35%
  */
-var majorityElement = (nums: Array<number>) => {
+var majorityElement = function(nums: number[]) {
   let map: any = {};
   nums.forEach(n => {
     if (n in map) {
