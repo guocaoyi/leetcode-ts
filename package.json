@@ -16,6 +16,7 @@
   },
   "homepage": "https://www.yalda.cn/leetcode-ts",
   "scripts": {
+    "clean": "",
     "create": "",
     "watch": "",
     "doc": "",

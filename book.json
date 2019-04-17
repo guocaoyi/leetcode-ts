@@ -1,0 +1,37 @@
+{
+  "title": "LeetCode for TypeScript",
+  "author": "yalda",
+  "description": "LeetCode problems' solutions with TypeScript",
+  "styles": {
+    "website": "assets/css/website.css"
+  },
+  "plugins": [
+    "-sharing",
+    "-lunr",
+    "-search",
+    "search-plus",
+    "splitter",
+    "github-buttons",
+    "prism",
+    "-highlight",
+    "emphasize"
+  ],
+  "pluginsConfig": {
+    "github-buttons": {
+      "buttons": [
+        {
+          "user": "guocaoyi",
+          "repo": "leetcode-ts",
+          "type": "star",
+          "size": "smal",
+          "count": true
+        }
+      ]
+    },
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-tomorrow.css"
+      ]
+    }
+  }
+}

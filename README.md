@@ -1,54 +1,27 @@
-# LeetCode Problems
+# LeetCode For TypeScript
 
-LeetCode problems' solutions with TypeScript
+LeetCode problems' submissions & top randed with TypeScript.
+
+**Submissions** was completed by myself.
+
+**Top Randed** includes the best submissions complated by other guys in LeetCode.com with JavaScript.
+
+> Author: Yalda
+>
+> Github: [leetcode-ts](https://github.com/guocaoyi/leetcode-ts/)
+> Blog: [www.yalda.cn](https://www.yalda.cn)
+> Online Book: [www.yalda.cn/leetcode-ts](https://www.yalda.cn/leetcode-ts)
 
 ## Topics
 
-[Array](./TOPICS.md#array)×100
+[Array](./TOPICS.md#array)×100,
 [Dynamic Programming](./TOPICS.md#string),
 [Math](./TOPICS.md#),
 [String](./TOPICS.md#),
 [Tree](./TOPICS.md#),
-[Hash Table](./TOPICS.md#),
-[Depth-first Search](./TOPICS.md#),
-[Binary Search](./TOPICS.md#),
-[Tow Pointers](./TOPICS.md#),
-[Greedy](./TOPICS.md#),
-[Breadth-first Search](./TOPICS.md#),
-[Stack](./TOPICS.md#),
-[Backtracking](./TOPICS.md#),
-[Design](./TOPICS.md#),
-[Linked List](./TOPICS.md#),
-[Bit Manipulation](./TOPICS.md#),
-[Heap](./TOPICS.md#),
-[Graph](./TOPICS.md#),
-[Sort](./TOPICS.md#),
-[Union Find](./TOPICS.md#),
-[Divide and Conquer](./TOPICS.md#),
-[Binary Search Tree](./TOPICS.md#),
-[Trie](./TOPICS.md#),
-[Sliding Window](./TOPICS.md#),
-[Recursion](./TOPICS.md#),
-[Queue](./TOPICS.md#),
-[Segment Tree](./TOPICS.md#),
-[Minimax](./TOPICS.md#),
-[Random](./TOPICS.md#),
-[Binary Indexed Tree](./TOPICS.md#),
-[Topological Sort](./TOPICS.md#),
-[Brainteaser](./TOPICS.md#),
-[Geometry](./TOPICS.md#),
-[Map](./TOPICS.md#),
-[Rejection Sampling](./TOPICS.md#),
-[Reservoir Sampling](./TOPICS.md#),
-[Memoization](./TOPICS.md#),
 
 ## Algorithms
 
-| \#  | Title                                          |   Topics   | Difficulty |
-| :-- | :--------------------------------------------- | :--------: | :--------: |
-| 1   | Two Sum                                        | String,Map |     ❗     |
-| 2   | Add Tow Numbers                                |            |     ❗     |
-| 3   | Longest Substring Without Repeating Characters |            |     ❗     |
-| 4   | Median of Two Sorted Arrays                    |            |    ❗❗    |
-| 6   | ZigZag Conversion                              |            |   ❗❗❗   |
-| 14  | Longest Common Prefix                          |            |    ❗❗    |
+| \#                           | Title   |   Topics   |               Difficulty                |
+| :--------------------------- | :------ | :--------: | :-------------------------------------: |
+| [1](algorithms/0001.Two Sum) | Two Sum | String,Map | {% em color="#5cb85c" %}Easy{% endem %} |

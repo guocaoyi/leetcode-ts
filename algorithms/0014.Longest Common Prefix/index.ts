@@ -43,7 +43,6 @@ var longestCommonPrefix = function(strs: string[]) {
       }
       point++;
     }
-    return "";
   } else {
     return "";
   }
@@ -53,7 +52,7 @@ var longestCommonPrefix = function(strs: string[]) {
  * 单次遍历
  * @description 使用 `strs[0]` 作为初始前缀串，逐一遍历 `strs[]` 元素进行比较，如 `String.indexOf !== 0` 则自减长度 1，直至成立后继续访问后面的元素。
  * @status Accepted
- * @runtime 60ms > 92.74%
+ * @runtime 60ms < 92.74%
  * @memory 33.8MB < 86.74%
  */
 var longestCommonPrefix = (strs: string[]) => {
