@@ -14,7 +14,8 @@
     "github-buttons",
     "prism",
     "-highlight",
-    "emphasize"
+    "emphasize",
+    "3-ba"
   ],
   "pluginsConfig": {
     "github-buttons": {
@@ -32,6 +33,9 @@
       "css": [
         "prismjs/themes/prism-tomorrow.css"
       ]
+    },
+    "3-ba": {
+      "token": "8b86dbbab489aa49fb5fb7885a8953cc"
     }
   }
 }

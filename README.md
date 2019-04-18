@@ -22,6 +22,6 @@ LeetCode problems' submissions & top randed with TypeScript.
 
 ## Algorithms
 
-| \#                           | Title   |   Topics   |               Difficulty                |
-| :--------------------------- | :------ | :--------: | :-------------------------------------: |
+| \#                           | Title   | Topics     |               Difficulty                |
+| :--------------------------- | :------ | :--------- | :-------------------------------------: |
 | [1](algorithms/0001.Two Sum) | Two Sum | String,Map | {% em color="#5cb85c" %}Easy{% endem %} |
