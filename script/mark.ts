@@ -2,6 +2,9 @@ import * as fs from "fs";
 import * as path from "path";
 import { SubmissionImpl, SubEnum } from "./parser";
 
+/**
+ * markdown
+ */
 export class Mark {
   private readonly templateMd =
     "# {{name}}\n\n## Related Topics\n\n- ...\n\n## Description\n\n...\n\n## Example\n\n```bash\n➜\n```\n\n## Note\n\n## Thinking\n\n...\n";
@@ -24,7 +27,7 @@ export class Mark {
   /**
    * json to markdown syntax strings
    */
-  public print = (submissions: Array<SubmissionImpl>): Mark => {
+  public print = (submissions: SubmissionImpl[]): Mark => {
     let subMd: string = "## Submissions\n\n";
     let topMd: string = "## Top Ranked\n\n";
     submissions.forEach((s: SubmissionImpl, k: number) => {
@@ -33,11 +36,10 @@ export class Mark {
       !!s.info.description && (cache += `${s.info.description}\n\n`);
       !!s.info.time && (cache += `- Time: ${s.info.time}\n`);
       !!s.info.status && (cache += `- Status: ${s.info.status}\n`);
-      !!s.info.testcase &&
-        (cache += `- Last executed input: : ${s.info.testcase}\n`);
+      !!s.info.params && (cache += `- Input: : ${s.info.params}\n`);
       !!s.info.runtime && (cache += `- Runtime: ${s.info.runtime}\n`);
       !!s.info.memory && (cache += `- Memory: ${s.info.memory}\n`);
-      cache += "\n```typescript\n" + s.sourse + "\n```\n\n";
+      cache += "```typescript\n" + s.sourse + "\n```\n\n";
       s.type == SubEnum.SUB ? (subMd += cache) : (topMd += cache);
     });
     this.md += "\n" + subMd + topMd;

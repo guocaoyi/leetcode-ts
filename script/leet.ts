@@ -3,27 +3,26 @@ import * as path from "path";
 import { Parser } from "./parser";
 import { Mark } from "./mark";
 
-const filePath = "./algorithms/0014.Longest Common Prefix";
-
 const filePaths = [
   "./algorithms/0001.Two Sum",
-  "./algorithms/0003.Longest Substring Without Repeating Characters",
-  "./algorithms/0014.Longest Common Prefix",
-  "./algorithms/0017.Letter Combinations of a Phone Number",
-  "./algorithms/0074.Search a 2D Matrix",
-  "./algorithms/0136.Single Number",
-  "./algorithms/0169.Majority Element",
-  "./algorithms/0202.Happy Number",
-  "./algorithms/0240.Search a 2D Matrix II",
-  "./algorithms/0344.Reverse String",
-  "./algorithms/0724.Find Pivot Index"
+  // "./algorithms/0003.Longest Substring Without Repeating Characters",
+  // "./algorithms/0014.Longest Common Prefix",
+  // "./algorithms/0017.Letter Combinations of a Phone Number",
+  // "./algorithms/0074.Search a 2D Matrix",
+  // "./algorithms/0136.Single Number",
+  // "./algorithms/0169.Majority Element",
+  // "./algorithms/0202.Happy Number",
+  // "./algorithms/0240.Search a 2D Matrix II",
+  // "./algorithms/0344.Reverse String",
+  // "./algorithms/0724.Find Pivot Index"
 ];
 
-export default class Bin {}
+// 1:保障 github 上的浏览正常
+// 2:保障 www.yalda.cn/leetcode-ts 上的浏览正常
 
 export class Leet {
   private readonly tempCode: string =
-    "/**\n *\n * @description\n * @time\n * @status\n * @runtime\n * @memory\n */\nvar subm = (target: any): any => {};\n";
+    "/**\n *\n * @time\n * @status\n * @runtime\n * @memory\n */\nvar subm = (target: any): any => {};\n";
   private readonly draftCode: string =
     "/**\n * @author yalda\n * @github github.com/guocaoyi\n * @website www.yalda.cn\n */\nvar subm = (target: any): any => {};\n";
 
@@ -65,3 +64,10 @@ export class Leet {
    */
   deploy() {}
 }
+
+filePaths.forEach((filePath: string) => {
+  new Mark()
+    .load({ filePath })
+    .print(new Parser().load({ filePath }).getSourse)
+    .write();
+});

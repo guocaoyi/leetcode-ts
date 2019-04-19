@@ -6,18 +6,23 @@
     "website": "assets/css/website.css"
   },
   "plugins": [
+    "-name",
     "-sharing",
     "-lunr",
     "-search",
     "search-plus",
     "splitter",
     "github-buttons",
-    "prism",
     "-highlight",
-    "emphasize",
-    "3-ba"
+    "prism",
+    "prism-themes"
   ],
   "pluginsConfig": {
+    "fontsettings": {
+      "theme": "night",
+      "family": "serif",
+      "size": 2
+    },
     "github-buttons": {
       "buttons": [
         {
@@ -31,7 +36,7 @@
     },
     "prism": {
       "css": [
-        "prismjs/themes/prism-tomorrow.css"
+        "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
       ]
     },
     "3-ba": {

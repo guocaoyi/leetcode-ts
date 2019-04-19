@@ -13,3 +13,23 @@ h1 {
 .markdown-section h6 {
   font-size: 0.85em;
 }
+
+.dif-tag {
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+span[class="dif-tag easy"] {
+  background-color: #5cb85c;
+}
+
+span[class="dif-tag hard"] {
+  background-color: #d9534f;
+}
+
+span[class="dif-tag medium"] {
+  background-color: #f0ad4e;
+}
