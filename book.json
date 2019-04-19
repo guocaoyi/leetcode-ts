@@ -15,7 +15,8 @@
     "github-buttons",
     "-highlight",
     "prism",
-    "prism-themes"
+    "prism-themes",
+    "3-ba"
   ],
   "pluginsConfig": {
     "fontsettings": {

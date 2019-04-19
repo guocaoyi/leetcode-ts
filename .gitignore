@@ -1,9 +1,12 @@
 ## folder
-_book
 .vscode
+.deploy_git
+_book
 node_modules
 
 ## files
 **/*.js
+!**/gitbook/*.js
+!**/gitbook/**/*.js
 **/yarn-lock.json
 **/package-lock.json
