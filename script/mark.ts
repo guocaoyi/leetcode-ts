@@ -39,7 +39,7 @@ export class Mark {
       !!s.info.params && (cache += `- Input: : ${s.info.params}\n`);
       !!s.info.runtime && (cache += `- Runtime: ${s.info.runtime}\n`);
       !!s.info.memory && (cache += `- Memory: ${s.info.memory}\n`);
-      cache += "```typescript\n" + s.sourse + "\n```\n\n";
+      cache += "\n```typescript\n" + s.sourse + "\n```\n\n";
       s.type == "Submission" ? (subMd += cache) : (topMd += cache);
     });
     this.md += "\n" + subMd + topMd;

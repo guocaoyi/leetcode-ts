@@ -36,10 +36,13 @@ Output: false
 
 ## Submissions
 
-### I: **
+### I: 双层遍历
 
-- Runtime: 64ms > 64.69%
-- Memory: 35.4MB > 7.41%
+- Time: 2019.3.15
+- Status: Accepted
+- Runtime: 64ms | 58.68%
+- Memory: 35.4MB | 7.41%
+
 ```typescript
 var searchMatrix = (matrix: number[][], target: number): boolean => {
   for (let i = 0; i < matrix.length; i++) {

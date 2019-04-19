@@ -33,7 +33,8 @@ Although the above answer is in lexicographical order, your answer could be in a
 
 ## Submissions
 
-### I: **
+### I: 笛卡尔积
+
 
 ```typescript
 var letterCombinations = function(digits: string) {
@@ -53,23 +54,6 @@ var letterCombinations = function(digits: string) {
   let result = [];
   let stack = [];
   let point = 0;
-
-  // let f = function() {
-  //   for (let i = 0, array = s[point++]; i < array.length; i++) {
-  //     stack.push(array[i]);
-  //     result.push(stack.join(""));
-  //     stack.pop();
-  //   }
-  //   if (a == 2) {
-  //     for (let i = 0, array = s[point++]; i < array.length; i++) {
-  //       stack.push(array[i]);
-  //       result.push(stack.join(""));
-  //       stack.pop();
-  //     }
-  //   } else {
-
-  //   }
-  // };
 
   for (let i = 0, array = s[point++]; i < array.length; i++) {
     stack.push(array[i]);

@@ -25,52 +25,29 @@ Your algorithm should have a linear runtime complexity. Could you implement it w
 
 ## Submissions
 
-### I: \*\*
+### I: 这里已经没有优化空间了，想想其他方法
 
-- Runtime: 104ms < 58.49%
-- Memory: 37.3mb
+- Time: 2019.04.19
+- Status: Accepted
+- Runtime: 64 ms | 81.78%
+- Memory: 36.9MB | 41.03%
 
 ```typescript
-var singleNumber = (nums: Array<number>): any => {
+var singleNumber = (nums: number[]): number => {
   let map: any = {};
-  nums.forEach(n => {
-    if (n in map) {
+  let length: number = nums.length;
+  for (let i: number = 0; i < length; i++) {
+    if (nums[i] in map && map[nums[i]] == 1) {
       // map 已经存在 n
-      map[n]++;
+      delete map[nums[i]];
     } else {
       // 不存在
-      map[n] = 1;
+      map[nums[i]] = 1;
     }
-    if (map[n] == 2) {
-      // 存在并且 == 2
-      delete map[n];
-    }
-  });
-  return Object.keys(map);
-};
-```
-
-### II: \*\*
-
-这里已经没有优化空间了，想想其他方法
-
-- Runtime: 108ms >
-- Memory: 36.9mb <
-
-```typescript
-var singleNumber2 = (nums: Array<number>): any => {
-  let map: any = {};
-  nums.forEach((n: number) => {
-    if (n in map && map[n] == 1) {
-      // 已经存在 且 == 1
-      delete map[n];
-    } else {
-      // 不存在
-      map[n] = 1;
-    }
-  });
-  return Object.keys(map);
+  }
+  return Number(Object.keys(map)[0]);
 };
 ```
 
 ## Top Ranked
+

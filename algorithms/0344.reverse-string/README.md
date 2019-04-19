@@ -44,6 +44,7 @@ Output: false
 由于 Array 对象内置了 reverse 函数，先采用这个方法看看效率。然后自行实现 reverse
 
 - Status: Accepted
+
 ```typescript
 var reverseString = (s: string[]): void => {
   s.reverse();
@@ -55,6 +56,7 @@ var reverseString = (s: string[]): void => {
 - Time: 2019.03
 - Status: Wrong Answer
 - Input: : `Input: ["h","e","l","l","o"] Output: ["h","e","l","l","o"] Expected: ["o","l","l","e","h"]`
+
 ```typescript
 var reverseString = (s: string[]): void => {
   let arr: string[] = [];

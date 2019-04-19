@@ -20,14 +20,14 @@ return [0, 1].
 
 ## Submissions
 
-### I: 两次列表遍历
+### I: 嵌套循环遍历
 
 这事最偷懒的办法，快速实现后，再考虑优化方案
-使用 Array.forEach 在性能上会有点损耗(测试用例:61ms 到 59ms)
+使用Array.forEach在性能上会有点损耗(测试用例:61ms到59ms)
 
-- Time: 2019.04.13
+- Time: 2018.9.13
 - Status: Accepted
-- Runtime: 120ms > 41.06%
+- Runtime: 120ms | 40.065%
 
 ```typescript
 var twoSum = (nums: number[], target: number): number[] => {
@@ -44,12 +44,30 @@ var twoSum = (nums: number[], target: number): number[] => {
 ### II: 哈希存储
 
 - Status: Accepted
+- Runtime: 80 ms | 59.00%
 
 ```typescript
 var twoSum = (nums: number[], target: number): number[] => {
   const map: any = {};
-  const length = nums.length;
-  // 使用Array.forEach在性能上会有点损耗(测试用例:61ms到59ms)
+  nums.forEach((i, k) => (map[i] = k));
+  for (let i = 0; i < nums.length; i++) {
+    const x = target - nums[i];
+    if (x in map && map[x] != i) {
+      return [i, map[x]];
+    }
+  }
+};
+```
+
+### III: 方案二：哈希存储
+
+- Status: Accepted
+- Runtime: 56ms | 100.00%
+
+```typescript
+var twoSum = (nums: number[], target: number): number[] => {
+  const map: any = {};
+  const length: number = nums.length;
   for (let i = 0; i < length; i++) {
     map[nums[i]] = i;
   }
@@ -62,10 +80,10 @@ var twoSum = (nums: number[], target: number): number[] => {
 };
 ```
 
-### III: 一次哈希遍历
+### IV: 哈希遍历
 
 - Status: Accepted
-- Runtime: 52ms < 100%
+- Runtime: 52ms | 100%
 
 ```typescript
 var twoSum = (nums: number[], target: number): number[] => {
@@ -83,20 +101,3 @@ var twoSum = (nums: number[], target: number): number[] => {
 
 ## Top Ranked
 
-### IV: 哈希遍历
-
-- Runtime: 52ms < 100%
-
-```typescript
-var twoSum = (nums: number[], target: number): number[] => {
-  const map: any = {};
-  const length = nums.length;
-  for (let i = 0; i < length; i++) {
-    const x = target - nums[i];
-    if (x in map && map[x] != i) {
-      return [map[x], i];
-    }
-    map[nums[i]] = i;
-  }
-};
-```

@@ -34,11 +34,15 @@ Explanation: The answer is "wke", with the length of 3.
 
 ### I: **
 
+- Time: 2018.10.19
+- Status: Output Limit Exceeded
+
 ```typescript
-const slution1 = (s: string): number => {
+var lengthOfLongestSubstring = (s: string): number => {
   let maxSub = "",
     currentSub = "";
-  const arr = s.split("");
+
+  const arr: string[] = s.split("");
   arr.forEach((s: string) => {
     if (currentSub.includes(s)) {
       // 存在
@@ -60,20 +64,36 @@ const slution1 = (s: string): number => {
 };
 ```
 
-### II: 987test case,184ms
+### II: **
+
+- Time: 2018.10.19
+- Status: Accepted
+- Runtime: 116ms | 55.08%
 
 ```typescript
-let slution2 = (s: string): number => {
-  const obj = {
-    subStr: "",
-    maxLen: 0
-  };
-  for (let i: number = 0; i < s.length; i++) {
-    let strArray: string[] = obj.subStr.split(s[i]);
-    obj.subStr = strArray[strArray.length - 1] + s[i];
-    obj.maxLen = Math.max(obj.maxLen, obj.subStr.length);
-  }
-  return obj.maxLen;
+var lengthOfLongestSubstring = (s: string): number => {
+  let maxSub: string = "",
+    currentSub: string = "";
+
+  const arr: string[] = s.split("");
+  arr.forEach((s: string) => {
+    if (currentSub.includes(s)) {
+      // 存在
+      if (currentSub.length >= maxSub.length) {
+        maxSub = currentSub;
+      }
+      let [lStr, rStr] = currentSub.split(s);
+      currentSub = rStr || "";
+      currentSub += s;
+    } else {
+      // 不存在
+      currentSub += s;
+      if (currentSub.length >= maxSub.length) {
+        maxSub = currentSub;
+      }
+    }
+  });
+  return maxSub.length;
 };
 ```
 

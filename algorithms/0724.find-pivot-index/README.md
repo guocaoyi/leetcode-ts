@@ -38,8 +38,9 @@ There is no index that satisfies the conditions in the problem statement.
 
 ### I: **
 
+
 ```typescript
-var pivotIndex = (nums: Array<number>): number => {
+var pivotIndex = (nums: number[]): number => {
   // nums.length >= 3,否则返回0
 
   // initial
@@ -62,8 +63,9 @@ var pivotIndex = (nums: Array<number>): number => {
 
 ### II: **
 
+
 ```typescript
-export function pivotIndex2(nums: Array<number>): number {
+export function pivotIndex2(nums: number[]): number {
   const _len = nums.length;
   let lSum = 0; // 左和
   let rSum = 0; // 右和

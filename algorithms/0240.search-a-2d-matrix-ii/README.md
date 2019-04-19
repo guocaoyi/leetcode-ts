@@ -33,9 +33,10 @@ Given target = 20, return false.
 ### I: 双层遍历
 
 - Status: Accepted
-- Runtime: 460ms > 15.75%
+- Runtime: 460ms > 22.93%
+
 ```typescript
-var searchMatrix = (matrix: Array<Array<number>>, target: number): boolean => {
+var searchMatrix = (matrix: number[][], target: number): boolean => {
   for (let i: number = 0; i < matrix.length; i++) {
     for (let j: number = 0; j < matrix[i].length; j++) {
       if (matrix[i][j] === target) {
