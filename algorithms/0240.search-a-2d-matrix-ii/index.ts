@@ -1,7 +1,7 @@
 /**
  * 双层遍历
  * @status Accepted
- * @runtime 460ms > 15.75%
+ * @runtime 460ms > 22.93%
  * @momery 37.1mb < 100.00%
  */
 var searchMatrix = (matrix: number[][], target: number): boolean => {

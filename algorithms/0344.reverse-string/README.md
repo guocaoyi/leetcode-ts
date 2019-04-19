@@ -45,9 +45,24 @@ Output: false
 
 - Status: Accepted
 ```typescript
-export function reverseString(s: string[]): void {
+var reverseString = (s: string[]): void => {
   s.reverse();
-}
+};
+```
+
+### II: O(1) extra memory 迫使无法使用额外的数组进行缓存；
+
+- Time: 2019.03
+- Status: Wrong Answer
+- Input: : `Input: ["h","e","l","l","o"] Output: ["h","e","l","l","o"] Expected: ["o","l","l","e","h"]`
+```typescript
+var reverseString = (s: string[]): void => {
+  let arr: string[] = [];
+  for (let i = s.length; i > 0; i--) {
+    arr.push(s[i - 1]);
+  }
+  s = arr;
+};
 ```
 
 ## Top Ranked

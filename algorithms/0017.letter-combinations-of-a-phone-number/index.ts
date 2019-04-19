@@ -1,5 +1,7 @@
 /**
  * 笛卡尔积
+ * @time
+ * @status
  */
 var letterCombinations = function(digits: string) {
   // 拨号键盘

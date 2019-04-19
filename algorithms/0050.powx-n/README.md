@@ -29,3 +29,22 @@ Explanation: 2-2 = 1/22 = 1/4 = 0.25
 
 - Math
 - Binary Search
+
+## Submissions
+
+### I: Math.pow
+
+这里偷懒，直接调用了全局对象 Math 静态方法，Math#pow
+
+- Time: 2019.04.19 10:39
+- Status: Acceted
+- Runtime: 76 ms > 42.42%
+- Memory: 34.2 MB < 13.79%
+```typescript
+var myPow = function(x: number, n: number): number | string {
+  return Math.pow(x, n).toFixed(5);
+};
+```
+
+## Top Ranked
+

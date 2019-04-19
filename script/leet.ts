@@ -4,17 +4,19 @@ import { Parser } from "./parser";
 import { Mark } from "./mark";
 
 const filePaths = [
-  "./algorithms/0001.Two Sum",
-  // "./algorithms/0003.Longest Substring Without Repeating Characters",
-  // "./algorithms/0014.Longest Common Prefix",
-  // "./algorithms/0017.Letter Combinations of a Phone Number",
-  // "./algorithms/0074.Search a 2D Matrix",
-  // "./algorithms/0136.Single Number",
-  // "./algorithms/0169.Majority Element",
-  // "./algorithms/0202.Happy Number",
-  // "./algorithms/0240.Search a 2D Matrix II",
-  // "./algorithms/0344.Reverse String",
-  // "./algorithms/0724.Find Pivot Index"
+  // "./algorithms/0001.two-sum",
+  // "./algorithms/0003.longest-substring-without-repeating-characters",
+  // "./algorithms/0004.median-of-two-sorted-arrays",
+  // "./algorithms/0014.longest-common-prefix",
+  // "./algorithms/0017.letter-combinations-of-a-phone-number",
+  "./algorithms/0050.powx-n",
+  // "./algorithms/0074.search-a-2d-matrix",
+  // "./algorithms/0136.single-number",
+  // "./algorithms/0169.majority-element",
+  // "./algorithms/0202.happy-number",
+  // "./algorithms/0240.search-a-2d-matrix-ii",
+  "./algorithms/0344.reverse-string"
+  // "./algorithms/0724.find-pivot-index"
 ];
 
 // 1:保障 github 上的浏览正常

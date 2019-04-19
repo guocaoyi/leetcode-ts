@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
-import { SubmissionImpl, SubEnum } from "./parser";
+import { Submission } from "./parser";
 
 /**
  * markdown
@@ -27,20 +27,20 @@ export class Mark {
   /**
    * json to markdown syntax strings
    */
-  public print = (submissions: SubmissionImpl[]): Mark => {
+  public print = (submissions: Submission[]): Mark => {
     let subMd: string = "## Submissions\n\n";
     let topMd: string = "## Top Ranked\n\n";
-    submissions.forEach((s: SubmissionImpl, k: number) => {
+    submissions.forEach((s: Submission, k: number) => {
       let cache: string = "";
       cache += `### ${this.roma.split(",")[k]}: ${s.name || "**"}\n\n`;
-      !!s.info.description && (cache += `${s.info.description}\n\n`);
+      !!s.info.comment && (cache += `${s.info.comment}\n\n`);
       !!s.info.time && (cache += `- Time: ${s.info.time}\n`);
       !!s.info.status && (cache += `- Status: ${s.info.status}\n`);
       !!s.info.params && (cache += `- Input: : ${s.info.params}\n`);
       !!s.info.runtime && (cache += `- Runtime: ${s.info.runtime}\n`);
       !!s.info.memory && (cache += `- Memory: ${s.info.memory}\n`);
       cache += "```typescript\n" + s.sourse + "\n```\n\n";
-      s.type == SubEnum.SUB ? (subMd += cache) : (topMd += cache);
+      s.type == "Submission" ? (subMd += cache) : (topMd += cache);
     });
     this.md += "\n" + subMd + topMd;
     return this;

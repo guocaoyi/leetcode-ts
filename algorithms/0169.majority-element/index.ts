@@ -2,10 +2,10 @@
  * 通用解法
  * @status Accepted
  * @time 2019.03.01
- * @runtime 68ms > 87.42%
- * @momory 37.2MB < 88.35%
+ * @runtime 68ms | 87.42%
+ * @momory 37.2MB | 88.35%
  */
-var majorityElement = function(nums: number[]) {
+var majorityElement = (nums: number[]): number => {
   let map: any = {};
   nums.forEach(n => {
     if (n in map) {
@@ -15,7 +15,7 @@ var majorityElement = function(nums: number[]) {
     }
   });
   let maximum = 0;
-  let maxKey = undefined;
+  let maxKey: any;
 
   for (let k in map) {
     if (map[k] >= maximum) {
