@@ -1,0 +1,456 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>0050.powx-n · LeetCode for TypeScript</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yalda">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../assets/css/website.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../0074.search-a-2d-matrix/" />
+    
+    
+    <link rel="prev" href="../0017.letter-combinations-of-a-phone-number/" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"guocaoyi","repo":"leetcode-ts","type":"star","size":"smal","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../TOPICS.html">
+            
+                <a href="../../TOPICS.html">
+            
+                    
+                    Topics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0001.two-sum/">
+            
+                <a href="../0001.two-sum/">
+            
+                    
+                    0001.two-sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0003.longest-substring-without-repeating-characters/">
+            
+                <a href="../0003.longest-substring-without-repeating-characters/">
+            
+                    
+                    0003.longest-substring-without-repeating-characters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../0004.median-of-two-sorted-arrays/">
+            
+                <a href="../0004.median-of-two-sorted-arrays/">
+            
+                    
+                    0004.median-of-two-sorted-arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../0014.longest-common-prefix/">
+            
+                <a href="../0014.longest-common-prefix/">
+            
+                    
+                    0014.longest-common-prefix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../0017.letter-combinations-of-a-phone-number/">
+            
+                <a href="../0017.letter-combinations-of-a-phone-number/">
+            
+                    
+                    0017.letter-combinations-of-a-phone-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    0050.powx-n
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../0074.search-a-2d-matrix/">
+            
+                <a href="../0074.search-a-2d-matrix/">
+            
+                    
+                    0074.search-a-2d-matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../0136.single-number/">
+            
+                <a href="../0136.single-number/">
+            
+                    
+                    0136.single-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../0169.majority-element/">
+            
+                <a href="../0169.majority-element/">
+            
+                    
+                    0169.majority-element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../0202.happy-number/">
+            
+                <a href="../0202.happy-number/">
+            
+                    
+                    0202.happy-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../0240.search-a-2d-matrix-ii/">
+            
+                <a href="../0240.search-a-2d-matrix-ii/">
+            
+                    
+                    0240.search-a-2d-matrix-ii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../0344.reverse-string/">
+            
+                <a href="../0344.reverse-string/">
+            
+                    
+                    0344.reverse-string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../0724.find-pivot-index/">
+            
+                <a href="../0724.find-pivot-index/">
+            
+                    
+                    0724.find-pivot-index
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >0050.powx-n</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="50-powxn">50. Pow(x,n)</h1>
+<p>Implement <code>pow(x, n)</code>, which calculates x raised to the power n (xn).</p>
+<h2 id="example">Example</h2>
+<pre class="language-"><code class="lang-bash">Input: 2.00000, 10
+Output: 1024.00000
+</code></pre>
+<pre class="language-"><code class="lang-bash">Input: 2.10000, 3
+Output: 9.26100
+</code></pre>
+<pre class="language-"><code class="lang-bash">Input: 2.00000, -2
+Output: 0.25000
+Explanation: 2-2 <span class="token operator">=</span> 1/22 <span class="token operator">=</span> 1/4 <span class="token operator">=</span> 0.25
+</code></pre>
+<h2 id="note">Note</h2>
+<ul>
+<li>-100.0 &lt; x &lt; 100.0</li>
+<li>n is a 32-bit signed integer, within the range [&#x2212;231, 231 &#x2212; 1]</li>
+</ul>
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+<li>Math</li>
+<li>Binary Search</li>
+</ul>
+<h2 id="submissions">Submissions</h2>
+<h3 id="i-mathpow">I: Math.pow</h3>
+<p>&#x8FD9;&#x91CC;&#x5077;&#x61D2;&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x4E86;&#x5168;&#x5C40;&#x5BF9;&#x8C61; Math &#x9759;&#x6001;&#x65B9;&#x6CD5;&#xFF0C;Math#pow</p>
+<ul>
+<li>Time: 2019.04.19 10:39</li>
+<li>Status: Acceted</li>
+<li>Runtime: 76 ms &gt; 42.42%</li>
+<li>Memory: 34.2 MB &lt; 13.79%</li>
+</ul>
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">var</span> <span class="token function-variable function">myPow</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">number</span></span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token builtin">number</span> <span class="token operator">|</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="top-ranked">Top Ranked</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../0017.letter-combinations-of-a-phone-number/" class="navigation navigation-prev " aria-label="Previous page: 0017.letter-combinations-of-a-phone-number">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../0074.search-a-2d-matrix/" class="navigation navigation-next " aria-label="Next page: 0074.search-a-2d-matrix">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"0050.powx-n","level":"1.8","depth":1,"next":{"title":"0074.search-a-2d-matrix","level":"1.9","depth":1,"path":"algorithms/0074.search-a-2d-matrix/README.md","ref":"algorithms/0074.search-a-2d-matrix/README.md","articles":[]},"previous":{"title":"0017.letter-combinations-of-a-phone-number","level":"1.7","depth":1,"path":"algorithms/0017.letter-combinations-of-a-phone-number/README.md","ref":"algorithms/0017.letter-combinations-of-a-phone-number/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-name","-sharing","-lunr","-search","search-plus","splitter","github-buttons","-highlight","prism","prism-themes","3-ba"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"serif","size":2},"github-buttons":{"buttons":[{"user":"guocaoyi","repo":"leetcode-ts","type":"star","size":"smal","count":true}]},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"3-ba":{"configuration":"auto","token":"8b86dbbab489aa49fb5fb7885a8953cc"},"search-plus":{},"splitter":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"yalda","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LeetCode for TypeScript","gitbook":"*","description":"LeetCode problems' solutions with TypeScript"},"file":{"path":"algorithms/0050.powx-n/README.md","mtime":"2019-04-19T12:05:03.199Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-24T09:08:37.994Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

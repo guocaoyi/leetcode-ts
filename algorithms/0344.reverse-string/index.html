@@ -1,0 +1,472 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>0344.reverse-string · LeetCode for TypeScript</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yalda">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../assets/css/website.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../0724.find-pivot-index/" />
+    
+    
+    <link rel="prev" href="../0240.search-a-2d-matrix-ii/" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"guocaoyi","repo":"leetcode-ts","type":"star","size":"smal","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../TOPICS.html">
+            
+                <a href="../../TOPICS.html">
+            
+                    
+                    Topics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0001.two-sum/">
+            
+                <a href="../0001.two-sum/">
+            
+                    
+                    0001.two-sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0003.longest-substring-without-repeating-characters/">
+            
+                <a href="../0003.longest-substring-without-repeating-characters/">
+            
+                    
+                    0003.longest-substring-without-repeating-characters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../0004.median-of-two-sorted-arrays/">
+            
+                <a href="../0004.median-of-two-sorted-arrays/">
+            
+                    
+                    0004.median-of-two-sorted-arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../0014.longest-common-prefix/">
+            
+                <a href="../0014.longest-common-prefix/">
+            
+                    
+                    0014.longest-common-prefix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../0017.letter-combinations-of-a-phone-number/">
+            
+                <a href="../0017.letter-combinations-of-a-phone-number/">
+            
+                    
+                    0017.letter-combinations-of-a-phone-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../0050.powx-n/">
+            
+                <a href="../0050.powx-n/">
+            
+                    
+                    0050.powx-n
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../0074.search-a-2d-matrix/">
+            
+                <a href="../0074.search-a-2d-matrix/">
+            
+                    
+                    0074.search-a-2d-matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../0136.single-number/">
+            
+                <a href="../0136.single-number/">
+            
+                    
+                    0136.single-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../0169.majority-element/">
+            
+                <a href="../0169.majority-element/">
+            
+                    
+                    0169.majority-element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../0202.happy-number/">
+            
+                <a href="../0202.happy-number/">
+            
+                    
+                    0202.happy-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../0240.search-a-2d-matrix-ii/">
+            
+                <a href="../0240.search-a-2d-matrix-ii/">
+            
+                    
+                    0240.search-a-2d-matrix-ii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    0344.reverse-string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../0724.find-pivot-index/">
+            
+                <a href="../0724.find-pivot-index/">
+            
+                    
+                    0724.find-pivot-index
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >0344.reverse-string</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="344-reverse-string">344. Reverse String</h1>
+<p>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.</p>
+<p>Formally the function should:</p>
+<blockquote>
+<p>Return true if there exists i, j, k</p>
+<p>such that arr[i] &lt; arr[j] &lt; arr[k] given 0 &#x2264; i &lt; j &lt; k &#x2264; n-1 else return false.</p>
+</blockquote>
+<h2 id="note">Note</h2>
+<p>Your algorithm should run in O(n) time complexity and O(1) space complexity.</p>
+<h3 id="example">Example</h3>
+<pre class="language-"><code class="lang-bash">Input: <span class="token punctuation">[</span>1,2,3,4,5<span class="token punctuation">]</span>
+Output: <span class="token boolean">true</span>
+</code></pre>
+<pre class="language-"><code class="lang-bash">Input: <span class="token punctuation">[</span>5,4,3,2,1<span class="token punctuation">]</span>
+Output: <span class="token boolean">false</span>
+</code></pre>
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+<li>Binary Search</li>
+<li>Dynamic Programming</li>
+</ul>
+<h2 id="thinking">Thinking</h2>
+<p>&#x6A21;&#x62DF; Array.reverse() &#x7684;&#x5B9E;&#x73B0;&#xFF1B;&#x5728;</p>
+<ul>
+<li>&#x4E0D;&#x5F97;&#x4F7F;&#x7528;&#x5206;&#x914D;&#x989D;&#x5916;&#x7684;&#x7A7A;&#x95F4;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F; O(1) &#x7684;</li>
+<li>in-place algorithms</li>
+</ul>
+<h2 id="submissions">Submissions</h2>
+<h3 id="i-arrayprototypereverse">I: Array.prototype.reverse</h3>
+<p>&#x7531;&#x4E8E; Array &#x5BF9;&#x8C61;&#x5185;&#x7F6E;&#x4E86; reverse &#x51FD;&#x6570;&#xFF0C;&#x5148;&#x91C7;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x770B;&#x770B;&#x6548;&#x7387;&#x3002;&#x7136;&#x540E;&#x81EA;&#x884C;&#x5B9E;&#x73B0; reverse</p>
+<ul>
+<li>Status: Accepted</li>
+</ul>
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">var</span> reverseString <span class="token operator">=</span> <span class="token punctuation">(</span>s<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token parameter"><span class="token keyword">void</span></span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  s<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="ii-o1-extra-memory-&#x8FEB;&#x4F7F;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x989D;&#x5916;&#x7684;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x7F13;&#x5B58;&#xFF1B;">II: O(1) extra memory &#x8FEB;&#x4F7F;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x989D;&#x5916;&#x7684;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x7F13;&#x5B58;&#xFF1B;</h3>
+<ul>
+<li>Time: 2019.03</li>
+<li>Status: Wrong Answer</li>
+<li>Input: : <code>Input: [&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;] Output: [&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;] Expected: [&quot;o&quot;,&quot;l&quot;,&quot;l&quot;,&quot;e&quot;,&quot;h&quot;]</code></li>
+</ul>
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">var</span> reverseString <span class="token operator">=</span> <span class="token punctuation">(</span>s<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token parameter"><span class="token keyword">void</span></span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> arr<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> s<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  s <span class="token operator">=</span> arr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="top-ranked">Top Ranked</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../0240.search-a-2d-matrix-ii/" class="navigation navigation-prev " aria-label="Previous page: 0240.search-a-2d-matrix-ii">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../0724.find-pivot-index/" class="navigation navigation-next " aria-label="Next page: 0724.find-pivot-index">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"0344.reverse-string","level":"1.14","depth":1,"next":{"title":"0724.find-pivot-index","level":"1.15","depth":1,"path":"algorithms/0724.find-pivot-index/README.md","ref":"algorithms/0724.find-pivot-index/README.md","articles":[]},"previous":{"title":"0240.search-a-2d-matrix-ii","level":"1.13","depth":1,"path":"algorithms/0240.search-a-2d-matrix-ii/README.md","ref":"algorithms/0240.search-a-2d-matrix-ii/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-name","-sharing","-lunr","-search","search-plus","splitter","github-buttons","-highlight","prism","prism-themes","3-ba"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"serif","size":2},"github-buttons":{"buttons":[{"user":"guocaoyi","repo":"leetcode-ts","type":"star","size":"smal","count":true}]},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"3-ba":{"configuration":"auto","token":"8b86dbbab489aa49fb5fb7885a8953cc"},"search-plus":{},"splitter":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"yalda","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LeetCode for TypeScript","gitbook":"*","description":"LeetCode problems' solutions with TypeScript"},"file":{"path":"algorithms/0344.reverse-string/README.md","mtime":"2019-04-19T12:05:03.207Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-24T09:08:37.994Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

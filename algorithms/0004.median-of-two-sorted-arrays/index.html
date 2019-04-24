@@ -1,0 +1,490 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>0004.median-of-two-sorted-arrays · LeetCode for TypeScript</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yalda">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../assets/css/website.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../0014.longest-common-prefix/" />
+    
+    
+    <link rel="prev" href="../0003.longest-substring-without-repeating-characters/" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"guocaoyi","repo":"leetcode-ts","type":"star","size":"smal","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../TOPICS.html">
+            
+                <a href="../../TOPICS.html">
+            
+                    
+                    Topics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0001.two-sum/">
+            
+                <a href="../0001.two-sum/">
+            
+                    
+                    0001.two-sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0003.longest-substring-without-repeating-characters/">
+            
+                <a href="../0003.longest-substring-without-repeating-characters/">
+            
+                    
+                    0003.longest-substring-without-repeating-characters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    0004.median-of-two-sorted-arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../0014.longest-common-prefix/">
+            
+                <a href="../0014.longest-common-prefix/">
+            
+                    
+                    0014.longest-common-prefix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../0017.letter-combinations-of-a-phone-number/">
+            
+                <a href="../0017.letter-combinations-of-a-phone-number/">
+            
+                    
+                    0017.letter-combinations-of-a-phone-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../0050.powx-n/">
+            
+                <a href="../0050.powx-n/">
+            
+                    
+                    0050.powx-n
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../0074.search-a-2d-matrix/">
+            
+                <a href="../0074.search-a-2d-matrix/">
+            
+                    
+                    0074.search-a-2d-matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../0136.single-number/">
+            
+                <a href="../0136.single-number/">
+            
+                    
+                    0136.single-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../0169.majority-element/">
+            
+                <a href="../0169.majority-element/">
+            
+                    
+                    0169.majority-element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../0202.happy-number/">
+            
+                <a href="../0202.happy-number/">
+            
+                    
+                    0202.happy-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../0240.search-a-2d-matrix-ii/">
+            
+                <a href="../0240.search-a-2d-matrix-ii/">
+            
+                    
+                    0240.search-a-2d-matrix-ii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../0344.reverse-string/">
+            
+                <a href="../0344.reverse-string/">
+            
+                    
+                    0344.reverse-string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../0724.find-pivot-index/">
+            
+                <a href="../0724.find-pivot-index/">
+            
+                    
+                    0724.find-pivot-index
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >0004.median-of-two-sorted-arrays</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="4-median-of-tow-sorted-arrays">4. Median of Tow Sorted Arrays</h1>
+<p>There are two sorted arrays <strong>nums1</strong> and <strong>nums2</strong> of size m and n respectively.</p>
+<p>Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).</p>
+<p>You may assume <strong>nums1</strong> and <strong>nums2</strong> cannot be both empty.</p>
+<h2 id="example">Example</h2>
+<pre class="language-"><code class="lang-bash">nums1 <span class="token operator">=</span> <span class="token punctuation">[</span>1, 3<span class="token punctuation">]</span>
+nums2 <span class="token operator">=</span> <span class="token punctuation">[</span>2<span class="token punctuation">]</span>
+
+The median is 2.0
+</code></pre>
+<pre class="language-"><code class="lang-bash">nums1 <span class="token operator">=</span> <span class="token punctuation">[</span>1, 2<span class="token punctuation">]</span>
+nums2 <span class="token operator">=</span> <span class="token punctuation">[</span>3, 4<span class="token punctuation">]</span>
+
+The median is <span class="token punctuation">(</span>2 + 3<span class="token punctuation">)</span>/2 <span class="token operator">=</span> 2.5
+</code></pre>
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+<li>Array</li>
+<li>Binary Search</li>
+<li>Divide and Conquer</li>
+</ul>
+<h2 id="submissions">Submissions</h2>
+<h3 id="i-&#x9012;&#x5F52;">I: &#x9012;&#x5F52;</h3>
+<ul>
+<li>Time: 2019.1.4</li>
+<li>Status: Accepted</li>
+<li>Runtime: 168ms | 19.48%</li>
+<li>Memory: 15.8MB |</li>
+</ul>
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">var</span> findMedianSortedArrays <span class="token operator">=</span> <span class="token punctuation">(</span>nums1<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> nums2<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token parameter"><span class="token builtin">number</span></span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> findKth <span class="token operator">=</span> <span class="token punctuation">(</span>nums1<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> nums2<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> k<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token parameter"><span class="token builtin">number</span></span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> m<span class="token punctuation">:</span> <span class="token builtin">number</span> <span class="token operator">=</span> nums1<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">var</span> n<span class="token punctuation">:</span> <span class="token builtin">number</span> <span class="token operator">=</span> nums2<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>m <span class="token operator">&gt;</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token function">findKth</span><span class="token punctuation">(</span>nums2<span class="token punctuation">,</span> nums1<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>m <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> nums2<span class="token punctuation">[</span>k <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>nums1<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> nums2<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">var</span> pa <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>k <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> m <span class="token operator">?</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>k <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> m<span class="token punctuation">;</span>
+    <span class="token keyword">var</span> pb <span class="token operator">=</span> k <span class="token operator">-</span> pa<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>nums1<span class="token punctuation">[</span>pa <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> nums2<span class="token punctuation">[</span>pb <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> t1 <span class="token operator">=</span> nums1<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>pa<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token function">findKth</span><span class="token punctuation">(</span>t1<span class="token punctuation">,</span> nums2<span class="token punctuation">,</span> k <span class="token operator">-</span> pa<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums1<span class="token punctuation">[</span>pa <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">&gt;</span> nums2<span class="token punctuation">[</span>pb <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> t2 <span class="token operator">=</span> nums2<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>pb<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">//nums2.splice(0,pb);</span>
+      <span class="token keyword">return</span> <span class="token function">findKth</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> t2<span class="token punctuation">,</span> k <span class="token operator">-</span> pb<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> nums1<span class="token punctuation">[</span>pa <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">var</span> m <span class="token operator">=</span> nums1<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+  <span class="token keyword">var</span> n <span class="token operator">=</span> nums2<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+  <span class="token keyword">var</span> tol <span class="token operator">=</span> m <span class="token operator">+</span> n<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>tol <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">-</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>tol <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0.1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">findKth</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> nums2<span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>tol <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token punctuation">(</span><span class="token function">findKth</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> nums2<span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>tol <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span>
+        <span class="token function">findKth</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> nums2<span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>tol <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span>
+      <span class="token number">2</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="top-ranked">Top Ranked</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../0003.longest-substring-without-repeating-characters/" class="navigation navigation-prev " aria-label="Previous page: 0003.longest-substring-without-repeating-characters">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../0014.longest-common-prefix/" class="navigation navigation-next " aria-label="Next page: 0014.longest-common-prefix">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"0004.median-of-two-sorted-arrays","level":"1.5","depth":1,"next":{"title":"0014.longest-common-prefix","level":"1.6","depth":1,"path":"algorithms/0014.longest-common-prefix/README.md","ref":"algorithms/0014.longest-common-prefix/README.md","articles":[]},"previous":{"title":"0003.longest-substring-without-repeating-characters","level":"1.4","depth":1,"path":"algorithms/0003.longest-substring-without-repeating-characters/README.md","ref":"algorithms/0003.longest-substring-without-repeating-characters/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-name","-sharing","-lunr","-search","search-plus","splitter","github-buttons","-highlight","prism","prism-themes","3-ba"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"serif","size":2},"github-buttons":{"buttons":[{"user":"guocaoyi","repo":"leetcode-ts","type":"star","size":"smal","count":true}]},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"3-ba":{"configuration":"auto","token":"8b86dbbab489aa49fb5fb7885a8953cc"},"search-plus":{},"splitter":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"yalda","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LeetCode for TypeScript","gitbook":"*","description":"LeetCode problems' solutions with TypeScript"},"file":{"path":"algorithms/0004.median-of-two-sorted-arrays/README.md","mtime":"2019-04-19T12:05:03.196Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-24T09:08:37.994Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,54 @@
+{
+  "0001": [
+    "Two Sum",
+    "easy"
+  ],
+  "0003": [
+    "Longest Substring Without Repeating Characters",
+    "easy"
+  ],
+  "0004": [
+    "Median of Tow Sorted Arrays",
+    "easy"
+  ],
+  "0014": [
+    "Longest Common Prefix",
+    "easy"
+  ],
+  "0017": [
+    "Letter Combinations of a Phone Number",
+    "easy"
+  ],
+  "0050": [
+    "Pow(x,n)",
+    "easy"
+  ],
+  "0074": [
+    "Search a 2D Matrix",
+    "easy"
+  ],
+  "0136": [
+    "Single Number",
+    "easy"
+  ],
+  "0169": [
+    "Majority Element",
+    "easy"
+  ],
+  "0202": [
+    "Happy Number",
+    "easy"
+  ],
+  "0240": [
+    "Search a 2D Matrix II",
+    "easy"
+  ],
+  "0344": [
+    "Reverse String",
+    "easy"
+  ],
+  "0724": [
+    "Find Pivot Index",
+    "easy"
+  ]
+}

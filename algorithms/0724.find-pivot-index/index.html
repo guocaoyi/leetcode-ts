@@ -1,0 +1,485 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>0724.find-pivot-index · LeetCode for TypeScript</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yalda">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../assets/css/website.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../0344.reverse-string/" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"guocaoyi","repo":"leetcode-ts","type":"star","size":"smal","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../TOPICS.html">
+            
+                <a href="../../TOPICS.html">
+            
+                    
+                    Topics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0001.two-sum/">
+            
+                <a href="../0001.two-sum/">
+            
+                    
+                    0001.two-sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0003.longest-substring-without-repeating-characters/">
+            
+                <a href="../0003.longest-substring-without-repeating-characters/">
+            
+                    
+                    0003.longest-substring-without-repeating-characters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../0004.median-of-two-sorted-arrays/">
+            
+                <a href="../0004.median-of-two-sorted-arrays/">
+            
+                    
+                    0004.median-of-two-sorted-arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../0014.longest-common-prefix/">
+            
+                <a href="../0014.longest-common-prefix/">
+            
+                    
+                    0014.longest-common-prefix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../0017.letter-combinations-of-a-phone-number/">
+            
+                <a href="../0017.letter-combinations-of-a-phone-number/">
+            
+                    
+                    0017.letter-combinations-of-a-phone-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../0050.powx-n/">
+            
+                <a href="../0050.powx-n/">
+            
+                    
+                    0050.powx-n
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../0074.search-a-2d-matrix/">
+            
+                <a href="../0074.search-a-2d-matrix/">
+            
+                    
+                    0074.search-a-2d-matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../0136.single-number/">
+            
+                <a href="../0136.single-number/">
+            
+                    
+                    0136.single-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../0169.majority-element/">
+            
+                <a href="../0169.majority-element/">
+            
+                    
+                    0169.majority-element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../0202.happy-number/">
+            
+                <a href="../0202.happy-number/">
+            
+                    
+                    0202.happy-number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../0240.search-a-2d-matrix-ii/">
+            
+                <a href="../0240.search-a-2d-matrix-ii/">
+            
+                    
+                    0240.search-a-2d-matrix-ii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../0344.reverse-string/">
+            
+                <a href="../0344.reverse-string/">
+            
+                    
+                    0344.reverse-string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    0724.find-pivot-index
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >0724.find-pivot-index</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="724-find-pivot-index">724. Find Pivot Index</h1>
+<p>Given an array of integers <code>nums</code>, write a method that returns the &quot;pivot&quot; index of this array.</p>
+<p>We define the pivot index as the index where the sum of the numbers to the left of the index is equal to the sum of the numbers to the right of the index.</p>
+<p>If no such index exists, we should return -1. If there are multiple pivot indexes, you should return the left-most pivot index.</p>
+<h2 id="example">Example</h2>
+<pre class="language-"><code class="lang-bash">Input:
+nums <span class="token operator">=</span> <span class="token punctuation">[</span>1, 7, 3, 6, 5, 6<span class="token punctuation">]</span>
+Output: 3
+Explanation:
+The <span class="token function">sum</span> of the numbers to the left of index 3 <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>3<span class="token punctuation">]</span> <span class="token operator">=</span> 6<span class="token punctuation">)</span> is equal to the <span class="token function">sum</span> of numbers to the right of index 3.
+Also, 3 is the first index where this occurs.
+</code></pre>
+<pre class="language-"><code class="lang-bash">Input:
+nums <span class="token operator">=</span> <span class="token punctuation">[</span>1, 2, 3<span class="token punctuation">]</span>
+Output: -1
+Explanation:
+There is no index that satisfies the conditions <span class="token keyword">in</span> the problem statement.
+</code></pre>
+<h2 id="note">Note</h2>
+<ul>
+<li>The length of <code>nums</code> will be in the range <code>[0, 10000]</code>.</li>
+<li>Each element <code>nums[i]</code> will be an integer in the range <code>[-1000, 1000]</code>.</li>
+</ul>
+<h2 id="related-tips">Related Tips</h2>
+<ul>
+<li>Array</li>
+</ul>
+<h2 id="submissions">Submissions</h2>
+<h3 id="i-">I: **</h3>
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">var</span> pivotIndex <span class="token operator">=</span> <span class="token punctuation">(</span>nums<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token parameter"><span class="token builtin">number</span></span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// nums.length &gt;= 3,&#x5426;&#x5219;&#x8FD4;&#x56DE;0</span>
+
+  <span class="token comment">// initial</span>
+  <span class="token keyword">let</span> lPointer <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// &#x5DE6;&#x6807;</span>
+  <span class="token keyword">let</span> lSum <span class="token operator">=</span> nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// &#x5DE6;&#x548C;</span>
+  <span class="token keyword">let</span> rPointer <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment">// &#x53F3;&#x6807;</span>
+  <span class="token keyword">let</span> rSum <span class="token operator">=</span> nums<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// &#x53F3;&#x548C;</span>
+
+  <span class="token comment">// step1&#xFF1A;&#x5DE6;&#x548C;&lt;&#x53F3;&#x548C;</span>
+  <span class="token comment">//    step1-0&#xFF1A;&#x5DE6;&#x6807;&#x904D;&#x5386;&#xFF0C;&#x5DE6;&#x548C;+&#x5DE6;&#x6807;&#x503C;&#xFF0C;&#x53F3;&#x548C;-&#x5DE6;&#x6807;&#x503C;</span>
+  <span class="token comment">// step2&#xFF1A;&#x5DE6;&#x548C;=&#x53F3;&#x548C;</span>
+  <span class="token comment">//    step2-0&#xFF1A;&#x53F3;&#x6807;&#x8FBE;&#x5230;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#xFF0C;return -1</span>
+  <span class="token comment">//    step2-1&#xFF1A;&#x53F3;&#x6807;&#x672A;&#x8FBE;&#x5230;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#xFF0C;&#x5DE6;&#x6807;&#x904D;&#x5386;&#xFF0C;&#x5DE6;&#x548C;+&#x5DE6;&#x6807;&#x503C;&#xFF0C;&#x53F3;&#x548C;-&#x5DE6;&#x6807;&#x503C;</span>
+  <span class="token comment">// step3&#xFF1A;&#x5DE6;&#x548C;&gt;&#x53F3;&#x548C;</span>
+  <span class="token comment">//    step3-0&#xFF1A;&#x53F3;&#x6807;&#x8FBE;&#x5230;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#xFF1B;return -1</span>
+  <span class="token comment">//    step3-1&#xFF1A;&#x53F3;&#x6807;&#x672A;&#x8FBE;&#x5230;&#x6570;&#x7EC4;&#x957F;&#x5EA6;,&#x53F3;&#x6807;&#x7EE7;&#x7EED;&#x904D;&#x5386;</span>
+  <span class="token keyword">return</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="ii-">II: **</h3>
+<pre class="language-"><code class="lang-typescript"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">pivotIndex2</span><span class="token punctuation">(</span><span class="token parameter">nums<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token builtin">number</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> _len <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+  <span class="token keyword">let</span> lSum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// &#x5DE6;&#x548C;</span>
+  <span class="token keyword">let</span> rSum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// &#x53F3;&#x548C;</span>
+  nums<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">n</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>rSum <span class="token operator">+=</span> n<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>_len <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> _len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>lSum <span class="token operator">===</span> rSum <span class="token operator">&amp;&amp;</span> i <span class="token operator">==</span> _len <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> i<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> _len <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      lSum <span class="token operator">+=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      rSum <span class="token operator">-=</span> nums<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="top-ranked">Top Ranked</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../0344.reverse-string/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 0344.reverse-string">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"0724.find-pivot-index","level":"1.15","depth":1,"previous":{"title":"0344.reverse-string","level":"1.14","depth":1,"path":"algorithms/0344.reverse-string/README.md","ref":"algorithms/0344.reverse-string/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-name","-sharing","-lunr","-search","search-plus","splitter","github-buttons","-highlight","prism","prism-themes","3-ba"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"serif","size":2},"github-buttons":{"buttons":[{"user":"guocaoyi","repo":"leetcode-ts","type":"star","size":"smal","count":true}]},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"3-ba":{"configuration":"auto","token":"8b86dbbab489aa49fb5fb7885a8953cc"},"search-plus":{},"splitter":{},"prism-themes":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"yalda","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LeetCode for TypeScript","gitbook":"*","description":"LeetCode problems' solutions with TypeScript"},"file":{"path":"algorithms/0724.find-pivot-index/README.md","mtime":"2019-04-19T12:05:03.208Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-24T09:08:37.994Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
