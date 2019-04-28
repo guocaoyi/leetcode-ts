@@ -26,7 +26,7 @@ var pivotIndex = (nums: number[]): number => {
 /**
  *
  */
-export function pivotIndex2(nums: number[]): number {
+var pivotIndex = (nums: number[]): number => {
   const _len = nums.length;
   let lSum = 0; // 左和
   let rSum = 0; // 右和
@@ -45,4 +45,4 @@ export function pivotIndex2(nums: number[]): number {
     }
     return -1;
   }
-}
+};

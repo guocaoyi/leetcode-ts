@@ -4,7 +4,7 @@
  * @status Time Limit Exceeded
  */
 var longestCommonPrefix = (strs: string[]): string => {
-  let prefix: string = "";
+  let prefix: string = '';
   if (strs && strs.length > 0) {
     let point = 1;
     while (true) {
@@ -17,7 +17,7 @@ var longestCommonPrefix = (strs: string[]): string => {
       point++;
     }
   } else {
-    return "";
+    return '';
   }
 };
 
@@ -28,7 +28,7 @@ var longestCommonPrefix = (strs: string[]): string => {
  * @params `["",""]`
  */
 var longestCommonPrefix = (strs: string[]): string => {
-  let prefix: string = "";
+  let prefix: string = '';
   if (strs.length == 1) {
     return strs[0];
   } else if (strs.length > 1) {
@@ -43,7 +43,7 @@ var longestCommonPrefix = (strs: string[]): string => {
       point++;
     }
   } else {
-    return "";
+    return '';
   }
 };
 
@@ -64,12 +64,12 @@ var longestCommonPrefix = (strs: string[]): string => {
         // 不存在前缀子串
         prefix = prefix.slice(0, prefix.length - 1);
         if (prefix.length == 0) {
-          return "";
+          return '';
         }
       }
     }
     return prefix;
   } else {
-    return "";
+    return '';
   }
 };

@@ -31,7 +31,7 @@ All given inputs are in lowercase letters a-z.
 
 刚拿到这题没有细想，认为这题比较简单；直接使用循环遍历的方式一遍一遍顺序访问数组。当子字符串不相等时 Break，结果却超时了。简单了分析了原因在长数组的情况下，过多的进行了顺序访问，实践复杂度为 O(k\*n)。便放弃广度优先，改为深读优先。后面发现，是长度为 1 的数组进入了死循环。
 
-- Status: Time Limit Exceeded
+- Status: <span class='alert-error'>Time Limit Exceeded</span>
 
 ```typescript
 var longestCommonPrefix = (strs: string[]): string => {
@@ -87,7 +87,7 @@ var longestCommonPrefix = (strs: string[]): string => {
 使用 `strs[0]` 作为初始前缀串，逐一遍历 `strs[]` 元素进行比较，如 `String.indexOf !== 0` 则自减长度 1，直至成立后继续访问后面的元素。
 
 - Time: 2019.03.26
-- Status: Accepted
+- Status: <span class="alert-suc">Accepted</span>
 - Runtime: 60ms | 97.88%
 - Memory: 33.8MB | 86.74%
 
@@ -113,4 +113,3 @@ var longestCommonPrefix = (strs: string[]): string => {
 ```
 
 ## Top Ranked
-

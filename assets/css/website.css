@@ -33,3 +33,13 @@ span[class="dif-tag hard"] {
 span[class="dif-tag medium"] {
   background-color: #f0ad4e;
 }
+
+.alert-success {
+  font-weight: bold;
+  color: #5cb85c;
+}
+
+.alert-error {
+  font-weight: bold;
+  color: #d9534f;
+}

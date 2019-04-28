@@ -3,12 +3,12 @@ import * as fs from "fs";
 import * as path from "path";
 
 export class Annotation {
-  public other?: boolean; // 排名靠前的提交记录
   public time?: string; // 提交时间
   public status: boolean; // 提交状态
   public runtime?: string; // 运行时情况
   public memory?: string; // 内存占用情况
-  public log?: string; // 测试用例
+  public case?: string; // 测试用例
+  public top?: boolean; // 排名靠前的提交记录
 }
 
 export class Info extends Annotation {
@@ -51,11 +51,10 @@ export class Parser {
    * 递归遍历 AST
    */
   private parseSourse(node: ts.SourceFile) {
-    const _this = this;
     const syntax: ts.Node = node
       .getChildren()
       .find((n: ts.Node) => ts.formatSyntaxKind(n.kind) == "SyntaxList");
-    _this.parseSyntax(syntax);
+    this.parseSyntax(syntax);
   }
 
   /**
@@ -104,14 +103,9 @@ export class Parser {
 
 // 0050. Pow(x, n) Title
 // 0050.powx-n 文件夹名，链接跳转
-"50.Pow(x, n)".toLowerCase().replace(/^\(|\)$/g, m => "");
-"1. Tow Num".replace(/(\d{0,4})\.(\s[A-Za-z]+)/g, "$2").trim();
-"5. Longest Palindromic Substring"
+"50.Pow(x, n)"
   .replace(/(\d{0,4})\.(\s[A-Za-z]+)/g, "$2")
   .trim()
   .toLowerCase()
-  .replace(/\s/g, "-")
-  // .replace(/([(|)|,])/g, "")
-  .replace(/(\()/g, "")
-  .replace(/(\))/g, "")
-  .replace(/(\,)/g, "");
+  .replace(/([(|)|,])/g, "")
+  .replace(/\s/g, "-");

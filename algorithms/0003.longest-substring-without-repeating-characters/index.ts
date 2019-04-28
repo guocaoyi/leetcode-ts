@@ -4,10 +4,10 @@
  * @input `"unpvlhkldvfzvzwdfhojkyczxydauiioxzlkhvvmqamnakrfrhqefsddqifmqocpnoawlvjcyxpyhifbqxhxpkchuivky"`
  */
 var lengthOfLongestSubstring = (s: string): number => {
-  let maxSub = "",
-    currentSub = "";
+  let maxSub = '',
+    currentSub = '';
 
-  const arr: string[] = s.split("");
+  const arr: string[] = s.split('');
   arr.forEach((s: string) => {
     if (currentSub.includes(s)) {
       // 存在
@@ -15,7 +15,7 @@ var lengthOfLongestSubstring = (s: string): number => {
         maxSub = currentSub;
       }
       let [lStr, rStr] = currentSub.split(s);
-      currentSub = rStr || "";
+      currentSub = rStr || '';
       currentSub += s;
     } else {
       // 不存在
@@ -35,10 +35,10 @@ var lengthOfLongestSubstring = (s: string): number => {
  * @runtime 116ms | 55.08%
  */
 var lengthOfLongestSubstring = (s: string): number => {
-  let maxSub: string = "",
-    currentSub: string = "";
+  let maxSub: string = '',
+    currentSub: string = '';
 
-  const arr: string[] = s.split("");
+  const arr: string[] = s.split('');
   arr.forEach((s: string) => {
     if (currentSub.includes(s)) {
       // 存在
@@ -46,7 +46,7 @@ var lengthOfLongestSubstring = (s: string): number => {
         maxSub = currentSub;
       }
       let [lStr, rStr] = currentSub.split(s);
-      currentSub = rStr || "";
+      currentSub = rStr || '';
       currentSub += s;
     } else {
       // 不存在

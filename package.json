@@ -29,6 +29,7 @@
   "devDependencies": {
     "@types/node": "^11.12.1",
     "cz-conventional-changelog": "^2.1.0",
+    "deploy-git": "0.0.3",
     "ts-node": "^8.0.3",
     "typescript": "^3.3.3"
   },
@@ -36,5 +37,11 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "deploy": {
+    "type": "git",
+    "repo": "https://github.com/guocaoyi/leetcode-ts",
+    "branch": "gh-pages",
+    "dir": "_book"
   }
 }
