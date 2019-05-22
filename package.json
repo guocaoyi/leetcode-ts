@@ -18,7 +18,7 @@
   "scripts": {
     "clean": "",
     "create": "",
-    "watch": "",
+    "watch": "tsc -w ./algorithms/0015.3sum/index.ts",
     "doc": "",
     "index": "",
     "deploy": ""

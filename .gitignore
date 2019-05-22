@@ -3,6 +3,7 @@
 .deploy_git
 _book
 node_modules
+.idea
 
 ## files
 **/*.js
