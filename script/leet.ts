@@ -1,22 +1,22 @@
-import * as fs from "fs";
-import * as path from "path";
-import { Parser } from "./parser";
-import { Mark } from "./mark";
+import * as fs from 'fs';
+import * as path from 'path';
+import { Parser } from './parser';
+import { Mark } from './mark';
 
 const filePaths = [
-  "./algorithms/0001.two-sum",
-  "./algorithms/0003.longest-substring-without-repeating-characters",
-  "./algorithms/0004.median-of-two-sorted-arrays",
-  "./algorithms/0014.longest-common-prefix",
-  "./algorithms/0017.letter-combinations-of-a-phone-number",
-  "./algorithms/0050.powx-n",
-  "./algorithms/0074.search-a-2d-matrix",
-  "./algorithms/0136.single-number",
-  "./algorithms/0169.majority-element",
-  "./algorithms/0202.happy-number",
-  "./algorithms/0240.search-a-2d-matrix-ii",
-  "./algorithms/0344.reverse-string",
-  "./algorithms/0724.find-pivot-index"
+  './algorithms/0001.two-sum',
+  './algorithms/0003.longest-substring-without-repeating-characters',
+  './algorithms/0004.median-of-two-sorted-arrays',
+  './algorithms/0014.longest-common-prefix',
+  './algorithms/0017.letter-combinations-of-a-phone-number',
+  './algorithms/0050.powx-n',
+  './algorithms/0074.search-a-2d-matrix',
+  './algorithms/0136.single-number',
+  './algorithms/0169.majority-element',
+  './algorithms/0202.happy-number',
+  './algorithms/0240.search-a-2d-matrix-ii',
+  './algorithms/0344.reverse-string',
+  './algorithms/0724.find-pivot-index'
 ];
 
 // 1:保障 github 上的浏览正常
@@ -24,9 +24,9 @@ const filePaths = [
 
 export class Leet {
   private readonly tempCode: string =
-    "/**\n *\n * @time\n * @status\n * @runtime\n * @memory\n */\nvar subm = (target: any): any => {};\n";
+    '/**\n *\n * @time\n * @status\n * @runtime\n * @memory\n */\nvar subm = (target: any): any => {};\n';
   private readonly draftCode: string =
-    "/**\n * @author yalda\n * @github github.com/guocaoyi\n * @website www.yalda.cn\n */\nvar subm = (target: any): any => {};\n";
+    '/**\n * @author yalda\n * @github github.com/guocaoyi\n * @website www.yalda.cn\n */\nvar subm = (target: any): any => {};\n';
 
   /**
    * leet create 0724. Find Pivot Indexs
@@ -48,7 +48,8 @@ export class Leet {
    * leet doc 0001 | all
    */
   doc(filePath: string) {
-    new Mark()
+    let mark = new Mark();
+    mark
       .load({ filePath })
       .print(new Parser().load({ filePath }).getSourse)
       .write();
@@ -58,17 +59,20 @@ export class Leet {
    * leet index 制作索引
    */
   summary(): any {
-    fs.writeFileSync("", "", { encoding: "utf8" });
+    fs.writeFileSync('', '', { encoding: 'utf8' });
   }
 
   /**
    * leet deploy 发布
    */
-  deploy() {}
+  deploy() {
+    console.info(':====>');
+  }
 }
 
 filePaths.forEach((filePath: string) => {
-  new Mark()
+  let mark = new Mark();
+  mark
     .load({ filePath })
     .print(new Parser().load({ filePath }).getSourse)
     .write();
