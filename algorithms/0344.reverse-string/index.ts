@@ -6,8 +6,8 @@
  * @runtime
  * @memory
  */
-var reverseString = (s: string[]): void => {
-  s.reverse();
+export const reverseString = (s: string[]): string[] => {
+  return s.reverse();
 };
 
 /**
@@ -16,7 +16,7 @@ var reverseString = (s: string[]): void => {
  * @status Wrong Answer
  * @params `Input: ["h","e","l","l","o"] Output: ["h","e","l","l","o"] Expected: ["o","l","l","e","h"]`
  */
-var reverseString = (s: string[]): void => {
+export const reverseString2 = (s: string[]): void => {
   let arr: string[] = [];
   for (let i = s.length; i > 0; i--) {
     arr.push(s[i - 1]);
