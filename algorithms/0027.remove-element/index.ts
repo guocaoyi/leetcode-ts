@@ -1,5 +1,3 @@
-import { S_IFBLK } from 'constants';
-
 /**
  * 逻辑没有考虑完备，导致很多测试用力无法通过
  * @state Error
@@ -22,30 +20,18 @@ export const removeElement1 = (nums: number[], val: number): number => {
 };
 
 /**
+ * 尾部判定
  * @state Accepted
- * @runtime
- * @memory
+ * @runtime 112ms > 28.81%
+ * @memory 33.8MB < 30.90%
  */
 export const removeElement = (nums: number[], val: number): number => {
-  // 伪代码
-  // head === val && tail === val; while(p >= 0 && p !== val) replace;i++;p--;
-  // head === val && tail !== val; replace;i++;p--;
-  // head !== val && tail === val; i++;p--;
-  // head !== val && tail !== val; i++;
-
-  let p: number = nums.length - 1;
-  for (let i: number = 0; i < nums.length && p >= 0; i++, i = nums.length) {
-    console.info(`::for::---> i:${i}, p:${p}`);
-    if (nums[i] === val) {
-      while (p >= 0 && nums[p--] === val) console.info(`::while::--->${p}`);
-      if (p < 0) break;
-      nums[i] = nums[i] ^ nums[p];
-      nums[p] = nums[i] ^ nums[p];
-      nums[i] = nums[i] ^ nums[p];
-      nums.length = p; // remove the filter element;change numbers[] length
-    } else if (nums[p] !== val) continue;
-    p--;
+  for (let p: number = 0; p < nums.length; p++) {
+    while (nums[nums.length - 1] === val) nums.length--;
+    if (p >= nums.length - 1) break;
+    nums[p] = nums[p] ^ nums[nums.length - 1];
+    nums[nums.length - 1] = nums[nums.length - 1] ^ nums[p];
+    nums[p] = nums[p] ^ nums[nums.length - 1];
   }
-  console.info(`::$::---->p:${p},nums:`, nums);
   return nums.length;
 };
