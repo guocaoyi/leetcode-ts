@@ -23,3 +23,34 @@ export const reverseString2 = (s: string[]): void => {
   }
   s = arr;
 };
+
+/**
+ * O(1) extra memory 迫使无法使用额外的数组进行缓存；
+ * @time 2019.06
+ * @status Accepted
+ * @runtime 116ms > 81.07%
+ * @memory 46.8MB < 52.47%
+ */
+export const reverseString3 = (s: string[]): void => {
+  const middle: number = Math.floor(s.length / 2);
+  let repl: string;
+  for (let i = 0; i < middle; i++) {
+    repl = s[i];
+    s[i] = s[s.length - i - 1];
+    s[s.length - i - 1] = repl;
+  }
+};
+
+/**
+ * O(1) extra memory 迫使无法使用额外的数组进行缓存；
+ * @time 2019.06
+ * @status Accepted
+ * @runtime 116ms > 81.07%
+ * @memory 46.8MB < 52.47%
+ */
+export const reverseString4 = (s: string[]): void => {
+  const middle: number = Math.floor(s.length / 2);
+  for (let i = 0; i < middle; i++) {
+    [s[i], s[s.length - i - 1]] = [s[s.length - i - 1], s[i]];
+  }
+};

@@ -14,10 +14,9 @@ export const addBinary = (a: string, b: string): string => {
 
 /**
  * 逐位计算
- * @param {string} a
- * @param {string} b
- * @return {string}
  * @state Accepted
+ * @runtime 84ms > 19.59%
+ * @memory 35.6MB < 71.79%
  */
 export const addBinary2 = (a: string, b: string): string => {
   const result: number[] = [];
