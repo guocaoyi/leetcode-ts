@@ -1,3 +1,27 @@
+`
+14. Longest Common Prefix
+
+Write a function to find the longest common prefix string amongst an array of strings.
+
+If there is no common prefix, return an empty string \`""\`.
+
+"""
+Input: ["flower","flow","flight"]
+Output: "fl"
+"""
+
+"""
+Input: ["dog","racecar","car"]
+Output: ""
+Explanation: There is no common prefix among the input strings.
+"""
+
+::: All given inputs are in lowercase letters \`a-z\`.
+
+>>> String
+`;
+let longestCommonPrefix: (strs: string[]) => string;
+
 /**
  * 循环遍历
  * 刚拿到这题没有细想，认为这题比较简单；直接使用循环遍历的方式一遍一遍顺序访问数组。
@@ -5,7 +29,7 @@
  * 便放弃广度优先，改为深读优先。后面发现，是长度为 1 的数组进入了死循环。
  * @status Time Limit Exceeded
  */
-export const longestCommonPrefix = (strs: string[]): string => {
+longestCommonPrefix = (strs: string[]): string => {
   let prefix: string = '';
   if (strs && strs.length > 0) {
     let point = 1;
@@ -27,9 +51,9 @@ export const longestCommonPrefix = (strs: string[]): string => {
  * 单次遍历
  * 没有兼容好空字符串的问题（PS:条件不是 a-z 么？WTF?）
  * @status Time Limit Exceeded
- * @params `["",""]`
+ * @case `["",""]`
  */
-export const longestCommonPrefix1 = (strs: string[]): string => {
+longestCommonPrefix = (strs: string[]): string => {
   let prefix: string = '';
   if (strs.length == 1) {
     return strs[0];
@@ -57,7 +81,7 @@ export const longestCommonPrefix1 = (strs: string[]): string => {
  * @runtime 60ms < 97.88%
  * @memory 33.8MB < 86.74%
  */
-export const longestCommonPrefix2 = (strs: string[]): string => {
+longestCommonPrefix = (strs: string[]): string => {
   if (strs && strs.length > 0) {
     let prefix: string = strs[0]; // 使用 strs[0] 作为初始前缀串
     for (let i = 1; i < strs.length; i++) {
@@ -75,3 +99,5 @@ export const longestCommonPrefix2 = (strs: string[]): string => {
     return '';
   }
 };
+
+export default longestCommonPrefix;

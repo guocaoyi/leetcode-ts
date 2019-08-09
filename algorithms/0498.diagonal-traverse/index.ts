@@ -1,11 +1,26 @@
+`
+0. \*\*
+
+\*\*\*
+
+"""
+\*\*\*
+"""
+
+::: \*\*
+### \*\*
+>>> \*\*
+`;
+let findDiagonalOrder: (matrix: number[][]) => number[];
+
 /**
- * @param {number[][]} matrix
- * @return {number[]}
  */
-export const findDiagonalOrder = (matrix: number[][]): number[] => {
+findDiagonalOrder = (matrix: number[][]): number[] => {
   const row: number = matrix.length;
   const result: number[] = [];
-  if (row === 0) return result;
+  if (row === 0) {
+    return result;
+  }
 
   // rows > 0
   let columns: number = matrix[0].length;
@@ -33,3 +48,5 @@ export const findDiagonalOrder = (matrix: number[][]): number[] => {
 
   return result;
 };
+
+export default findDiagonalOrder;

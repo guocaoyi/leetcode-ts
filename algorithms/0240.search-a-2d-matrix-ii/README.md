@@ -36,7 +36,7 @@ Given target = 20, return false.
 - Runtime: 460ms > 22.93%
 
 ```typescript
-var searchMatrix = (matrix: number[][], target: number): boolean => {
+export const searchMatrix = (matrix: number[][], target: number): boolean => {
   for (let i: number = 0; i < matrix.length; i++) {
     for (let j: number = 0; j < matrix[i].length; j++) {
       if (matrix[i][j] === target) {
@@ -49,4 +49,3 @@ var searchMatrix = (matrix: number[][], target: number): boolean => {
 ```
 
 ## Top Ranked
-

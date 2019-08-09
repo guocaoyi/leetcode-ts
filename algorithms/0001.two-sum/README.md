@@ -2,7 +2,7 @@
 
 Given an array of integers, return **indices** of the two numbers such that they add up to a specific target.
 
-You may assume that each input would have **exactly** one solution, and you may not use the same element twice.
+You may assume that each input would have **_exactly_** one solution, and you may not use the same element twice.
 
 ## Example
 
@@ -23,7 +23,7 @@ return [0, 1].
 ### I: 嵌套循环遍历
 
 这事最偷懒的办法，快速实现后，再考虑优化方案
-使用Array.forEach在性能上会有点损耗(测试用例:61ms到59ms)
+使用 Array.forEach 在性能上会有点损耗(测试用例:61ms 到 59ms)
 
 - Time: 2018.9.13
 - Status: Accepted
@@ -100,4 +100,3 @@ var twoSum = (nums: number[], target: number): number[] => {
 ```
 
 ## Top Ranked
-

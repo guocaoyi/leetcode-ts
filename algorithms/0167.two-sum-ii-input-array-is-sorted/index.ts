@@ -1,12 +1,22 @@
+`
+0. \*\*
+
+\*\*\*
+
+"""
+\*\*\*
+"""
+
+::: \*\*
+### \*\*
+>>> \*\*
+`;
+let twoSum: (numbers: number[], target: number) => number[];
+
 /**
- * @param {number[]} numbers
- * @param {number} target
- * @return {number[]}
- * @state Accepted
- * @runtime
- * @memory
+ * @status
  */
-export const twoSum = (numbers: number[], target: number): number[] => {
+twoSum = (numbers: number[], target: number): number[] => {
   let i = 0;
   let p;
   for (; i < numbers.length; i += 1) {
@@ -22,3 +32,5 @@ export const twoSum = (numbers: number[], target: number): number[] => {
   }
   return [i + 1, p + 1];
 };
+
+export default twoSum;

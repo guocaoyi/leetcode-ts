@@ -1,9 +1,24 @@
+`
+0. \*\*
+
+\*\*\*
+
+"""
+\*\*\*
+"""
+
+::: \*\*
+### \*\*
+>>> \*\*
+`;
+let removeElement: (nums: number[], val: number) => number;
+
 /**
  * 逻辑没有考虑完备，导致很多测试用力无法通过
- * @state Error
+ * @status Error
  * @case [1],1 -> [1]
  */
-export const removeElement1 = (nums: number[], val: number): number => {
+removeElement = (nums: number[], val: number): number => {
   let p = nums.length - 1;
   for (let i = 0; i < p; i++) {
     if (nums[i] === val && nums[p] === val) {
@@ -21,14 +36,18 @@ export const removeElement1 = (nums: number[], val: number): number => {
 
 /**
  * 尾部判定
- * @state Accepted
+ * @status Accepted
  * @runtime 112ms > 28.81%
  * @memory 33.8MB < 30.90%
  */
-export const removeElement = (nums: number[], val: number): number => {
+removeElement = (nums: number[], val: number): number => {
   for (let p: number = 0; p < nums.length; p++) {
-    while (nums[nums.length - 1] === val) nums.length--;
-    if (p >= nums.length - 1) break;
+    while (nums[nums.length - 1] === val) {
+      nums.length--;
+    }
+    if (p >= nums.length - 1) {
+      break;
+    }
     nums[p] = nums[p] ^ nums[nums.length - 1];
     nums[nums.length - 1] = nums[nums.length - 1] ^ nums[p];
     nums[p] = nums[p] ^ nums[nums.length - 1];

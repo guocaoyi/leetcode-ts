@@ -1,9 +1,37 @@
+`
+3. Longest Substring Without Repeating Characters
+
+Given a string, find the length of the longest substring without repeating characters.
+
+"""
+Input: "abcabcbb"
+Output: 3 
+Explanation: The answer is "abc", with the length of 3. 
+"""
+
+"""
+Input: "bbbbb"
+Output: 1
+Explanation: The answer is "b", with the length of 1.
+"""
+
+"""
+Input: "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3. 
+             Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+"""
+
+>>> Hash Table,String,Sliding Window
+`;
+let lengthOfLongestSubstring: (s: string) => number;
+
 /**
  * @time 2018.10.19
  * @status Output Limit Exceeded
- * @input `"unpvlhkldvfzvzwdfhojkyczxydauiioxzlkhvvmqamnakrfrhqefsddqifmqocpnoawlvjcyxpyhifbqxhxpkchuivky"`
+ * @case `"unpvlhkldvfzvzwdfhojkyczxydauiioxzlkhvvmqamnakrfrhqefsddqifmqocpnoawlvjcyxpyhifbqxhxpkchuivky"`
  */
-var lengthOfLongestSubstring = (s: string): number => {
+lengthOfLongestSubstring = (s: string): number => {
   let maxSub = '',
     currentSub = '';
 
@@ -34,7 +62,7 @@ var lengthOfLongestSubstring = (s: string): number => {
  * @status Accepted
  * @runtime 116ms | 55.08%
  */
-var lengthOfLongestSubstring = (s: string): number => {
+lengthOfLongestSubstring = (s: string): number => {
   let maxSub: string = '',
     currentSub: string = '';
 
@@ -58,3 +86,5 @@ var lengthOfLongestSubstring = (s: string): number => {
   });
   return maxSub.length;
 };
+
+export default lengthOfLongestSubstring;

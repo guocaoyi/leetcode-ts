@@ -1,14 +1,28 @@
+`
+0. \*\*
+
+\*\*\*
+
+"""
+\*\*\*
+"""
+
+::: \*\*
+### \*\*
+>>> \*\*
+`;
+let singleNumber: (nums: number[]) => number;
+
 /**
  * 这里已经没有优化空间了，想想其他方法
- * @hash 223496299
  * @time 2019.04.19
  * @status Accepted
  * @runtime 64 ms | 81.78%
  * @memory 36.9MB | 41.03%
  */
-var singleNumber = (nums: number[]): number => {
-  let map: any = {};
-  let length: number = nums.length;
+singleNumber = (nums: number[]): number => {
+  const map: any = {};
+  const length: number = nums.length;
   for (let i: number = 0; i < length; i++) {
     if (nums[i] in map && map[nums[i]] == 1) {
       // map 已经存在 n
@@ -20,3 +34,5 @@ var singleNumber = (nums: number[]): number => {
   }
   return Number(Object.keys(map)[0]);
 };
+
+export default singleNumber;

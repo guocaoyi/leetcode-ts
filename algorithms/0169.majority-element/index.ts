@@ -1,11 +1,26 @@
+`
+0. \*\*
+
+\*\*\*
+
+"""
+\*\*\*
+"""
+
+::: \*\*
+### \*\*
+>>> \*\*
+`;
+let majorityElement: (nums: number[]) => number;
+
 /**
  * 通用解法
  * @status Accepted
  * @time 2019.03.01
  * @runtime 68ms | 87.42%
- * @momory 37.2MB | 88.35%
+ * @memory 37.2MB | 88.35%
  */
-var majorityElement = (nums: number[]): number => {
+majorityElement = (nums: number[]): number => {
   let map: any = {};
   nums.forEach(n => {
     if (n in map) {
@@ -25,3 +40,5 @@ var majorityElement = (nums: number[]): number => {
   }
   return maxKey;
 };
+
+export default majorityElement;

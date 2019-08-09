@@ -32,17 +32,17 @@ Explanation: The answer is "wke", with the length of 3.
 
 ## Submissions
 
-### I: **
+### I: \*\*
 
 - Time: 2018.10.19
 - Status: Output Limit Exceeded
 
 ```typescript
 var lengthOfLongestSubstring = (s: string): number => {
-  let maxSub = "",
-    currentSub = "";
+  let maxSub = '',
+    currentSub = '';
 
-  const arr: string[] = s.split("");
+  const arr: string[] = s.split('');
   arr.forEach((s: string) => {
     if (currentSub.includes(s)) {
       // 存在
@@ -50,7 +50,7 @@ var lengthOfLongestSubstring = (s: string): number => {
         maxSub = currentSub;
       }
       let [lStr, rStr] = currentSub.split(s);
-      currentSub = rStr || "";
+      currentSub = rStr || '';
       currentSub += s;
     } else {
       // 不存在
@@ -64,7 +64,7 @@ var lengthOfLongestSubstring = (s: string): number => {
 };
 ```
 
-### II: **
+### II: \*\*
 
 - Time: 2018.10.19
 - Status: Accepted
@@ -72,10 +72,10 @@ var lengthOfLongestSubstring = (s: string): number => {
 
 ```typescript
 var lengthOfLongestSubstring = (s: string): number => {
-  let maxSub: string = "",
-    currentSub: string = "";
+  let maxSub: string = '',
+    currentSub: string = '';
 
-  const arr: string[] = s.split("");
+  const arr: string[] = s.split('');
   arr.forEach((s: string) => {
     if (currentSub.includes(s)) {
       // 存在
@@ -83,7 +83,7 @@ var lengthOfLongestSubstring = (s: string): number => {
         maxSub = currentSub;
       }
       let [lStr, rStr] = currentSub.split(s);
-      currentSub = rStr || "";
+      currentSub = rStr || '';
       currentSub += s;
     } else {
       // 不存在
@@ -98,4 +98,3 @@ var lengthOfLongestSubstring = (s: string): number => {
 ```
 
 ## Top Ranked
-

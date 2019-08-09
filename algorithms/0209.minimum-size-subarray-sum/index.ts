@@ -1,13 +1,25 @@
+`
+0. \*\*
+
+\*\*\*
+
+"""
+\*\*\*
+"""
+
+::: \*\*
+### \*\*
+>>> \*\*
+`;
+let minSubArrayLen: (s: number, nums: number[]) => number;
+
 /**
  * Two Pointer
- * @param {number} s
- * @param {number[]} nums
- * @return {number}
- * @state Accepted
+ * @statu Accepted
  * @runtime
  * @memory
  */
-export const minSubArrayLen = (s: number, nums: number[]): number => {
+minSubArrayLen = (s: number, nums: number[]): number => {
   // 伪代码
   // prev,next
   // sum < s; next右移
@@ -17,9 +29,11 @@ export const minSubArrayLen = (s: number, nums: number[]): number => {
     sum += nums[next++];
     if (sum >= s) {
       next - prev < mini && (mini = next - prev);
-      while ((sum -= nums[prev++]) >= s);
+      while ((sum -= nums[prev++]) >= s) {}
     }
     console.info('---->', sum, prev, next);
   }
   return mini;
 };
+
+export default minSubArrayLen;

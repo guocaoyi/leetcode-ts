@@ -1,3 +1,26 @@
+`
+15. 3Sum
+
+Given an array \`nums\` of n integers, are there elements a, b, c in \`nums\` such that _a + b + c_ = 0? Find all unique triplets in the array which gives the sum of zero.
+
+"""
+Given array nums = [-1, 0, 1, 2, -1, -4],
+
+A solution set is:
+[
+  [-1, 0, 1],
+  [-1, -1, 2]
+]
+"""
+
+::: The solution set must not contain duplicate triplets.
+
++++ If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+
+>>> Array,Hash Table
+`;
+let threeSum: (nums: number[]) => number[][];
+
 /**
  * 排列组合
  * 刚拿到这题第一个想法就是使用排列组合，很快写完。结果在遇到一个长3000的数组时，运行超时了，时间复杂度O(n!)。
@@ -7,7 +30,7 @@
  * @status Time Limit Exceeded
  * @case [82597,-9243,62390,83030,-97960,-26521...] (3000)
  */
-var threeSum = (nums: number[]): number[][] => {
+threeSum = (nums: number[]): number[][] => {
   const result: { [T: string]: number[] } = {};
   for (let a: number = 0; a < nums.length; a++) {
     for (let b: number = a + 1; b < nums.length; b++) {
@@ -27,10 +50,11 @@ var threeSum = (nums: number[]): number[][] => {
 
 /**
  * 排列组合
- * @github https://github.com/guocaoyi/leetcode-ts
- * @author yalda
+ * @status
+ * @runtime
+ * @memory
  */
-var threeSum = (nums: number[]): number[][] => {
+threeSum = (nums: number[]): number[][] => {
   const result: { [T: string]: number[] } = {};
   nums = nums.sort();
   let left = 0;
@@ -52,3 +76,5 @@ var threeSum = (nums: number[]): number[][] => {
 
   return Object.values(result);
 };
+
+export default threeSum;
