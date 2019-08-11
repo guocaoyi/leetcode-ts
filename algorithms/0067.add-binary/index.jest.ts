@@ -1,4 +1,4 @@
-import { addBinary2 } from '.';
+import addBinary from '.';
 
 let result: string;
 let answer: string;
@@ -27,7 +27,7 @@ let answer: string;
 // answer = '11111';
 // console.info('--->', result, '11111', result === answer, '\n');
 
-result = addBinary2(
+result = addBinary(
   '10100000100100110110010000010101111011011001101110111111111101000000101111001110001111100001101',
   '110101001011101110001111100110001010100001101011101010000011011011001011101111001100000011011110011'
 );
