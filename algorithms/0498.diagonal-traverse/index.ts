@@ -1,21 +1,36 @@
-`
-0. \*\*
+/**
+# 498. Diagonal Traverse
 
-\*\*\*
+Given a matrix of M x N elements (M rows, N columns), return all elements of the matrix in diagonal order as shown in the below image.
 
-"""
-\*\*\*
-"""
+## Example
 
-::: \*\*
-### \*\*
->>> \*\*
-`;
-let findDiagonalOrder: (matrix: number[][]) => number[];
+```bash
+Input:
+[
+ [ 1, 2, 3 ],
+ [ 4, 5, 6 ],
+ [ 7, 8, 9 ]
+]
+
+Output:  [1,2,4,7,5,3,6,8,9]
+```
+
+## Explanation:
+
+![498](../../assets/images/498_diagonal_traverse.png)
+
+## Note
+
+- nums will have a length in the range [1, 50].
+- Every nums[i] will be an integer in the range [0, 99].
+ */
+type Submission = (matrix: number[][]) => number[];
 
 /**
+ * @time
  */
-findDiagonalOrder = (matrix: number[][]): number[] => {
+export const findDiagonalOrder: Submission = (matrix: number[][]): number[] => {
   const row: number = matrix.length;
   const result: number[] = [];
   if (row === 0) {
@@ -48,5 +63,3 @@ findDiagonalOrder = (matrix: number[][]): number[] => {
 
   return result;
 };
-
-export default findDiagonalOrder;

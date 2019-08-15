@@ -1,9 +1,15 @@
-`
-15. 3Sum
+/**
+# 15. 3Sum
 
-Given an array \`nums\` of n integers, are there elements a, b, c in \`nums\` such that _a + b + c_ = 0? Find all unique triplets in the array which gives the sum of zero.
+Given an array `nums` of n integers, are there elements a, b, c in `nums` such that _a + b + c_ = 0? Find all unique triplets in the array which gives the sum of zero.
 
-"""
+### Note
+
+The solution set must not contain duplicate triplets.
+
+### Example
+
+```bash
 Given array nums = [-1, 0, 1, 2, -1, -4],
 
 A solution set is:
@@ -11,15 +17,9 @@ A solution set is:
   [-1, 0, 1],
   [-1, -1, 2]
 ]
-"""
-
-::: The solution set must not contain duplicate triplets.
-
-+++ If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
-
->>> Array,Hash Table
-`;
-let threeSum: (nums: number[]) => number[][];
+```
+ */
+type Submission = (nums: number[]) => number[][];
 
 /**
  * 排列组合
@@ -30,7 +30,7 @@ let threeSum: (nums: number[]) => number[][];
  * @status Time Limit Exceeded
  * @case [82597,-9243,62390,83030,-97960,-26521...] (3000)
  */
-threeSum = (nums: number[]): number[][] => {
+export const threeSum: Submission = (nums: number[]): number[][] => {
   const result: { [T: string]: number[] } = {};
   for (let a: number = 0; a < nums.length; a++) {
     for (let b: number = a + 1; b < nums.length; b++) {
@@ -50,11 +50,8 @@ threeSum = (nums: number[]): number[][] => {
 
 /**
  * 排列组合
- * @status
- * @runtime
- * @memory
  */
-threeSum = (nums: number[]): number[][] => {
+export const threeSum1: Submission = (nums: number[]): number[][] => {
   const result: { [T: string]: number[] } = {};
   nums = nums.sort();
   let left = 0;
@@ -76,5 +73,3 @@ threeSum = (nums: number[]): number[][] => {
 
   return Object.values(result);
 };
-
-export default threeSum;

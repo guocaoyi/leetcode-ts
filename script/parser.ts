@@ -1,45 +1,38 @@
 import * as ts from 'ntypescript';
 import * as fs from 'fs';
 import * as path from 'path';
+import { Submission, Info } from './type';
 
-export class Annotation {
-  public time?: string; // 提交时间
-  public status: boolean; // 提交状态
-  public runtime?: string; // 运行时情况
-  public memory?: string; // 内存占用情况
-  public case?: string; // 测试用例
-  public top?: boolean; // 排名靠前的提交记录
+class HtmlParse {
+  private HTML_DECODE: any = {
+    '&lt;': '<',
+    '&gt;': '>',
+    '&amp;': '&',
+    '&nbsp;': ' ',
+    '&quot;': '"',
+    '&#39;': '\'',
+    '&copy;': '©'
+  };
+  parse() {
+    // <p></p> -> ''
+    // <code></code> -> ``
+    // <em></em> -> **
+    // <strong></strong> -> ****
+    // <pre><pre> -> ```bash```
+    // <img>
+    // <div></div>
+    // <b></b>
+    // <br />
+    // <ol></ol>
+    // <li></li>
+    // 转义字符
+  }
 }
-
-export class Info extends Annotation {
-  [T: string]: any;
-  public title: string; // 方案名称
-  public comment: string; // 注释
-}
-
-export class Submission {
-  public name: string; // 名称
-  public info: Info; // 注释信息
-  public type: 'Submission' | 'TopRanked';
-  public sourse: string; // 源码（ts）
-}
-
-`
-0. \*\*
-
-\*\*\*
-
-"""
-\*\*\*
-"""
-
-::: \*\*
-### \*\*
->>> \*\*
-`;
 
 /**
  * 解析器
+ * @author gcy[yalda]
+ * @date 2019.08
  */
 export class Parser {
   private submissions: Submission[] = [];
@@ -59,20 +52,6 @@ export class Parser {
     );
     this.parseSourse(sourseFile);
     return this;
-  };
-
-  private getSource = (): any => {
-    let problems: any = [];
-    let collections: any = document.getElementsByClassName('reactable-data')[0]
-      .children;
-    for (let i = 0; i < collections.length; i++) {
-      const item = collections[i];
-      const num = Number(item.children[1].innerText);
-      const title = item.children[2].getAttribute('value');
-      const difficulty = item.children[5].children[0].innerText;
-      problems.push([num, title, difficulty]);
-    }
-    return problems;
   };
 
   /**
@@ -138,7 +117,7 @@ export class Parser {
       .toLowerCase()
       .replace(/\-/g, ' ')
       .replace(/\s+/g, ' ')
-      .replace(/([(|)|,])/g, '')
+      .replace(/([(|)|,'])/g, '')
       .replace(/\s/g, '-');
   }
 }

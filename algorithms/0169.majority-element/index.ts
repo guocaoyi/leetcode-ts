@@ -1,26 +1,32 @@
-`
-0. \*\*
+/**
+# 169. Majority Element
 
-\*\*\*
+Given an array of size n, find the majority element. The majority element is the element that appears **more than** `⌊ n/2 ⌋` times.
 
-"""
-\*\*\*
-"""
+You may assume that the array is non-empty and the majority element always exist in the array.
 
-::: \*\*
-### \*\*
->>> \*\*
-`;
-let majorityElement: (nums: number[]) => number;
+## Example
+
+```bash
+Input: [3,2,3]
+Output: 3
+```
+
+```bash
+Input: [2,2,1,1,1,2,2]
+Output: 2
+```
+ */
+type Submission = (nums: number[]) => number;
 
 /**
  * 通用解法
- * @status Accepted
  * @time 2019.03.01
- * @runtime 68ms | 87.42%
- * @memory 37.2MB | 88.35%
+ * @status Accepted
+ * @runtime 68ms < 87.42%
+ * @memory 37.2MB > 88.35%
  */
-majorityElement = (nums: number[]): number => {
+export const majorityElement: Submission = (nums: number[]): number => {
   let map: any = {};
   nums.forEach(n => {
     if (n in map) {
@@ -40,5 +46,3 @@ majorityElement = (nums: number[]): number => {
   }
   return maxKey;
 };
-
-export default majorityElement;

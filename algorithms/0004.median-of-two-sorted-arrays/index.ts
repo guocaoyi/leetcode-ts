@@ -1,38 +1,41 @@
-`
-4. Median of Two Sorted Arrays
+/**
+# 4. Median of Tow Sorted Arrays
 
-There are two sorted arrays \`nums1\` and \`nums2\` of size m and n respectively.
+There are two sorted arrays **nums1** and **nums2** of size m and n respectively.
 
 Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
 
-You may assume \`nums1\` and \`nums2\` cannot be both empty.
+You may assume **nums1** and **nums2** cannot be both empty.
 
-"""
+## Example
+
+```bash
 nums1 = [1, 3]
 nums2 = [2]
 
 The median is 2.0
-"""
+```
 
-"""
+```bash
 nums1 = [1, 2]
 nums2 = [3, 4]
 
 The median is (2 + 3)/2 = 2.5
-"""
-
->>> Array,Binary Search,Divide and Conquer
-`;
-let findMedianSortedArrays: (nums1: number[], nums2: number[]) => number;
+```
+ */
+type Submission = (nums1: number[], nums2: number[]) => number;
 
 /**
  * 递归
  * @time 2019.1.4
  * @status Accepted
- * @runtime 168ms | 19.48%
- * @memory 15.8MB |
+ * @runtime 168 ms > 19.48%
+ * @memory 15.8 MB <
  */
-findMedianSortedArrays = (nums1: number[], nums2: number[]): number => {
+export const findMedianSortedArrays: Submission = (
+  nums1: number[],
+  nums2: number[]
+): number => {
   const findKth = (nums1: number[], nums2: number[], k: number): number => {
     let m: number = nums1.length;
     let n: number = nums2.length;
@@ -72,5 +75,3 @@ findMedianSortedArrays = (nums1: number[], nums2: number[]): number => {
     );
   }
 };
-
-export default findMedianSortedArrays;

@@ -1,0 +1,26 @@
+query questionTags($skipCompanyTags: Boolean = false) {
+  questionTopicTags {
+    edges {
+      node {
+        name
+        translatedName
+        questionIds
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+  questionCompanyTags @skip(if: $skipCompanyTags) {
+    edges {
+      node {
+        name
+        translatedName
+        questionIds
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}

@@ -1,26 +1,34 @@
-`
-0. \*\*
+/**
+# 136. Single Number
 
-\*\*\*
+Given a **non-empty** array of integers, every element appears twice except for one. Find that single one.
 
-"""
-\*\*\*
-"""
+## Note
 
-::: \*\*
-### \*\*
->>> \*\*
-`;
-let singleNumber: (nums: number[]) => number;
+Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+
+## Example
+
+```bash
+Input: [2,2,1]
+Output: 1
+```
+
+```bash
+Input: [4,1,2,1,2]
+Output: 4
+```
+ */
+type Submission = (nums: number[]) => number;
 
 /**
  * 这里已经没有优化空间了，想想其他方法
  * @time 2019.04.19
  * @status Accepted
- * @runtime 64 ms | 81.78%
- * @memory 36.9MB | 41.03%
+ * @runtime 64 ms > 81.78%
+ * @memory 36.9 MB < 41.03%
  */
-singleNumber = (nums: number[]): number => {
+export const singleNumber: Submission = (nums: number[]): number => {
   const map: any = {};
   const length: number = nums.length;
   for (let i: number = 0; i < length; i++) {
@@ -34,5 +42,3 @@ singleNumber = (nums: number[]): number => {
   }
   return Number(Object.keys(map)[0]);
 };
-
-export default singleNumber;

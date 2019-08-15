@@ -1,17 +1,25 @@
-`
-0. \*\*
+/**
+# 344. Reverse String
 
-\*\*\*
+Write a function that reverses a string. The input string is given as an array of characters `char[]`.
 
-"""
-\*\*\*
-"""
+Do not allocate extra space for another array, you must do this by modifying the input array **in-place** with O(1) extra memory.
 
-::: \*\*
-### \*\*
->>> \*\*
-`;
-let reverseString: (s: string[]) => void;
+You may assume all the characters consist of [printable ascii characters.](https://en.wikipedia.org/wiki/ASCII#Printable_characters)
+
+### Example
+
+```bash
+Input: ["h","e","l","l","o"]
+Output: ["o","l","l","e","h"]
+```
+
+```bash
+Input: ["H","a","n","n","a","h"]
+Output: ["h","a","n","n","a","H"]
+```
+ */
+type Submission = (s: string[]) => void;
 
 /**
  * Array.prototype.reverse
@@ -21,7 +29,7 @@ let reverseString: (s: string[]) => void;
  * @runtime
  * @memory
  */
-reverseString = (s: string[]): void => {
+export const reverseString: Submission = (s: string[]): void => {
   s.reverse();
 };
 
@@ -31,7 +39,7 @@ reverseString = (s: string[]): void => {
  * @status Wrong Answer
  * @case `Input: ["h","e","l","l","o"] Output: ["h","e","l","l","o"] Expected: ["o","l","l","e","h"]`
  */
-reverseString = (s: string[]): void => {
+export const reverseString1: Submission = (s: string[]): void => {
   let arr: string[] = [];
   for (let i = s.length; i > 0; i--) {
     arr.push(s[i - 1]);
@@ -43,10 +51,10 @@ reverseString = (s: string[]): void => {
  * O(1) extra memory 迫使无法使用额外的数组进行缓存；
  * @time 2019.06
  * @status Accepted
- * @runtime 116ms > 81.07%
- * @memory 46.8MB < 52.47%
+ * @runtime 116 ms > 81.07%
+ * @memory 46.8 MB < 52.47%
  */
-reverseString = (s: string[]): void => {
+export const reverseString2: Submission = (s: string[]): void => {
   const middle: number = Math.floor(s.length / 2);
   let repl: string;
   for (let i = 0; i < middle; i++) {
@@ -60,10 +68,10 @@ reverseString = (s: string[]): void => {
  * O(1) extra memory 迫使无法使用额外的数组进行缓存；
  * @time 2019.06
  * @status Accepted
- * @runtime 116ms > 81.07%
- * @memory 46.8MB < 52.47%
+ * @runtime 116 ms > 81.07%
+ * @memory 46.8 MB < 52.47%
  */
-reverseString = (s: string[]): void => {
+export const reverseString3: Submission = (s: string[]): void => {
   const middle: number = Math.floor(s.length / 2);
   for (let i = 0; i < middle; i++) {
     [s[i], s[s.length - i - 1]] = [s[s.length - i - 1], s[i]];

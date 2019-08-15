@@ -1,20 +1,20 @@
-`
-1.Tow Sum
+/**
+# 1. Two Sum
 
 Given an array of integers, return **indices** of the two numbers such that they add up to a specific target.
 
 You may assume that each input would have ***exactly*** one solution, and you may not use the same element twice.
 
-"""
+## Example
+
+```bash
 Given nums = [2, 7, 11, 15], target = 9,
 
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
-"""
-
->>> Array,Hash Table
-`;
-let twoSum: (nums: number[], target: number) => number[];
+```
+ */
+type Submission = (nums: number[], target: number) => number[];
 
 /**
  * 嵌套循环遍历
@@ -22,9 +22,13 @@ let twoSum: (nums: number[], target: number) => number[];
  * 使用Array.forEach在性能上会有点损耗(测试用例:61ms到59ms)
  * @time 2018.9.13
  * @status Accepted
- * @runtime 120ms | 40.065%
+ * @runtime 120 ms < 40.065%
+ * @memory N/A
  */
-twoSum = (nums: number[], target: number): number[] => {
+export const twoSum: Submission = (
+  nums: number[],
+  target: number
+): number[] => {
   for (let i: number = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; j++) {
       if (nums[i] + nums[j] == target) {
@@ -36,11 +40,15 @@ twoSum = (nums: number[], target: number): number[] => {
 
 /**
  * 哈希存储
- * @time
+ * @time 2018.9.13
  * @status Accepted
- * @runtime 80 ms | 59.00%
+ * @runtime 80 ms < 59.00%
+ * @memory N/A
  */
-twoSum = (nums: number[], target: number): number[] => {
+export const twoSum1: Submission = (
+  nums: number[],
+  target: number
+): number[] => {
   const map: any = {};
   nums.forEach((i, k) => (map[i] = k));
   for (let i = 0; i < nums.length; i++) {
@@ -52,12 +60,16 @@ twoSum = (nums: number[], target: number): number[] => {
 };
 
 /**
- * 方案二：哈希存储
- * @time
+ * 哈希存储
+ * @time 2018.9.13
  * @status Accepted
- * @runtime 56ms | 100.00%
+ * @runtime 56 ms < 100.00%
+ * @memory N/A
  */
-twoSum = (nums: number[], target: number): number[] => {
+export const twoSum2: Submission = (
+  nums: number[],
+  target: number
+): number[] => {
   const map: any = {};
   const length: number = nums.length;
   for (let i = 0; i < length; i++) {
@@ -73,11 +85,15 @@ twoSum = (nums: number[], target: number): number[] => {
 
 /**
  * 哈希遍历
- * @time
+ * @time 2018.9.13
  * @status Accepted
- * @runtime 52ms | 100%
+ * @runtime 52 ms < 100%
+ * @memory N/A
  */
-twoSum = (nums: number[], target: number): number[] => {
+export const twoSum3: Submission = (
+  nums: number[],
+  target: number
+): number[] => {
   const map: any = {};
   const length = nums.length;
   for (let i = 0; i < length; i++) {
@@ -88,5 +104,3 @@ twoSum = (nums: number[], target: number): number[] => {
     map[nums[i]] = i;
   }
 };
-
-export default twoSum;

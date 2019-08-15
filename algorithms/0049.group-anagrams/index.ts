@@ -1,9 +1,11 @@
-`
-49. Group Anagrams
+/**
+# 49. Group Anagrams
 
 Given an array of strings, group anagrams together.
 
-"""
+## Example
+
+```typescript
 Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
 Output:
 [
@@ -11,16 +13,14 @@ Output:
   ["nat","tan"],
   ["bat"]
 ]
-"""
+```
 
-:::
-All inputs will be in lowercase.
-The order of your output does not matter.
-:::
+## Note
 
->>> Hash Table,String >>>
-`;
-let groupAnagrams: (strs: string[]) => string[][];
+- All inputs will be in lowercase.
+- The order of your output does not matter.
+ */
+type Submission = (strs: string[]) => string[][];
 
 /**
  * 哈希存储
@@ -30,7 +30,7 @@ let groupAnagrams: (strs: string[]) => string[][];
  * @runtime 128 ms > 63.90%
  * @memory 45.1 MB < 60.87%
  */
-groupAnagrams = (strs: string[]): string[][] => {
+export const groupAnagrams: Submission = (strs: string[]): string[][] => {
   const map: any = {};
   strs.forEach((str: string) => {
     const origin: string = str
