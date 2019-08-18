@@ -9,8 +9,6 @@ const Csrftoken: string =
 const UserAgent: string =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36';
 
-const typeDefs = importSchema('./questionData.gql');
-
 /**
  * 查询语句
  * @author gcy[yalda]

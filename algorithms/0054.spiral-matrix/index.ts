@@ -28,8 +28,14 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 type Submission = (matrix: number[][]) => number[];
 
 /**
- * 简单方法
+ * 双指针遍历
+ *
+ * @time
+ * @status
+ * @runtime
+ * @memory
  */
 export const spiralOrder: Submission = (matrix: number[][]): number[] => {
-  return null;
+  const result: number[] = [];
+  return result;
 };
