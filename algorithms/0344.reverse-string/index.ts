@@ -39,7 +39,7 @@ export const reverseString: Submission = (s: string[]): void => {
  * @status Wrong Answer
  * @case `Input: ["h","e","l","l","o"] Output: ["h","e","l","l","o"] Expected: ["o","l","l","e","h"]`
  */
-export const reverseString1: Submission = (s: string[]): void => {
+export const reverseString$1: Submission = (s: string[]): void => {
   let arr: string[] = [];
   for (let i = s.length; i > 0; i--) {
     arr.push(s[i - 1]);
@@ -54,7 +54,7 @@ export const reverseString1: Submission = (s: string[]): void => {
  * @runtime 116 ms > 81.07%
  * @memory 46.8 MB < 52.47%
  */
-export const reverseString2: Submission = (s: string[]): void => {
+export const reverseString$2: Submission = (s: string[]): void => {
   const middle: number = Math.floor(s.length / 2);
   let repl: string;
   for (let i = 0; i < middle; i++) {

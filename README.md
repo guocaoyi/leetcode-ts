@@ -1,16 +1,10 @@
-# LeetCode For TypeScript
+# LeetCode-TS
 
-LeetCode problems' submissions & top randed with TypeScript.
-
-**Submissions** was completed by myself.
-
-**Top Randed** includes the best submissions complated by other guys in LeetCode.com with JavaScript.
+LeetCode problems' submissions with TypeScript.
 
 > Author: Yalda
 >
 > Github: [leetcode-ts](https://github.com/guocaoyi/leetcode-ts/)
->
-> Blog: [www.yalda.cn](https://www.yalda.cn)
 >
 > Online Book: [www.yalda.cn/leetcode-ts](https://www.yalda.cn/leetcode-ts)
 
@@ -20,9 +14,7 @@ LeetCode problems' submissions & top randed with TypeScript.
 [Dynamic Programming](./TOPICS.md)⁴,
 [Math](./TOPICS.md)³,
 [String](./TOPICS.md)¹,
-[Tree](./TOPICS.md)¹,
-
-<!-- ⁰¹²³⁴⁵⁶⁷⁸⁹ -->
+[Tree](./TOPICS.md/#Tree)¹,
 
 ## Algorithms
 

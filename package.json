@@ -4,16 +4,12 @@
   "author": "gcy",
   "license": "MIT",
   "homepage": "https://www.yalda.cn/leetcode-ts",
-  "bin": {
-    "leet": "./script/.bin/leet"
-  },
   "scripts": {
     "watch": "tsc -w ./algorithms/0015.3sum/index.ts"
   },
-  "dependencies": {
-    "ntypescript": "^1.201706190042.1"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@types/htmlparser2": "^3.10.1",
     "@types/jest": "^24.0.14",
     "@types/node": "^11.12.1",
     "axios": "^0.19.0",
@@ -23,10 +19,12 @@
     "graphql-import": "^0.7.1",
     "graphql-request": "^1.8.2",
     "html-to-md": "^0.3.1",
+    "htmlparser2": "^4.0.0",
     "jest": "^24.8.0",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.0.3",
-    "typescript": "^3.3.3"
+    "typescript": "^3.3.3",
+    "url-parse": "^1.4.7"
   },
   "config": {
     "commitizen": {

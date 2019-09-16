@@ -16,7 +16,7 @@
     "suppressImplicitAnyIndexErrors": false,
     "target": "es2016",
     "paths": {
-      "leet-core": ["./plugins/leet-core/src/index.ts"]
+      "leet-core": ["../leet-core/src/index.ts"]
     }
   },
   "exclude": ["node_modules"]

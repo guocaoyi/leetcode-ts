@@ -1,46 +1,55 @@
-import * as ts from 'ntypescript';
-import * as fs from 'fs';
 import * as path from 'path';
-import { Submission, Info } from './type';
+import * as fs from 'fs';
 
-class HtmlParse {
-  private HTML_DECODE: any = {
-    '&lt;': '<',
-    '&gt;': '>',
-    '&amp;': '&',
-    '&nbsp;': ' ',
-    '&quot;': '"',
-    '&#39;': '\'',
-    '&copy;': '©'
-  };
-  parse() {
-    // <p></p> -> ''
-    // <code></code> -> ``
-    // <em></em> -> **
-    // <strong></strong> -> ****
-    // <pre><pre> -> ```bash```
-    // <img>
-    // <div></div>
-    // <b></b>
-    // <br />
-    // <ol></ol>
-    // <li></li>
-    // 转义字符
-  }
+// 提纲
+export interface Question {
+  title: string; // 题目x
+  content: string; // 题干
+  example: string | string[]; // 示例
+  note: string | string[]; // 说明
+  followup: string; // 进阶
+  thinking: string; // 个人总结 & 思考
+  topics: string[];
+  submissions: Submission[]; // 提案
+}
+
+// 提交案例
+export interface Submission {
+  name: string; // 标题（所用方法）
+  info?: string; // 答题（说明、思路、总结）
+  time: string; // 提交时间
+  status?:
+    | 'Accepted'
+    | 'Time Limit Exceeded'
+    | 'Error'
+    | 'Failed'
+    | 'Wrong Answer'; // 提交测试情况
+  runtime?: string; // 测试运行时（时间复杂度）
+  memory?: string; // 测试内存占用（空间复杂度）
+  case?: string; // 测试用例（入参）
+  code: string; // 代码
 }
 
 /**
- * 解析器
- * @author gcy[yalda]
- * @date 2019.08
+ * Compiler
  */
-export class Parser {
-  private submissions: Submission[] = [];
+export class Compiler {
+  constructor() {
+    let data: Submission = {
+      name: `Submission \*\*`,
+      time: new Date()
+        .toISOString()
+        .replace(/\-/g, '/')
+        .replace(/T/, ' ')
+        .replace(/\..+/, ''),
+      code: '```typescript\nconst solution = () => {};\n```'
+    };
+  }
 
   /**
    * 加载文件
    */
-  public load = ({ filePath }: any): Parser => {
+  public load = ({ filePath }: any): Compiler => {
     filePath = path.join(filePath, 'index.ts');
     let file = fs.readFileSync(filePath, { encoding: 'utf8' }).trim();
 
@@ -77,7 +86,6 @@ export class Parser {
         const info: Info = _this.parseDoc(stmt);
         submission.info = info;
         submission.name = info.title;
-        submission.type = 'top' in info ? 'TopRanked' : 'Submission';
         _this.submissions.push(submission);
       }
     });
@@ -105,19 +113,5 @@ export class Parser {
    */
   get getSourse(): Submission[] {
     return this.submissions;
-  }
-
-  /**
-   * 字符串格式化城合格的 JS 变量命名规则
-   */
-  parse(str: string): string {
-    return str
-      .replace(/(\d{0,4})\.(\s[A-Za-z]+)/g, '$2')
-      .trim()
-      .toLowerCase()
-      .replace(/\-/g, ' ')
-      .replace(/\s+/g, ' ')
-      .replace(/([(|)|,'])/g, '')
-      .replace(/\s/g, '-');
   }
 }

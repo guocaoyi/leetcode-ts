@@ -6,6 +6,8 @@ node_modules
 .idea
 
 ## files
+**/*cache.json
+.leet/**
 **/*.js
 !**/gitbook/*.js
 !**/gitbook/**/*.js
