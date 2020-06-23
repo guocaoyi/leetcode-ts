@@ -27,7 +27,7 @@ Although the above answer is in lexicographical order, your answer could be in a
 3. 商品详情页面下单时勾选规格值，根据 SKU 库存排除无货的规格值可选
 4. 电商营销场景组合优惠券场景
  */
-type Submission = (digits: string) => string[];
+type Submission = (digits: string) => string[]
 
 /**
  * 笛卡尔积
@@ -43,51 +43,51 @@ export const letterCombinations: Submission = (digits: string): string[] => {
     7: ['p', 'q', 'r', 's'],
     8: ['t', 'u', 'v'],
     9: ['w', 'x', 'y', 'z']
-  };
-
-  const multi_cartesian = (...sets: Array<Set<number>>): Array<Set<number>> => {
-    const result: Array<Set<number>> = [];
-    let loop = (set: Set<number>, items: number[], point: number): void => {
-      set.forEach((v: number) => {
-        items.push(v);
-        if (point >= sets.length - 1) {
-          result.push(new Set(items));
-        } else {
-          set = sets[point + 1];
-          loop(set, items, point + 1);
-        }
-        items.pop();
-      });
-    };
-    loop(sets[0], [], 0);
-    return result;
-  };
-
-  const s = digits.split('').map(d => keymap[d]);
-  let result: any[] = [];
-  let stack = [];
-  let point = 0;
-
-  for (let i = 0, array = s[point++]; i < array.length; i++) {
-    stack.push(array[i]);
-    for (let i = 0, array = s[point++]; i < array.length; i++) {
-      stack.push(array[i]);
-      for (let i = 0, array = s[point++]; i < array.length; i++) {
-        stack.push(array[i]);
-        for (let i = 0, array = s[point++]; i < array.length; i++) {
-          stack.push(array[i]);
-          result.push(stack.join(''));
-          stack.pop();
-        }
-        point--;
-        stack.pop();
-      }
-      point--;
-      stack.pop();
-    }
-    point--;
-    stack.pop();
   }
 
-  return result;
-};
+  const multi_cartesian = (...sets: Array<Set<number>>): Array<Set<number>> => {
+    const result: Array<Set<number>> = []
+    let loop = (set: Set<number>, items: number[], point: number): void => {
+      set.forEach((v: number) => {
+        items.push(v)
+        if (point >= sets.length - 1) {
+          result.push(new Set(items))
+        } else {
+          set = sets[point + 1]
+          loop(set, items, point + 1)
+        }
+        items.pop()
+      })
+    }
+    loop(sets[0], [], 0)
+    return result
+  }
+
+  const s = digits.split('').map(d => keymap[d])
+  let result: any[] = []
+  let stack = []
+  let point = 0
+
+  for (let i = 0, array = s[point++]; i < array.length; i++) {
+    stack.push(array[i])
+    for (let i = 0, array = s[point++]; i < array.length; i++) {
+      stack.push(array[i])
+      for (let i = 0, array = s[point++]; i < array.length; i++) {
+        stack.push(array[i])
+        for (let i = 0, array = s[point++]; i < array.length; i++) {
+          stack.push(array[i])
+          result.push(stack.join(''))
+          stack.pop()
+        }
+        point--
+        stack.pop()
+      }
+      point--
+      stack.pop()
+    }
+    point--
+    stack.pop()
+  }
+
+  return result
+}

@@ -24,7 +24,7 @@ Given target = `5`, return `true`.
 
 Given target = `20`, return `false`.
  */
-type Submission = (matrix: number[][], target: number) => boolean;
+type Submission = (matrix: number[][], target: number) => boolean
 
 /**
  * 双层遍历
@@ -40,9 +40,9 @@ export const searchMatrix: Submission = (
   for (let i: number = 0; i < matrix.length; i++) {
     for (let j: number = 0; j < matrix[i].length; j++) {
       if (matrix[i][j] === target) {
-        return true;
+        return true
       }
     }
   }
-  return false;
-};
+  return false
+}

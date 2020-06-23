@@ -31,7 +31,7 @@ There is no index that satisfies the conditions in the problem statement.
 - The length of `nums` will be in the range `[0, 10000]`.
 - Each element `nums[i]` will be an integer in the range `[-1000, 1000]`.
  */
-type Submission = (nums: number[]) => number;
+type Submission = (nums: number[]) => number
 
 /**
  * Two Pointers
@@ -42,19 +42,19 @@ type Submission = (nums: number[]) => number;
  * @memory 37.7 MB < 87.50%
  */
 export const pivotIndex: Submission = (nums: number[]): number => {
-  const _len: number = nums.length;
+  const _len: number = nums.length
   if (_len === 0 || _len === 1) {
-    return _len - 1;
+    return _len - 1
   }
 
-  let lSum = 0;
-  let rSum = nums.reduce((l, r) => l + r);
+  let lSum = 0
+  let rSum = nums.reduce((l, r) => l + r)
   for (let i = 0; i < _len; i += 1) {
-    rSum -= nums[i] || 0;
+    rSum -= nums[i] || 0
     if (lSum === rSum) {
-      return i;
+      return i
     }
-    lSum += nums[i] || 0;
+    lSum += nums[i] || 0
   }
-  return -1;
-};
+  return -1
+}

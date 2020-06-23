@@ -1,26 +1,26 @@
 /**
-# 49. Group Anagrams
-
-Given an array of strings, group anagrams together.
-
-## Example
-
-```typescript
-Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
-Output:
-[
-  ["ate","eat","tea"],
-  ["nat","tan"],
-  ["bat"]
-]
-```
-
-## Note
-
-- All inputs will be in lowercase.
-- The order of your output does not matter.
+ * # 49. Group Anagrams
+ * 
+ * Given an array of strings, group anagrams together.
+ * 
+ * ## Example
+ * 
+ * ```typescript
+ * Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
+ * Output:
+ * [
+ *   ["ate","eat","tea"],
+ *   ["nat","tan"],
+ *   ["bat"]
+ * ]
+ * ```
+ * 
+ * ## Note
+ * 
+ * - All inputs will be in lowercase.
+ * - The order of your output does not matter.
  */
-type Submission = (strs: string[]) => string[][];
+type Submission = (strs: string[]) => string[][]
 
 /**
  * 哈希存储
@@ -31,17 +31,17 @@ type Submission = (strs: string[]) => string[][];
  * @memory 45.1 MB < 60.87%
  */
 export const groupAnagrams: Submission = (strs: string[]): string[][] => {
-  const map: any = {};
+  const map: any = {}
   strs.forEach((str: string) => {
     const origin: string = str
       .split('')
       .sort()
-      .join('');
+      .join('')
     if (origin in map) {
-      map[origin].push(str);
+      map[origin].push(str)
     } else {
-      map[origin] = [str];
+      map[origin] = [str]
     }
-  });
-  return Object.values(map);
-};
+  })
+  return Object.values(map)
+}

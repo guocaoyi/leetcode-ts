@@ -25,7 +25,7 @@ Input:
 Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 ```
  */
-type Submission = (matrix: number[][]) => number[];
+type Submission = (matrix: number[][]) => number[]
 
 /**
  * 双指针遍历
@@ -36,6 +36,6 @@ type Submission = (matrix: number[][]) => number[];
  * @memory
  */
 export const spiralOrder: Submission = (matrix: number[][]): number[] => {
-  const result: number[] = [];
-  return result;
-};
+  const result: number[] = []
+  return result
+}

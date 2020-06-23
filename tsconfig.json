@@ -4,6 +4,11 @@
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
     "baseUrl": "./",
+    "lib": [
+      "ES2015",
+      "ES2016",
+      "ESNext"
+    ],
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "module": "commonjs",
@@ -16,8 +21,12 @@
     "suppressImplicitAnyIndexErrors": false,
     "target": "es2016",
     "paths": {
-      "leet-core": ["./plugins/leet-core/src/index.ts"]
+      "leet-core": [
+        "./plugins/leet-core/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

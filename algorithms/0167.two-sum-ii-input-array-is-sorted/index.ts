@@ -18,7 +18,7 @@ Output: [1,2]
 Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 ```
  */
-type Submission = (numbers: number[], target: number) => number[];
+type Submission = (numbers: number[], target: number) => number[]
 
 /**
  * 回溯法
@@ -28,18 +28,18 @@ export const twoSum: Submission = (
   numbers: number[],
   target: number
 ): number[] => {
-  let i = 0;
-  let p;
+  let i = 0
+  let p
   for (; i < numbers.length; i += 1) {
-    p = i + 1;
+    p = i + 1
     while (numbers[i] + numbers[p] < target) {
-      p += 1;
+      p += 1
     }
     if (numbers[i] + numbers[p] === target) {
-      break;
+      break
     } else if (numbers[i] + numbers[p] > target) {
-      continue;
+      continue
     }
   }
-  return [i + 1, p + 1];
-};
+  return [i + 1, p + 1]
+}

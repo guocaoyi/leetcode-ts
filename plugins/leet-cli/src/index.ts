@@ -1,3 +1,4 @@
+import * fs from 'fs'
 import core from 'leet-core';
 
 const { Compiler, Fetcher } = core;
@@ -55,3 +56,4 @@ export class Leet {
     console.info(':====>');
   }
 }
+let m = f = n => m[n] || (m[n] = n < 2 ? 1 : f(--n) + f(--n))

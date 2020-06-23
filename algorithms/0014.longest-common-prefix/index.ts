@@ -22,7 +22,7 @@ Explanation: There is no common prefix among the input strings.
 
 All given inputs are in lowercase letters `a-z`.
  */
-type Submission = (strs: string[]) => string;
+type Submission = (strs: string[]) => string
 
 /**
  * 循环遍历
@@ -33,22 +33,22 @@ type Submission = (strs: string[]) => string;
  * @status Time Limit Exceeded
  */
 export const longestCommonPrefix: Submission = (strs: string[]): string => {
-  let prefix: string = '';
+  let prefix: string = ''
   if (strs && strs.length > 0) {
-    let point = 1;
+    let point = 1
     while (true) {
-      prefix = strs[0].slice(0, point);
+      prefix = strs[0].slice(0, point)
       for (let i = 0; i < strs.length; i++) {
         if (prefix !== strs[i].slice(0, point)) {
-          return prefix.slice(0, prefix.length - 1);
+          return prefix.slice(0, prefix.length - 1)
         }
       }
-      point++;
+      point++
     }
   } else {
-    return '';
+    return ''
   }
-};
+}
 
 /**
  * 单次遍历
@@ -58,24 +58,24 @@ export const longestCommonPrefix: Submission = (strs: string[]): string => {
  * @case `["",""]`
  */
 export const longestCommonPrefix1: Submission = (strs: string[]): string => {
-  let prefix: string = '';
+  let prefix: string = ''
   if (strs.length == 1) {
-    return strs[0];
+    return strs[0]
   } else if (strs.length > 1) {
-    let point = 1;
+    let point = 1
     while (true) {
-      prefix = strs[0].slice(0, point);
+      prefix = strs[0].slice(0, point)
       for (let i = 0; i < strs.length; i++) {
         if (prefix !== strs[i].slice(0, point)) {
-          return prefix.slice(0, prefix.length - 1);
+          return prefix.slice(0, prefix.length - 1)
         }
       }
-      point++;
+      point++
     }
   } else {
-    return '';
+    return ''
   }
-};
+}
 
 /**
  * 单次遍历
@@ -87,19 +87,19 @@ export const longestCommonPrefix1: Submission = (strs: string[]): string => {
  */
 export const longestCommonPrefix2: Submission = (strs: string[]): string => {
   if (strs && strs.length > 0) {
-    let prefix: string = strs[0]; // 使用 strs[0] 作为初始前缀串
+    let prefix: string = strs[0] // 使用 strs[0] 作为初始前缀串
     for (let i = 1; i < strs.length; i++) {
-      let subStr = strs[i];
+      let subStr = strs[i]
       while (subStr.indexOf(prefix) !== 0) {
         // 不存在前缀子串
-        prefix = prefix.slice(0, prefix.length - 1);
+        prefix = prefix.slice(0, prefix.length - 1)
         if (prefix.length == 0) {
-          return '';
+          return ''
         }
       }
     }
-    return prefix;
+    return prefix
   } else {
-    return '';
+    return ''
   }
-};
+}

@@ -21,7 +21,7 @@ Output:
 ]
 ```
  */
-type Submission = (numRows: number) => number[][];
+type Submission = (numRows: number) => number[][]
 
 /**
  * 杨辉三角形
@@ -34,16 +34,16 @@ type Submission = (numRows: number) => number[][];
  */
 export const PascalTriangle: Submission = (numRows: number): number[][] => {
   if (numRows === 0) {
-    return [];
+    return []
   }
-  const triangle: number[][] = [[1]];
+  const triangle: number[][] = [[1]]
   for (let i = 1; i < numRows; i += 1) {
-    const row: number[] = [];
+    const row: number[] = []
     for (let j = 0; j <= i; j += 1) {
-      row[j] = (triangle[i - 1][j - 1] || 0) + (triangle[i - 1][j] || 0);
+      row[j] = (triangle[i - 1][j - 1] || 0) + (triangle[i - 1][j] || 0)
     }
-    triangle.push(row);
+    triangle.push(row)
   }
 
-  return triangle;
-};
+  return triangle
+}

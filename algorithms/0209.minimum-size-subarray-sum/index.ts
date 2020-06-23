@@ -15,7 +15,7 @@ Explanation: the subarray [4,3] has the minimal length under the problem constra
 
 If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log n).
  */
-type Submission = (s: number, nums: number[]) => number;
+type Submission = (s: number, nums: number[]) => number
 
 /**
  * Two Pointer
@@ -28,13 +28,13 @@ export const minSubArrayLen: Submission = (
   // prev,next
   // sum < s; next右移
   // sum > s; prev右移 -> sum < s
-  let mini: number = nums.length;
+  let mini: number = nums.length
   for (let prev = 0, next = 0, sum = 0; next < nums.length; ) {
-    sum += nums[next++];
+    sum += nums[next++]
     if (sum >= str) {
-      next - prev < mini && (mini = next - prev);
+      next - prev < mini && (mini = next - prev)
       while ((sum -= nums[prev++]) >= str) {}
     }
   }
-  return mini;
-};
+  return mini
+}

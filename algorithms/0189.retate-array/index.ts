@@ -27,18 +27,18 @@ rotate 2 steps to the right: [3,99,-1,-100]
 - Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
 - Could you do it in-place with O(1) extra space?
  */
-type Submission = (nums: number[], k: number) => void;
+type Submission = (nums: number[], k: number) => void
 
 /**
  * @time
  */
 export const rotate: Submission = (nums: number[], k: number): void => {
   if (k === 0 || nums.length === 0) {
-    return;
+    return
   }
-  let ret: number = k % nums.length;
+  let ret: number = k % nums.length
   if (ret === 0) {
-    return;
+    return
   }
   for (let i = 0; i < ret; i++) {}
-};
+}

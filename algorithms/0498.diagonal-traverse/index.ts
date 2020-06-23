@@ -25,26 +25,26 @@ Output:  [1,2,4,7,5,3,6,8,9]
 - nums will have a length in the range [1, 50].
 - Every nums[i] will be an integer in the range [0, 99].
  */
-type Submission = (matrix: number[][]) => number[];
+type Submission = (matrix: number[][]) => number[]
 
 /**
  * @time
  */
 export const findDiagonalOrder: Submission = (matrix: number[][]): number[] => {
-  const row: number = matrix.length;
-  const result: number[] = [];
+  const row: number = matrix.length
+  const result: number[] = []
   if (row === 0) {
-    return result;
+    return result
   }
 
   // rows > 0
-  let columns: number = matrix[0].length;
-  let p: number[] = [0, 0]; //
-  let direction: boolean = true; // true:x向右上 false:向左下
+  let columns: number = matrix[0].length
+  let p: number[] = [0, 0] //
+  let direction: boolean = true // true:x向右上 false:向左下
 
   while (!(p[0] === row && p[1] === columns)) {
     // 新注值
-    result.push(matrix[p[0]][p[1]]);
+    result.push(matrix[p[0]][p[1]])
 
     // 处理游标逻辑
     if (direction) {
@@ -52,14 +52,14 @@ export const findDiagonalOrder: Submission = (matrix: number[][]): number[] => {
       if (p[0] - 1 < 0 || p[1] + 1 >= columns) {
         // 越界
       }
-      p[0] = p[0] - 1;
-      p[1] = p[1] + 1;
+      p[0] = p[0] - 1
+      p[1] = p[1] + 1
     } else {
       // 左下
-      p[0] = p[0] + 1;
-      p[1] = p[1] - 1;
+      p[0] = p[0] + 1
+      p[1] = p[1] - 1
     }
   }
 
-  return result;
-};
+  return result
+}

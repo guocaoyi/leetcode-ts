@@ -17,7 +17,7 @@ Explanation: The first two digits or the last three digits are consecutive 1s.
 - The input array will only contain `0` and `1`.
 - The length of input array is a positive integer and will not exceed 10,000
  */
-type Submission = (nums: Array<0 | 1>) => number;
+type Submission = (nums: Array<0 | 1>) => number
 
 /**
  * 指针
@@ -29,14 +29,14 @@ type Submission = (nums: Array<0 | 1>) => number;
 export const findMaxConsecutiveOnes: Submission = (
   nums: Array<0 | 1>
 ): number => {
-  let maxLength: number = 0;
-  let curLength: number = 0;
+  let maxLength: number = 0
+  let curLength: number = 0
   nums.forEach((v: 0 | 1) => {
     if (v === 1) {
-      curLength++ >= maxLength && (maxLength = curLength);
+      curLength++ >= maxLength && (maxLength = curLength)
     } else {
-      curLength = 0;
+      curLength = 0
     }
-  });
-  return maxLength;
-};
+  })
+  return maxLength
+}

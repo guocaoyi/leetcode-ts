@@ -37,7 +37,7 @@ Output: true
 4. `0 <= trips[i][1] < trips[i][2] <= 100`
 5. `1 <= capacity <= 100000`
  */
-type Submission = (trips: number[][], capacity: number) => Boolean;
+type Submission = (trips: number[][], capacity: number) => Boolean
 
 /**
  * 贪心算法
@@ -49,6 +49,6 @@ export const carPooling: Submission = (
   // 看行程上，是否有重合
   // 未重合，座席 == 单次行程最大乘客数
   // 重合，座席 == 合并乘次人数之和
-  trips.sort((pre: number[], next: number[]) => pre[1] - next[1]);
-  return false;
-};
+  trips.sort((pre: number[], next: number[]) => pre[1] - next[1])
+  return false
+}
