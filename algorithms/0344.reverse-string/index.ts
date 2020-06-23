@@ -1,25 +1,26 @@
 /**
-# 344. Reverse String
-
-Write a function that reverses a string. The input string is given as an array of characters `char[]`.
-
-Do not allocate extra space for another array, you must do this by modifying the input array **in-place** with O(1) extra memory.
-
-You may assume all the characters consist of [printable ascii characters.](https://en.wikipedia.org/wiki/ASCII#Printable_characters)
-
-### Example
-
-```bash
-Input: ["h","e","l","l","o"]
-Output: ["o","l","l","e","h"]
-```
-
-```bash
-Input: ["H","a","n","n","a","h"]
-Output: ["h","a","n","n","a","H"]
-```
+ * # 344. Reverse String
+ *
+ * Write a function that reverses a string. The input string is given as an array of characters `char[]`.
+ *
+ * Do not allocate extra space for another array, you must do this by modifying
+ * the input array **in-place** with O(1) extra memory.
+ *
+ * You may assume all the characters consist of
+ * [printable ascii characters.](https://en.wikipedia.org/wiki/ASCII#Printable_characters)
+ *
+ * ### Example
+ *
+ * ```bash
+ * Input: ["h","e","l","l","o"]
+ * Output: ["o","l","l","e","h"]
+ * ```
+ *
+ * ```bash
+ * Input: ["H","a","n","n","a","h"]
+ * Output: ["h","a","n","n","a","H"]
+ * ```
  */
-type Submission = (s: string[]) => void
 
 /**
  * Array.prototype.reverse
@@ -29,9 +30,9 @@ type Submission = (s: string[]) => void
  * @runtime
  * @memory
  */
-export const reverseString: Submission = (s: string[]): void => {
-  s.reverse()
-}
+export const reverseString = (s: string[]): void => {
+  s.reverse();
+};
 
 /**
  * O(1) extra memory 迫使无法使用额外的数组进行缓存；
@@ -39,13 +40,13 @@ export const reverseString: Submission = (s: string[]): void => {
  * @status Wrong Answer
  * @case `Input: ["h","e","l","l","o"] Output: ["h","e","l","l","o"] Expected: ["o","l","l","e","h"]`
  */
-export const reverseString$1: Submission = (s: string[]): void => {
-  let arr: string[] = []
+export const reverseString$1 = (s: string[]): void => {
+  let arr: string[] = [];
   for (let i = s.length; i > 0; i--) {
-    arr.push(s[i - 1])
+    arr.push(s[i - 1]);
   }
-  s = arr
-}
+  s = arr;
+};
 
 /**
  * O(1) extra memory 迫使无法使用额外的数组进行缓存；
@@ -54,15 +55,15 @@ export const reverseString$1: Submission = (s: string[]): void => {
  * @runtime 116 ms > 81.07%
  * @memory 46.8 MB < 52.47%
  */
-export const reverseString$2: Submission = (s: string[]): void => {
-  const middle: number = Math.floor(s.length / 2)
-  let repl: string
+export const reverseString$2 = (s: string[]): void => {
+  const middle: number = Math.floor(s.length / 2);
+  let repl: string;
   for (let i = 0; i < middle; i++) {
-    repl = s[i]
-    s[i] = s[s.length - i - 1]
-    s[s.length - i - 1] = repl
+    repl = s[i];
+    s[i] = s[s.length - i - 1];
+    s[s.length - i - 1] = repl;
   }
-}
+};
 
 /**
  * O(1) extra memory 迫使无法使用额外的数组进行缓存；
@@ -71,9 +72,9 @@ export const reverseString$2: Submission = (s: string[]): void => {
  * @runtime 116 ms > 81.07%
  * @memory 46.8 MB < 52.47%
  */
-export const reverseString3: Submission = (s: string[]): void => {
-  const middle: number = Math.floor(s.length / 2)
+export const reverseString3 = (s: string[]): void => {
+  const middle: number = Math.floor(s.length / 2);
   for (let i = 0; i < middle; i++) {
-    ;[s[i], s[s.length - i - 1]] = [s[s.length - i - 1], s[i]]
+    [s[i], s[s.length - i - 1]] = [s[s.length - i - 1], s[i]];
   }
-}
+};

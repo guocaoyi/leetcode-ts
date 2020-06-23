@@ -1,27 +1,26 @@
 /**
-# 118. Pascal's Triangle
-
-Given a non-negative integer numRows, generate the first numRows of Pascal's triangle.
-
-![Pascal's Trangle](../../assets/images/118.PascalTriangleAnimated2.gif)
-
-###### In Pascal's triangle, each number is the sum of the two numbers directly above it.
-
-## Example
-
-```bash
-Input: 5
-Output:
-[
-     [1],
-    [1,1],
-   [1,2,1],
-  [1,3,3,1],
- [1,4,6,4,1]
-]
-```
+ * # 118. Pascal's Triangle
+ *
+ * Given a non-negative integer numRows, generate the first numRows of Pascal's triangle.
+ *
+ * ![Pascal's Trangle](../../assets/images/118.PascalTriangleAnimated2.gif)
+ *
+ * ###### In Pascal's triangle, each number is the sum of the two numbers directly above it.
+ *
+ * ## Example
+ *
+ * ```bash
+ * Input: 5
+ * Output:
+ * [
+ *      [1],
+ *     [1,1],
+ *    [1,2,1],
+ *   [1,3,3,1],
+ *  [1,4,6,4,1]
+ * ]
+ * ```
  */
-type Submission = (numRows: number) => number[][]
 
 /**
  * 杨辉三角形
@@ -32,18 +31,18 @@ type Submission = (numRows: number) => number[][]
  * @runtime 44 ms > 99.04%
  * @memory 33.9 MB < 41.52%
  */
-export const PascalTriangle: Submission = (numRows: number): number[][] => {
+export const PascalTriangle = (numRows: number): number[][] => {
   if (numRows === 0) {
-    return []
+    return [];
   }
-  const triangle: number[][] = [[1]]
+  const triangle: number[][] = [[1]];
   for (let i = 1; i < numRows; i += 1) {
-    const row: number[] = []
+    const row: number[] = [];
     for (let j = 0; j <= i; j += 1) {
-      row[j] = (triangle[i - 1][j - 1] || 0) + (triangle[i - 1][j] || 0)
+      row[j] = (triangle[i - 1][j - 1] || 0) + (triangle[i - 1][j] || 0);
     }
-    triangle.push(row)
+    triangle.push(row);
   }
 
-  return triangle
-}
+  return triangle;
+};

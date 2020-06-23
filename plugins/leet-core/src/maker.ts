@@ -1,11 +1,11 @@
-import * as fs from 'fs';
-import * as path from 'path';
+import * as fs from "fs";
+import * as path from "path";
 import {
   Question,
   Questions,
   QuestionData,
-  Submission as ISub
-} from 'leet-core';
+  Submission as ISub,
+} from "leet-core";
 
 // 生成 algorithms/*/index.ts
 export class MarkTS {
@@ -34,13 +34,13 @@ export class MarkJS {
 
 // 生成 algorithms/*/README.md
 export class MarkMD {
-  private readonly roma: string = 'I,II,III,IV,V,VI,VII,VIII,IX,X';
+  private readonly roma: string = "I,II,III,IV,V,VI,VII,VIII,IX,X";
   //
 }
 
 // 生成 ~/README.md
 export class MarkRootMD {
-  private readonly fileName: string = 'README.md';
+  private readonly fileName: string = "README.md";
 
   constructor(data: any) {
     // 8304 -> ⁰, 8313 -> ⁹
@@ -52,7 +52,7 @@ export class MarkRootMD {
    * load files
    */
   public load = ({ filePath }: any): void => {
-    let file = fs.readFileSync(filePath, { encoding: 'utf8' });
+    let file = fs.readFileSync(filePath, { encoding: "utf8" });
     // this.md = file.split('\n## Submissions')[0];
   };
 
@@ -60,7 +60,7 @@ export class MarkRootMD {
    * json to markdown syntax strings
    */
   public print = (submissions: ISub[]): void => {
-    let str: string = '## Submissions\n\n';
+    let str: string = "## Submissions\n\n";
     // title
 
     submissions.forEach((s: ISub, k: number) => {
@@ -68,7 +68,8 @@ export class MarkRootMD {
       str += `### ${name}\n\n`;
       str += `\t${info}\n\n`;
       const { time, status, runtime, memory } = s;
-      str += `|Time|Status|Runtime|Memory|\\n|:--:|:----:|:-----:|:----:|\\n|${time}|${status}|${runtime}|${memory}|\\n`;
+      str +=
+        `|Time|Status|Runtime|Memory|\\n|:--:|:----:|:-----:|:----:|\\n|${time}|${status}|${runtime}|${memory}|\\n`;
       const { code } = s;
       str += `\`\`\`typescript\\n${code}\\n\\n\`\`\``;
     });
@@ -93,5 +94,5 @@ export default {
   MarkJS,
   MarkMD,
   MarkRootMD,
-  MarkTopics
+  MarkTopics,
 };

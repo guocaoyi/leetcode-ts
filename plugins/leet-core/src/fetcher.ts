@@ -1,7 +1,7 @@
-import * as fs from 'fs';
-import * as path from 'path';
-import * as process from 'process';
-import * as graphql from 'graphql-request';
+import * as fs from "fs";
+import * as path from "path";
+import * as process from "process";
+import * as graphql from "graphql-request";
 
 // queries
 export class Queries {
@@ -27,7 +27,8 @@ fragment questionSummaryFields on QuestionNode {
 }`;
 
   // 根据名称获取题目详情 Query 语句
-  public static questionDataQuery: string = `query questionData($titleSlug: String!) {
+  public static questionDataQuery: string =
+    `query questionData($titleSlug: String!) {
   question(titleSlug: $titleSlug) {
     questionId
     questionFrontendId
@@ -59,14 +60,14 @@ export class Fetcher<T> {
   private client: graphql.GraphQLClient;
 
   constructor() {
-    this.client = new graphql.GraphQLClient('https://leetcode-cn.com/graphql', {
+    this.client = new graphql.GraphQLClient("https://leetcode-cn.com/graphql", {
       headers: {
-        accept: '*/*',
-        'content-type': 'application/json',
-        'user-agent':
-          'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
-        'x-newrelic-id': 'UAQDVFVRGwEAXVlbBAg='
-      }
+        accept: "*/*",
+        "content-type": "application/json",
+        "user-agent":
+          "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36",
+        "x-newrelic-id": "UAQDVFVRGwEAXVlbBAg=",
+      },
     });
   }
 
@@ -75,7 +76,7 @@ export class Fetcher<T> {
     try {
       data = await this.client.request(query);
     } catch (e) {
-      throw new Error('Fetcher#fetch');
+      throw new Error("Fetcher#fetch");
     } finally {
       return data;
     }

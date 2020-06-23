@@ -1,5 +1,5 @@
-import * as path from 'path';
-import * as fs from 'fs';
+import * as path from "path";
+import * as fs from "fs";
 
 // 提纲
 export interface Question {
@@ -19,11 +19,11 @@ export interface Submission {
   info?: string; // 答题（说明、思路、总结）
   time: string; // 提交时间
   status?:
-    | 'Accepted'
-    | 'Time Limit Exceeded'
-    | 'Error'
-    | 'Failed'
-    | 'Wrong Answer'; // 提交测试情况
+    | "Accepted"
+    | "Time Limit Exceeded"
+    | "Error"
+    | "Failed"
+    | "Wrong Answer"; // 提交测试情况
   runtime?: string; // 测试运行时（时间复杂度）
   memory?: string; // 测试内存占用（空间复杂度）
   case?: string; // 测试用例（入参）
@@ -39,10 +39,10 @@ export class Compiler {
       name: `Submission \*\*`,
       time: new Date()
         .toISOString()
-        .replace(/\-/g, '/')
-        .replace(/T/, ' ')
-        .replace(/\..+/, ''),
-      code: '```typescript\nconst solution = () => {};\n```'
+        .replace(/\-/g, "/")
+        .replace(/T/, " ")
+        .replace(/\..+/, ""),
+      code: "```typescript\nconst solution = () => {};\n```",
     };
   }
 
@@ -50,14 +50,14 @@ export class Compiler {
    * 加载文件
    */
   public load = ({ filePath }: any): Compiler => {
-    filePath = path.join(filePath, 'index.ts');
-    let file = fs.readFileSync(filePath, { encoding: 'utf8' }).trim();
+    filePath = path.join(filePath, "index.ts");
+    let file = fs.readFileSync(filePath, { encoding: "utf8" }).trim();
 
     const sourseFile: ts.SourceFile = ts.createSourceFile(
-      'code.ts',
+      "code.ts",
       file,
       ts.ScriptTarget.ES5,
-      true
+      true,
     );
     this.parseSourse(sourseFile);
     return this;
@@ -69,7 +69,7 @@ export class Compiler {
   private parseSourse(node: ts.SourceFile) {
     const syntax: ts.Node = node
       .getChildren()
-      .find((n: ts.Node) => ts.formatSyntaxKind(n.kind) == 'SyntaxList');
+      .find((n: ts.Node) => ts.formatSyntaxKind(n.kind) == "SyntaxList");
     this.parseSyntax(syntax);
   }
 
@@ -80,7 +80,7 @@ export class Compiler {
     const _this = this;
     syntax.getChildren().forEach((stmt: ts.Node) => {
       const kind = ts.formatSyntaxKind(stmt.kind);
-      if (kind == 'FunctionDeclaration' || kind == 'VariableStatement') {
+      if (kind == "FunctionDeclaration" || kind == "VariableStatement") {
         const submission = new Submission();
         submission.sourse = stmt.getText();
         const info: Info = _this.parseDoc(stmt);
@@ -98,10 +98,10 @@ export class Compiler {
     const info = new Info();
     const commNode: any = stmt
       .getChildren()
-      .find((n: ts.Node) => ts.formatSyntaxKind(n.kind) === 'JSDocComment');
-    let [title, ...comment] = (commNode.comment || '').split('\n');
+      .find((n: ts.Node) => ts.formatSyntaxKind(n.kind) === "JSDocComment");
+    let [title, ...comment] = (commNode.comment || "").split("\n");
     info.title = title;
-    info.comment = comment.join('\n');
+    info.comment = comment.join("\n");
     commNode
       .getChildren()
       .forEach((n: any) => (info[n.tagName.text] = n.comment));

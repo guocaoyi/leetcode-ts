@@ -26,7 +26,6 @@
  * - -100.0 < x < 100.0
  * - n is a 32-bit signed integer, within the range [−231, 231 − 1]
  */
-type Submission = (x: number, n: number) => number | string
 
 /**
  * 内置 API 完成
@@ -36,6 +35,6 @@ type Submission = (x: number, n: number) => number | string
  * @runtime 76 ms > 42.42%
  * @memory 34.2 MB < 13.79%
  */
-export const myPow: Submission = (x: number, n: number): number | string => {
-  return Math.pow(x, n).toFixed(5)
-}
+export const myPow = (x: number, n: number): number | string => {
+  return Math.pow(x, n).toFixed(5);
+};

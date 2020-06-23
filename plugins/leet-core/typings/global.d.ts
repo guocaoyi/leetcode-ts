@@ -1,4 +1,4 @@
-declare module 'leet-core' {
+declare module "leet-core" {
   // topic
   export interface Topic {
     name: string;
@@ -13,7 +13,7 @@ declare module 'leet-core' {
     questionId: string;
     questionFrontendId: string;
     topicTags: Topic[];
-    difficulty: 'Easy' | 'Medium' | 'Hard';
+    difficulty: "Easy" | "Medium" | "Hard";
     isPaidOnly: boolean; // 是否付费
   }
 
@@ -26,8 +26,8 @@ declare module 'leet-core' {
 
   // code snippet
   export interface CodeSnippet {
-    lang: 'Java' | 'Python3' | 'JavaScript';
-    langSlug: 'java' | 'python3' | 'javascript';
+    lang: "Java" | "Python3" | "JavaScript";
+    langSlug: "java" | "python3" | "javascript";
     code: string;
   }
 
@@ -42,7 +42,7 @@ declare module 'leet-core' {
         content: string;
         translatedTitle: string;
         isPaidOnly: boolean;
-        difficulty: 'Easy' | 'Medium' | 'Hard';
+        difficulty: "Easy" | "Medium" | "Hard";
         likes: number;
         dislikes: number;
         codeSnippets: CodeSnippet[];
@@ -67,7 +67,7 @@ declare module 'leet-core' {
     name: string; // 标题（所用方法）
     info: string; // 答题（说明、思路、总结）
     time: string; // 提交时间
-    status: 'Accepted'; // 提交测试情况
+    status: "Accepted"; // 提交测试情况
     runtime: string; // 测试运行时（时间复杂度）
     memory: string; // 测试内存占用（空间复杂度）
     code: string; // 代码
