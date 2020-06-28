@@ -1,5 +1,4 @@
-import * fs from 'fs'
-import core from 'leet-core';
+import { writeFileStrSync } from "https://deno.land/std/fs/write_file_str.ts";
 
 const { Compiler, Fetcher } = core;
 
@@ -11,9 +10,9 @@ const { Compiler, Fetcher } = core;
  */
 export class Leet {
   private readonly tempCode: string =
-    '/**\n *\n * @time\n * @status\n * @runtime\n * @memory\n */\nvar subm = (target: any): any => {};\n';
+    "/**\n *\n * @time\n * @status\n * @runtime\n * @memory\n */\nvar subm = (target: any): any => {};\n";
   private readonly draftCode: string =
-    '/**\n * @author yalda\n * @github github.com/guocaoyi\n * @website www.yalda.cn\n */\nvar subm = (target: any): any => {};\n';
+    "/**\n * @author yalda\n * @github github.com/guocaoyi\n * @website www.yalda.cn\n */\nvar subm = (target: any): any => {};\n";
 
   /**
    * leet create 0724. Find Pivot Indexs
@@ -46,14 +45,12 @@ export class Leet {
    * leet index 制作索引
    */
   summary(): any {
-    fs.writeFileSync('', '', { encoding: 'utf8' });
+    writeFileStrSync("", "", { encoding: "utf8" });
   }
 
   /**
    * leet deploy 发布
    */
   deploy() {
-    console.info(':====>');
   }
 }
-let m = f = n => m[n] || (m[n] = n < 2 ? 1 : f(--n) + f(--n))

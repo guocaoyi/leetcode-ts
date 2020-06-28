@@ -16,28 +16,20 @@
  * Input: a = "1010", b = "1011"
  * Output: "10101"
  * ```
+ * 
+ * ### 注意
+ * 一开始偷懒，直接使用 parseInt 来进行数值类型的转换，导致了大数值丢失精度
+ * 别忽略 Number.MAX_SAFE_INTEGER，的损失精度的情况
  */
-
-/**
- * 原生方法
- * 无脑转换类型，忽略了 Number.MAX_SAFE_INTEGER 的损失精度的情况
- * @time
- * @status Error
- * @case `10100000100100110110010000010101111011011001101110111111111101000000101111001110001111100001101`
- * `110101001011101110001111100110001010100001101011101010000011011011001011101111001100000011011110011`
- */
-export const addBinary = (a: string, b: string): string => {
-  return Number(parseInt(a, 2) + parseInt(b, 2)).toString(2);
-};
+export type Submission = (a: string, b: string) => string;
 
 /**
  * 逐位计算
  * @time
- * @status Accepted
  * @runtime 84 ms > 19.59%
  * @memory 35.6 MB < 71.79%
  */
-export const addBinary1 = (a: string, b: string): string => {
+export const addBinary = (a: string, b: string): string => {
   const result: number[] = [];
   let fix: number = 0;
   for (let p = a.split(""), n = b.split(""); p.length > 0 || n.length > 0;) {

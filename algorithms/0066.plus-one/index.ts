@@ -22,27 +22,22 @@
  * Explanation: The array represents the integer 4321.
  * ```
  */
-
-/**
- * 转数字
- * 一开始没有考虑超出 JS 最大数的问题，直接转成数字进行运算，导致损失精度；
- * @time
- * @status Failed
- * @case [6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]
- */
-export const plusOne = (digits: number[]): Array<number | string> =>
-  String(Number(digits.join("")) + 1).split("");
+export type Submission = (digits: number[]) => number[];
 
 /**
  * 进位制运算
  * 从各位开始计算
+ * @time 2020.06.24 18:54
+ * @runtime 72 ms, faster than 50.00% of TypeScript
+ * @memory 33.9 MB, less than 100.00% of TypeScript
  */
-export const plusOne$1 = (digits: number[]): Array<number | string> => {
-  let p: number = digits.length - 1;
-  if (Number(digits.join("")) <= Number.MAX_SAFE_INTEGER - 1) {
-    return String(Number(digits.join("")) + 1).split("");
+export const plusOne = (digits: number[]): number[] => {
+  let integer = Number(digits.join(""));
+  if (Number(digits.join("")) < Number.MAX_SAFE_INTEGER) {
+    return String(integer + 1).split("").map((s) => Number(s));
   }
 
+  let p: number = digits.length - 1;
   let last_computed_is_carry: boolean = false;
   while (p >= 0) {
     let d: number = digits[p] + 1;

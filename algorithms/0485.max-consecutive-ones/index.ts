@@ -17,11 +17,11 @@
  * - The input array will only contain `0` and `1`.
  * - The length of input array is a positive integer and will not exceed 10,000
  */
+export type Submission = (nums: Array<0 | 1>) => number;
 
 /**
  * 指针
  * @time 2019.06.21
- * @status Accepted
  * @runtime 112 ms > 68.79%
  * @memory 36.6 MB < 73,78%
  */

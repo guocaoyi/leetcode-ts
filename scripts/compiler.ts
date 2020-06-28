@@ -1,5 +1,5 @@
-import * as path from "path";
-import * as fs from "fs";
+import { readFileStrSync } from 'https://deno.land/std/fs/read_file_str.ts'
+import { } from "https://deno.land/std/path/"
 
 // 提纲
 export interface Question {
@@ -19,11 +19,11 @@ export interface Submission {
   info?: string; // 答题（说明、思路、总结）
   time: string; // 提交时间
   status?:
-    | "Accepted"
-    | "Time Limit Exceeded"
-    | "Error"
-    | "Failed"
-    | "Wrong Answer"; // 提交测试情况
+  | "Accepted"
+  | "Time Limit Exceeded"
+  | "Error"
+  | "Failed"
+  | "Wrong Answer"; // 提交测试情况
   runtime?: string; // 测试运行时（时间复杂度）
   memory?: string; // 测试内存占用（空间复杂度）
   case?: string; // 测试用例（入参）
@@ -51,7 +51,7 @@ export class Compiler {
    */
   public load = ({ filePath }: any): Compiler => {
     filePath = path.join(filePath, "index.ts");
-    let file = fs.readFileSync(filePath, { encoding: "utf8" }).trim();
+    let file = readFileStrSync(filePath, { encoding: "utf8" }).trim();
 
     const sourseFile: ts.SourceFile = ts.createSourceFile(
       "code.ts",
@@ -77,16 +77,15 @@ export class Compiler {
    * 函数语句 & 箭头函数定义语句进行格式化
    */
   private parseSyntax(syntax: ts.Node) {
-    const _this = this;
     syntax.getChildren().forEach((stmt: ts.Node) => {
       const kind = ts.formatSyntaxKind(stmt.kind);
       if (kind == "FunctionDeclaration" || kind == "VariableStatement") {
         const submission = new Submission();
         submission.sourse = stmt.getText();
-        const info: Info = _this.parseDoc(stmt);
+        const info: Info = this.parseDoc(stmt);
         submission.info = info;
         submission.name = info.title;
-        _this.submissions.push(submission);
+        this.submissions.push(submission);
       }
     });
   }

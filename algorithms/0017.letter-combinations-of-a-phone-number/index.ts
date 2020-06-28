@@ -29,11 +29,22 @@
  * 3. 商品详情页面下单时勾选规格值，根据 SKU 库存排除无货的规格值可选
  * 4. 电商营销场景组合优惠券场景
  */
+export type Submission = (digits: string) => string[];
 
 /**
  * 笛卡尔积
+ * @author yalda
+ * @github https://github.com/guocaoyi/leetcode-ts
+ * @time 2020.06.28 12:10
+ * @runtime 100 ms, faster then 100.00% of TypeScript
+ * @memory 33.1 Mb, less then 100.00% of TypeScript
+ * @runtime_cn 72 ms, faster then 31.25% of TypeScript
+ * @memory_cn 32.4 MB, less then 100.00% of TypeScript
  */
 export const letterCombinations = (digits: string): string[] => {
+  if (digits === "") {
+    return [];
+  }
   // 拨号键盘
   const keymap: any = {
     2: ["a", "b", "c"],
@@ -46,49 +57,23 @@ export const letterCombinations = (digits: string): string[] => {
     9: ["w", "x", "y", "z"],
   };
 
-  const multi_cartesian = (...sets: Array<Set<number>>): Array<Set<number>> => {
-    const result: Array<Set<number>> = [];
-    let loop = (set: Set<number>, items: number[], point: number): void => {
-      set.forEach((v: number) => {
-        items.push(v);
-        if (point >= sets.length - 1) {
-          result.push(new Set(items));
-        } else {
-          set = sets[point + 1];
-          loop(set, items, point + 1);
-        }
-        items.pop();
-      });
-    };
-    loop(sets[0], [], 0);
-    return result;
-  };
-
   const s = digits.split("").map((d) => keymap[d]);
   let result: any[] = [];
-  let stack = [];
+  let stack: any[] = [];
   let point = 0;
 
-  for (let i = 0, array = s[point++]; i < array.length; i++) {
-    stack.push(array[i]);
+  const loop = () => {
     for (let i = 0, array = s[point++]; i < array.length; i++) {
       stack.push(array[i]);
-      for (let i = 0, array = s[point++]; i < array.length; i++) {
-        stack.push(array[i]);
-        for (let i = 0, array = s[point++]; i < array.length; i++) {
-          stack.push(array[i]);
-          result.push(stack.join(""));
-          stack.pop();
-        }
+      if (point == digits.length) {
+        result.push(stack.join(""));
+      } else {
+        loop();
         point--;
-        stack.pop();
       }
-      point--;
       stack.pop();
     }
-    point--;
-    stack.pop();
-  }
-
+  };
+  loop();
   return result;
 };

@@ -19,25 +19,44 @@
  * 6^2 + 8^2 = 100
  * 1^2 + 0^2 + 0^2 = 1
  * ```
+ * 
+ * ### Thinkings
+ * 
+ * - 要报所有的推导结果环境，一旦发现已经存在，即除了死循环，立即退出；
+ * 一开始以为这题很简单，也没仔细考虑；使用了 Array.reduce() 和 While 控制语句完事；跑测试用例时才发现，第二条用例就没有通过。问题出在时间复杂度上，这里必须对死循环进行处理。
  */
+export type Submission = (n: number) => boolean;
 
 /**
- *
- * 一开始以为这题很简单，也没仔细考虑；使用了 Array.reduce() 和 While 控制语句完事；跑测试用例时才发现，第二条用例就没有通过。问题出在时间复杂度上，这里必须对死循环进行处理。
- * @time 2019.03.15
- * @status Time Limit Exceeded
- * @case `2`
+ * @author yalda
+ * @github https://github.com/guocaoyi/leetcode-ts
+ * @time 2020.06.28 15:18
+ * @runtime 92 ms, faster then 100.00% of TypeScript online submissions 
+ * @memory 36.9 MB, less then 100.00% of TypeScript online submissions 
+ * @runtime_cn 88 ms, faster then 25.00% of TypeScript online submissions 
+ * @memory_cn 35.9 MB, less then 100.00% of TypeScript online submissions 
  */
 export const isHappy = (n: number): boolean => {
   let result: number = n;
-  let f = (n: number): any =>
-    String(n)
-      .split("")
-      .reduce((x: string, y: string) =>
-        String(Math.pow(Number(x), 2) + Math.pow(Number(y), 2))
-      );
+  let cache: Set<number> = new Set([]);
+
+  let happify = (n: number): any => {
+    let sum: number = 0;
+    let len = String(n).length;
+    for (let i = 0; i < len; i++) {
+      sum += (n % 10) ** 2;
+      n = (n - n % 10) / 10;
+    }
+    return sum;
+  };
+
   while (result !== 1) {
-    result = f(result);
+    result = happify(result);
+    if (cache.has(result)) {
+      return false;
+    }
+
+    cache.add(result);
   }
   return true;
 };

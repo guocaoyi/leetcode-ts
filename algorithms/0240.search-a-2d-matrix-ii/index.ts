@@ -24,11 +24,11 @@
  *
  * Given target = `20`, return `false`.
  */
+export type Submission = (matrix: number[][], target: number) => boolean;
 
 /**
  * 双层遍历
  * @time 2019.03.05
- * @status Accepted
  * @runtime 460 ms > 22.93%
  * @momery 37.1 MB < 100.00%
  */

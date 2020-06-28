@@ -1,67 +1,71 @@
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+import * as asserts from "https://deno.land/std/testing/asserts.ts";
+import * as log from "https://deno.land/std/log/mod.ts";
 
-import {
-  longestCommonPrefix,
-  longestCommonPrefix1,
-  longestCommonPrefix2,
-} from "./index.ts";
+import { longestCommonPrefix } from "./index.ts";
+
+log.info("0014.Longest Common Prefix");
 
 Deno.test({
-  name: `0014.Longest Common Prefix #longestCommonPrefix
+  name: `
+  Input: ["",""]
+  Output: ''`,
+  fn(): void {
+    const result = longestCommonPrefix(["", ""]);
+    asserts.assertEquals(result, "");
+  },
+});
+
+Deno.test({
+  name: `
   Input: ['flower', 'flow', 'flight']
   Output: 'fl'`,
   fn(): void {
     const result = longestCommonPrefix(["flower", "flow", "flight"]);
-    assertEquals(result, "fl");
+    asserts.assertEquals(result, "fl");
   },
 });
 
 Deno.test({
-  name: `0014.Longest Common Prefix #longestCommonPrefix
+  name: `
   Input: ['dog', 'racecar', 'car']
   Output: ''`,
   fn(): void {
     const result = longestCommonPrefix(["dog", "racecar", "car"]);
-    assertEquals(result, "");
+    asserts.assertEquals(result, "");
   },
 });
 
 Deno.test({
-  name: `0014.Longest Common Prefix #longestCommonPrefix1
-  Input: ['flower', 'flow', 'flight']
-  Output: 'fl'`,
-  fn(): void {
-    const result = longestCommonPrefix1(["flower", "flow", "flight"]);
-    assertEquals(result, "fl");
-  },
-});
-
-Deno.test({
-  name: `0014.Longest Common Prefix #longestCommonPrefix1
-  Input: ['dog', 'racecar', 'car']
+  name: `
+  Input: 
+    [
+      "abcdefghijklmnopqrstuvwxyzxcewr",
+      "abcdefghijklmnopqrstuvwxyzwetwret",
+      "abcdefghijklmnopqrstuvwxyzxzcvr",
+      "abcdefghijklmnopqrstuvwxyztjnh",
+    ]
   Output: ''`,
   fn(): void {
-    const result = longestCommonPrefix1(["dog", "racecar", "car"]);
-    assertEquals(result, "");
+    const result = longestCommonPrefix(
+      [
+        "abcdefghijklmnopqrstuvwxyzxcewr",
+        "abcdefghijklmnopqrstuvwxyzwetwret",
+        "abcdefghijklmnopqrstuvwxyzxzcvr",
+        "abcdefghijklmnopqrstuvwxyztjnh",
+      ],
+    );
+    asserts.assertEquals(result, "abcdefghijklmnopqrstuvwxyz");
   },
 });
 
 Deno.test({
-  name: `0014.Longest Common Prefix #longestCommonPrefix2
-  Input: ['flower', 'flow', 'flight']
-  Output: 'fl'`,
-  fn(): void {
-    const result = longestCommonPrefix2(["flower", "flow", "flight"]);
-    assertEquals(result, "fl");
-  },
-});
-
-Deno.test({
-  name: `0014.Longest Common Prefix #longestCommonPrefix2
-  Input: ['dog', 'racecar', 'car']
+  name: `
+  Input: ['vclxzjkhdsaifdsajfhkdlsh', 'iuwerhlkrdfjgbnfxjznfghdksj']
   Output: ''`,
   fn(): void {
-    const result = longestCommonPrefix2(["dog", "racecar", "car"]);
-    assertEquals(result, "");
+    const result = longestCommonPrefix(
+      ["vclxzjkhdsaifdsajfhkdlsh", "iuwerhlkrdfjgbnfxjznfghdksj"],
+    );
+    asserts.assertEquals(result, "");
   },
 });

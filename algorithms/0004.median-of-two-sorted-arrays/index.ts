@@ -23,13 +23,15 @@
  * The median is (2 + 3)/2 = 2.5
  * ```
  */
+export type Submission = (nums1: number[], nums2: number[]) => number;
 
 /**
  * 递归
- * @time 2019.1.4
- * @status Accepted
- * @runtime 168 ms > 19.48%
- * @memory 15.8 MB <
+ * @time 2020.06.28 12:51
+ * @runtime
+ * @memory
+ * @runtime_cn 128 ms, faster then 76.00%
+ * @memory_cn 42.2 MB, less then 100.00%
  */
 export const findMedianSortedArrays = (
   nums1: number[],

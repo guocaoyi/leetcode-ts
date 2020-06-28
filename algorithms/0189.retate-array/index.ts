@@ -27,6 +27,7 @@
  * - Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
  * - Could you do it in-place with O(1) extra space?
  */
+export type Submission = (nums: number[], k: number) => void;
 
 /**
  * @time

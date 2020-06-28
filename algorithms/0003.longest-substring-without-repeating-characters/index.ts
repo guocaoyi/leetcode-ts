@@ -24,13 +24,16 @@
  *              Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  * ```
  */
+export type Submission = (s: string) => number;
 
 /**
- *
- * @time 2018.10.19
- * @status Accepted
- * @runtime 116 ms > 55.08%
- * @memory N/A
+ * @author yalda
+ * @github https://github.com/guocaoyi/leetcode-ts
+ * @time 2020.06.28 12:47
+ * @runtime
+ * @memory
+ * @runtime_cn 100 ms, faster then 84.62%
+ * @memory_cn 42.6 MB, less then 100.00%
  */
 export const lengthOfLongestSubstring = (s: string): number => {
   let maxSub: string = "";

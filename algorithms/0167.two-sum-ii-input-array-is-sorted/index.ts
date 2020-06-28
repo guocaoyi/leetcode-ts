@@ -20,6 +20,7 @@
  * Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
  * ```
  */
+export type Submission = (numbers: number[], target: number) => number[];
 
 /**
  * 回溯法

@@ -33,12 +33,12 @@
  * - The length of `nums` will be in the range `[0, 10000]`.
  * - Each element `nums[i]` will be an integer in the range `[-1000, 1000]`.
  */
+export type Submission = (nums: number[]) => number;
 
 /**
  * Two Pointers
  * 使用左右两个指针进行逻辑处理
  * @time 2019.06.13
- * @status Accepted
  * @runtime 74 ms > 67.50%
  * @memory 37.7 MB < 87.50%
  */

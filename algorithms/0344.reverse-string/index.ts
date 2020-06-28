@@ -20,13 +20,16 @@
  * Input: ["H","a","n","n","a","h"]
  * Output: ["h","a","n","n","a","H"]
  * ```
+ * 
+ * ## Notes
+ * in-place 不得使用额外内存
  */
+export type Submission = (s: string[]) => void;
 
 /**
  * Array.prototype.reverse
  * 由于 Array 对象内置了 reverse 函数，先采用这个方法看看效率。然后自行实现 reverse
  * @time
- * @status Accepted
  * @runtime
  * @memory
  */
@@ -36,26 +39,11 @@ export const reverseString = (s: string[]): void => {
 
 /**
  * O(1) extra memory 迫使无法使用额外的数组进行缓存；
- * @time 2019.03
- * @status Wrong Answer
- * @case `Input: ["h","e","l","l","o"] Output: ["h","e","l","l","o"] Expected: ["o","l","l","e","h"]`
+ * @time 2019.06
+ * @runtime 116 ms, faster then  81.07%
+ * @memory 46.8 MB, less then 52.47%
  */
 export const reverseString$1 = (s: string[]): void => {
-  let arr: string[] = [];
-  for (let i = s.length; i > 0; i--) {
-    arr.push(s[i - 1]);
-  }
-  s = arr;
-};
-
-/**
- * O(1) extra memory 迫使无法使用额外的数组进行缓存；
- * @time 2019.06
- * @status Accepted
- * @runtime 116 ms > 81.07%
- * @memory 46.8 MB < 52.47%
- */
-export const reverseString$2 = (s: string[]): void => {
   const middle: number = Math.floor(s.length / 2);
   let repl: string;
   for (let i = 0; i < middle; i++) {
@@ -67,14 +55,27 @@ export const reverseString$2 = (s: string[]): void => {
 
 /**
  * O(1) extra memory 迫使无法使用额外的数组进行缓存；
- * @time 2019.06
- * @status Accepted
- * @runtime 116 ms > 81.07%
- * @memory 46.8 MB < 52.47%
+ * @time 2020.06.24 17:01
+ * @runtime 108 ms, faster then 75.86%
+ * @memory 42.8 MB, less then 100.00%
  */
-export const reverseString3 = (s: string[]): void => {
+export const reverseString$2 = (s: string[]): void => {
   const middle: number = Math.floor(s.length / 2);
   for (let i = 0; i < middle; i++) {
     [s[i], s[s.length - i - 1]] = [s[s.length - i - 1], s[i]];
+  }
+};
+
+/**
+ * O(1) extra memory 迫使无法使用额外的数组进行缓存；
+ * @time 2020.06.24 17:10
+ * @runtime 104 ms, faster then 82.76%
+ * @memory 42.6 MB, less then 100.00%
+ */
+export const reverseString$3 = (s: string[]): void => {
+  const middle: number = Math.floor(s.length / 2);
+  for (let i = 0, j = 0; i < middle; i++) {
+    j = s.length - i - 1;
+    [s[i], s[j]] = [s[j], s[i]];
   }
 };

@@ -18,11 +18,11 @@
  * Output: 2
  * ```
  */
+export type Submission = (nums: number[]) => number;
 
 /**
  * 通用解法
  * @time 2019.03.01
- * @status Accepted
  * @runtime 68ms < 87.42%
  * @memory 37.2MB > 88.35%
  */

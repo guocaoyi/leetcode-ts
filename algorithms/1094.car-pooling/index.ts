@@ -41,6 +41,7 @@
  * 4. `0 <= trips[i][1] < trips[i][2] <= 100`
  * 5. `1 <= capacity <= 100000`
  */
+export type Submission = (trips: number[][], capacity: number) => boolean;
 
 /**
  * 贪心算法

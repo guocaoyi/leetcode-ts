@@ -1,6 +1,3 @@
-import * as fs from "fs";
-import * as path from "path";
-import * as process from "process";
 import * as graphql from "graphql-request";
 
 // queries
@@ -76,9 +73,10 @@ export class Fetcher<T> {
     try {
       data = await this.client.request(query);
     } catch (e) {
-      throw new Error("Fetcher#fetch");
+      // throw new Error("throw new Error()");
+      return Promise.reject("Fetcher#fetch")
     } finally {
-      return data;
+      return Promise.resolve(data);
     }
   }
 }

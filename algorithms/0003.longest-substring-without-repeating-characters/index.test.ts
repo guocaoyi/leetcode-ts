@@ -1,36 +1,39 @@
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+import * as asserts from "https://deno.land/std/testing/asserts.ts";
+import * as log from "https://deno.land/std/log/mod.ts";
 
 import { lengthOfLongestSubstring } from "./index.ts";
 
+log.info("0003 Longest Substring Without Repeating Characters");
+
 Deno.test({
-  name: `0003 Longest Substring Without Repeating Characters
+  name: `
   Input: "abcabcbb"
   Output: 3
   `,
   fn(): void {
     const result = lengthOfLongestSubstring("abcabcbb");
-    assertEquals(result, 3);
+    asserts.assertEquals(result, 3);
   },
 });
 
 Deno.test({
-  name: `0003 Longest Substring Without Repeating Characters
+  name: `
   Input: "bbbbb"
   Output: 1
   `,
   fn(): void {
     const result = lengthOfLongestSubstring("bbbbb");
-    assertEquals(result, 1);
+    asserts.assertEquals(result, 1);
   },
 });
 
 Deno.test({
-  name: `0003 Longest Substring Without Repeating Characters
+  name: `
   Input: "pwwkew"
   Output: 3
   `,
   fn(): void {
     const result = lengthOfLongestSubstring("pwwkew");
-    assertEquals(result, 3);
+    asserts.assertEquals(result, 3);
   },
 });

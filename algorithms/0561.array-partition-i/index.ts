@@ -18,11 +18,10 @@
  * - **n** is a positive integer, which is in the range of [1, 10000].
  * - All the integers in the array will be in the range of [-10000, 10000].
  */
+export type Submission = (nums: number[]) => number;
 
 /**
- *
  * @time
- * @status Accepted
  * @runtime 112ms > 88.09%
  * @memory 39MB < 58.18%
  */

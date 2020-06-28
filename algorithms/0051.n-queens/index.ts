@@ -26,6 +26,7 @@
  * Explanation: There exist two distinct solutions to the 4-queens puzzle as shown above.
  * ```
  */
+export type Submission = (n: number) => string[][];
 
 /**
  * 回溯法

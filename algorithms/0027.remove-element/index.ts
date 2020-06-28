@@ -46,37 +46,15 @@ for (int i = 0; i < len; i++) {
 }
 ```
  */
-
-/**
- * 逻辑没有考虑完备，导致很多测试用力无法通过
- * @time
- * @status Error
- * @case [1],1 -> [1]
- */
-export const removeElement = (nums: number[], val: number): number => {
-  let p = nums.length - 1;
-  for (let i = 0; i < p; i++) {
-    if (nums[i] === val && nums[p] === val) {
-      p -= 1;
-    }
-    if (nums[i] === val) {
-      nums[i] = nums[i] ^ nums[p];
-      nums[p] = nums[i] ^ nums[p];
-      nums[i] = nums[i] ^ nums[p];
-      p -= 1;
-    }
-  }
-  return p + 1;
-};
+export type Submission = (nums: number[], val: number) => number;
 
 /**
  * 尾部判定
  * @time
- * @status Accepted
  * @runtime 112 ms > 28.81%
  * @memory 33.8 MB < 30.90%
  */
-export const removeElement1 = (nums: number[], val: number): number => {
+export const removeElement = (nums: number[], val: number): number => {
   for (let p: number = 0; p < nums.length; p++) {
     while (nums[nums.length - 1] === val) {
       nums.length--;

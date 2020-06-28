@@ -1,11 +1,4 @@
-import * as fs from "fs";
-import * as path from "path";
-import {
-  Question,
-  Questions,
-  QuestionData,
-  Submission as ISub,
-} from "leet-core";
+import { readFileStrSync } from "https://deno.land/std/fs/read_file_str.ts";
 
 // 生成 algorithms/*/index.ts
 export class MarkTS {
@@ -14,11 +7,29 @@ export class MarkTS {
 }
 
 // 生成 algorithms/*/index.jest.ts
-export class MarkJest {
-  // index.jest.ts
-  // 空
-  // import { } from './index'
-  // fs.writeFileSync('')
+export class MarkTest {
+  private template: string;
+  constructor() {
+    const template: string = `
+      import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+      import { blue, bgBlue, white } from "https://deno.land/std/fmt/colors.ts";
+
+      import { } from "./index.ts";
+
+      console.log(
+      bgBlue(white("0017")),
+      blue(""),
+      );
+
+      Deno.test({
+      name: \`
+            \`,
+      fn(): void {
+      },
+      });
+    `;
+    this.template = template;
+  }
 }
 
 // 生成 algorithms/*/index.js
@@ -52,18 +63,18 @@ export class MarkRootMD {
    * load files
    */
   public load = ({ filePath }: any): void => {
-    let file = fs.readFileSync(filePath, { encoding: "utf8" });
+    let file = readFileStrSync(filePath, { encoding: "utf8" });
     // this.md = file.split('\n## Submissions')[0];
   };
 
   /**
    * json to markdown syntax strings
    */
-  public print = (submissions: ISub[]): void => {
+  public print = (submissions: any[]): void => {
     let str: string = "## Submissions\n\n";
     // title
 
-    submissions.forEach((s: ISub, k: number) => {
+    submissions.forEach((s: any, k: number) => {
       const { name, info } = s;
       str += `### ${name}\n\n`;
       str += `\t${info}\n\n`;
@@ -90,7 +101,7 @@ export class MarkTopics {
  */
 export default {
   MarkTS,
-  MarkJest,
+  MarkTest,
   MarkJS,
   MarkMD,
   MarkRootMD,

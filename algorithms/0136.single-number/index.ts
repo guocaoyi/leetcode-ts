@@ -19,13 +19,13 @@
  * Output: 4
  * ```
  */
+export type Submission = (nums: number[]) => number;
 
 /**
  * 这里已经没有优化空间了，想想其他方法
  * @time 2019.04.19
- * @status Accepted
- * @runtime 64 ms > 81.78%
- * @memory 36.9 MB < 41.03%
+ * @runtime 64 ms, faster then 81.78% of TypeScript
+ * @memory 36.9 MB, less then 41.03% of TypeScript
  */
 export const singleNumber = (nums: number[]): number => {
   const map: any = {};

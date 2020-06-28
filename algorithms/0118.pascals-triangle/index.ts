@@ -21,15 +21,14 @@
  * ]
  * ```
  */
+export type Submission = (numRows: number) => number[][];
 
 /**
  * 杨辉三角形
  * (n,k) = (n-1,k-1) + (n-1,k)
  * (n,k) = n!/k!(n-k)! 第 n 行，第 k 个元素
- * @time
- * @status Accepted
- * @runtime 44 ms > 99.04%
- * @memory 33.9 MB < 41.52%
+ * @runtime 44 ms, faster then 99.04% of TypeScript
+ * @memory 33.9 MB, less then 41.52% of TypeScript
  */
 export const PascalTriangle = (numRows: number): number[][] => {
   if (numRows === 0) {

@@ -95,7 +95,7 @@ export class ParserTS {
 }
 
 // parse html
-class ParseHtml {}
+class ParseHtml { }
 
 let str: string = fs.readFileSync("./test.md", { encoding: "utf8" });
 
@@ -148,7 +148,7 @@ const parser = new htmlparser2.Parser(
         return `[]()`;
       }
     },
-    ontext(text) {
+    ontext(text: string) {
       // Example
       if (
         text === "Example:" ||
@@ -172,7 +172,7 @@ const parser = new htmlparser2.Parser(
       if (text === "Credits:") {
       }
     },
-    onclosetag(name) {
+    onclosetag(name: string) {
       if (name === "p") {
         // 段落
         return "\n";
@@ -202,13 +202,11 @@ const parser = new htmlparser2.Parser(
         return `[]()`;
       }
     },
-    onerror(e) {},
-    onend() {},
+    onerror(e) { },
+    onend() { },
   },
   { decodeEntities: true },
 );
 
 parser.write(str);
 parser.end();
-
-s.forEach((str) => console.info(str));

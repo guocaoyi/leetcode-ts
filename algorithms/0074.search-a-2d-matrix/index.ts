@@ -31,13 +31,13 @@
  * Output: false
  * ```
  */
+export type Submission = (matrix: number[][], target: number) => boolean;
 
 /**
  * 双层遍历
  * @time 2019.3.15
- * @status Accepted
- * @runtime 64ms | 58.68%
- * @memory 35.4MB | 7.41%
+ * @runtime 64 ms, faster then 58.68%
+ * @memory 35.4 MB, less then 7.41%
  */
 export const searchMatrix = (matrix: number[][], target: number): boolean => {
   for (let i = 0; i < matrix.length; i++) {

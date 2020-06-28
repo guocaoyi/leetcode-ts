@@ -1,6 +1,13 @@
 # LeetCode-TS
 
-LeetCode problems' submissions with TypeScript.
+LeetCode problems' submissions with TypeScript. Power by deno.lang
+
+### Testing  
+```TypeScript
+deno test
+// or
+cd algorithms/0001.two-sum && deno test
+```
 
 > Author: Yalda
 >
@@ -19,7 +26,7 @@ LeetCode problems' submissions with TypeScript.
 ## Algorithms
 
 | \#                                                                            | Title                                          | Topics                                |                 Difficulty                 |
-| :---------------------------------------------------------------------------- | :--------------------------------------------- | :------------------------------------ | :----------------------------------------: |
+|:------------------------------------------------------------------------------|:-----------------------------------------------|:--------------------------------------|:------------------------------------------:|
 | [1](algorithms/0001.two-sum/README.md)                                        | two-sum                                        | String                                |   <span class='dif-tag easy'>Easy</span>   |
 | [3](algorithms/0003.longest-substring-without-repeating-characters/README.md) | longest-substring-without-repeating-characters | Array,Dynamic Programming,Math,String |   <span class='dif-tag easy'>Easy</span>   |
 | [4](algorithms/0004.median-of-two-sorted-arrays/README.md)                    | median-of-two-sorted-arrays                    | String                                |   <span class='dif-tag hard'>Hard</span>   |
