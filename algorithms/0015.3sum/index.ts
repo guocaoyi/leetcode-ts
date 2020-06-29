@@ -38,46 +38,37 @@ export type Submission = (nums: number[]) => number[][];
  * @case [82597,-9243,62390,83030,-97960,-26521...] (3000)
  */
 export const threeSum = (nums: number[]): number[][] => {
-  const result: { [T: string]: number[] } = {};
+  nums = nums.sort((a, b) => a - b);
+  const result: number[][] = [];
+  const cacheSet: Set<string> = new Set();
   for (let a: number = 0; a < nums.length; a++) {
+    const bSet: Set<number> = new Set([]);
     for (let b: number = a + 1; b < nums.length; b++) {
+      if (bSet.has(nums[b])) {
+        continue;
+      } else {
+        bSet.add(nums[b]);
+      }
+
+      const cSet: Set<number> = new Set([]);
       for (let c: number = b + 1; c < nums.length; c++) {
+        if (cSet.has(nums[c])) {
+          continue;
+        } else {
+          cSet.add(nums[c]);
+        }
+
         if (nums[a] + nums[b] + nums[c] === 0) {
-          const arr: number[] = [nums[a], nums[b], nums[c]].sort();
-          const arrStr: string = arr.toString();
-          if (!(arrStr in result)) {
-            result[arrStr] = arr;
+          let key = [nums[a], nums[b], nums[c]].sort((a, b) => a - b).join("");
+          if (cacheSet.has(key)) {
+            continue;
+          } else {
+            cacheSet.add(key);
+            result.push([nums[a], nums[b], nums[c]].sort((a, b) => a - b));
           }
         }
       }
     }
   }
-  return Object.values(result);
-};
-
-/**
- * 排列组合
- */
-export const threeSum1 = (nums: number[]): number[][] => {
-  const result: { [T: string]: number[] } = {};
-  nums = nums.sort();
-
-  // 三个数字如果有两个一样就返回
-  // 遇到相同的数字就返回，
-
-  for (let a: number = 0; a < nums.length - 3; a++) {
-    for (let b: number = a + 1; b < nums.length; b++) {
-      for (let c: number = b + 1; c < nums.length; c++) {
-        if (nums[a] + nums[b] + nums[c] === 0) {
-          const arr: number[] = [nums[a], nums[b], nums[c]].sort();
-          const arrStr: string = arr.toString();
-          if (!(arrStr in result)) {
-            result[arrStr] = arr;
-          }
-        }
-      }
-    }
-  }
-
-  return Object.values(result);
+  return result;
 };

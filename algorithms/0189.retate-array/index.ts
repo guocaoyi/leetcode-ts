@@ -30,15 +30,24 @@
 export type Submission = (nums: number[], k: number) => void;
 
 /**
- * @time
+ * in-place
+ * @time 2020.06.29 08:35
+ * @runtime 236 ms, faster then 100.00% of TypeScript online Submissions
+ * @memory 37.3 MB, less then 100.00% of TypeScript online Submissions
+ * @runtime_cn 328 ms, faster then 7.14% of TypeScript online Submissions
+ * @memory_cn 36.6 MB, less then 100% of TypeScript online Submissions
  */
 export const rotate = (nums: number[], k: number): void => {
-  if (k === 0 || nums.length === 0) {
-    return;
+  let len = nums.length;
+  k = k % len
+  if (k === 0) return
+  for (let i = 0; i < k; i++) {
+    let pre: number = nums[len - 1]
+    let next: number
+    for (let j = 0; j < len; j++) {
+      next = nums[j]
+      nums[j] = pre
+      pre = next
+    }
   }
-  let ret: number = k % nums.length;
-  if (ret === 0) {
-    return;
-  }
-  for (let i = 0; i < ret; i++) {}
 };
