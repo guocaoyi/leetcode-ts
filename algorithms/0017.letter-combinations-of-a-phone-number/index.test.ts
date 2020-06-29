@@ -1,12 +1,9 @@
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { blue, bgBlue, white } from "https://deno.land/std/fmt/colors.ts";
+import * as asserts from "https://deno.land/std/testing/asserts.ts";
+import * as log from "https://deno.land/std/log/mod.ts"
+
+log.info("0017. Letter Combinations of a Phone Number #letterCombinations")
 
 import { letterCombinations } from "./index.ts";
-
-console.log(
-  bgBlue(white("0017")),
-  blue("Letter Combinations of a Phone Number #letterCombinations"),
-);
 
 Deno.test({
   name: `
@@ -14,7 +11,7 @@ Deno.test({
   Output: [].`,
   fn(): void {
     const output: string[] = letterCombinations("");
-    assertEquals(
+    asserts.assertEquals(
       output,
       [],
     );
@@ -27,7 +24,7 @@ Deno.test({
   Output: ["j", "k", "l"].`,
   fn(): void {
     const output: string[] = letterCombinations("5");
-    assertEquals(
+    asserts.assertEquals(
       output,
       ["j", "k", "l"],
     );
@@ -40,7 +37,7 @@ Deno.test({
   Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].`,
   fn(): void {
     const output: string[] = letterCombinations("23");
-    assertEquals(
+    asserts.assertEquals(
       output,
       ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"],
     );
@@ -53,7 +50,7 @@ Deno.test({
   Output: ["gp", "gq", "gr", "gs", "hp", "hq", "hr", "hs", "ip", "iq", "ir", "is"].`,
   fn(): void {
     const output: string[] = letterCombinations("47");
-    assertEquals(
+    asserts.assertEquals(
       output,
       ["gp", "gq", "gr", "gs", "hp", "hq", "hr", "hs", "ip", "iq", "ir", "is"],
     );
@@ -66,7 +63,7 @@ Deno.test({
   Output: ["dw", "dx", "dy", "dz", "ew", "ex", "ey", "ez", "fw", "fx", "fy", "fz"].`,
   fn(): void {
     const output: string[] = letterCombinations("39");
-    assertEquals(
+    asserts.assertEquals(
       output,
       ["dw", "dx", "dy", "dz", "ew", "ex", "ey", "ez", "fw", "fx", "fy", "fz"],
     );
@@ -79,7 +76,7 @@ Deno.test({
   Output: ["aa", "ab", "ac", "ba", "bb", "bc", "ca", "cb", "cc"].`,
   fn(): void {
     const output: string[] = letterCombinations("589");
-    assertEquals(
+    asserts.assertEquals(
       output,
       [
         "jtw",

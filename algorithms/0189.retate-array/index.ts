@@ -27,15 +27,15 @@
  * - Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
  * - Could you do it in-place with O(1) extra space?
  */
-export type Submission = (nums: number[], k: number) => void;
+export type Solution = (nums: number[], k: number) => void;
 
 /**
  * in-place
  * @time 2020.06.29 08:35
- * @runtime 236 ms, faster then 100.00% of TypeScript online Submissions
- * @memory 37.3 MB, less then 100.00% of TypeScript online Submissions
- * @runtime_cn 328 ms, faster then 7.14% of TypeScript online Submissions
- * @memory_cn 36.6 MB, less then 100% of TypeScript online Submissions
+ * @runtime 236 ms, faster then 100.00%
+ * @memory 37.3 MB, less then 100.00%
+ * @runtime_cn 328 ms, faster then 7.14%
+ * @memory_cn 36.6 MB, less then 100%
  */
 export const rotate = (nums: number[], k: number): void => {
   let len = nums.length;

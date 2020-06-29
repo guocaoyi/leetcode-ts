@@ -18,7 +18,7 @@
  * Output: 2
  * ```
  */
-export type Submission = (nums: number[]) => number;
+export type Solution = (nums: number[]) => number;
 
 /**
  * 通用解法

@@ -24,7 +24,7 @@
  *              Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  * ```
  */
-export type Submission = (s: string) => number;
+export type Solution = (s: string) => number;
 
 /**
  * @author yalda

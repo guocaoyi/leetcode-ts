@@ -31,7 +31,7 @@
  * Output: false
  * ```
  */
-export type Submission = (matrix: number[][], target: number) => boolean;
+export type Solution = (matrix: number[][], target: number) => boolean;
 
 /**
  * 双层遍历

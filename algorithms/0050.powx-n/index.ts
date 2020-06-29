@@ -26,14 +26,16 @@
  * - -100.0 < x < 100.0
  * - n is a 32-bit signed integer, within the range [−231, 231 − 1]
  */
-export type Submission = (x: number, n: number) => number;
+export type Solution = (x: number, n: number) => number;
 
 /**
  * 内置 API 完成
  * 这里偷懒，直接调用了全局对象 Math.pow 方法，Math#pow
- * @time 2020.06.24 11:14
- * @runtime 68 ms
- * @memory 33.5 MB
+ * @time 2020.06.29 12:32:00
+ * @runtime 72 ms
+ * @memory 33.6 MB
+ * @runtime_cn 72 ms, less then 66.67%
+ * @memory_cn 33.2 MB, less then 100.00%
  */
 export const myPow = (x: number, n: number): number =>
   Number(Math.pow(x, n).toFixed(5));
@@ -41,9 +43,11 @@ export const myPow = (x: number, n: number): number =>
 /**
  * 内置 API 完成
  * 这里偷懒，直接用了一元运算符 **
- * @time 2020.06.24 11:14
+ * @time 2020.06.29 12:32:00
  * @runtime 72 ms
  * @memory 33.6 MB
+ * @runtime_cn 68 ms, less then 83.33%
+ * @memory_cn 33.1 MB, less then 100.00%
  */
 export const myPow$1 = (x: number, n: number): number =>
   Number((x ** n).toFixed(5));

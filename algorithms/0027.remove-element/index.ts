@@ -46,7 +46,7 @@ for (int i = 0; i < len; i++) {
 }
 ```
  */
-export type Submission = (nums: number[], val: number) => number;
+export type Solution = (nums: number[], val: number) => number;
 
 /**
  * 尾部判定

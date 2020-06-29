@@ -21,7 +21,7 @@
  * 一开始偷懒，直接使用 parseInt 来进行数值类型的转换，导致了大数值丢失精度
  * 别忽略 Number.MAX_SAFE_INTEGER，的损失精度的情况
  */
-export type Submission = (a: string, b: string) => string;
+export type Solution = (a: string, b: string) => string;
 
 /**
  * 逐位计算

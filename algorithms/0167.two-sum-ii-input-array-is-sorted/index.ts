@@ -20,15 +20,20 @@
  * Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
  * ```
  */
-export type Submission = (numbers: number[], target: number) => number[];
+export type Solution = (numbers: number[], target: number) => number[];
 
 /**
  * 回溯法
  * 从第一个元素开始进行穷举，知道算出相等的 Target 值
+ * @time 2020.06.29 12:15:00
+ * @runtime 108 ms, faster than 100.00% 
+ * @memory 36.3 MB, less than 100.00%
+ * @runtime_cn 136 ms, faster than 28.57%
+ * @memory_cn 35.6 MB, less than 100.00%
  */
 export const twoSum = (numbers: number[], target: number): number[] => {
   let i = 0;
-  let p;
+  let p = 0;
   for (; i < numbers.length; i += 1) {
     p = i + 1;
     while (numbers[i] + numbers[p] < target) {

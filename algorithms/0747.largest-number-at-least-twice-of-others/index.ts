@@ -27,7 +27,7 @@
  * - `nums` will have a length in the range `[1, 50]`.
  * - Every `nums[i]` will be an integer in the range `[0, 99]`.
  */
-export type Submission = (nums: number[]) => number;
+export type Solution = (nums: number[]) => number;
 
 /**
  * @time 2019.06.13

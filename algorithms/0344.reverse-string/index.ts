@@ -24,7 +24,7 @@
  * ## Notes
  * in-place 不得使用额外内存
  */
-export type Submission = (s: string[]) => void;
+export type Solution = (s: string[]) => void;
 
 /**
  * Array.prototype.reverse

@@ -1,4 +1,4 @@
-import { readFileStrSync } from "https://deno.land/std/fs/read_file_str.ts";
+import * as asserts from "https://deno.land/std/testing/asserts.ts";
 
 // 生成 algorithms/*/index.ts
 export class MarkTS {
@@ -11,15 +11,12 @@ export class MarkTest {
   private template: string;
   constructor() {
     const template: string = `
-      import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-      import { blue, bgBlue, white } from "https://deno.land/std/fmt/colors.ts";
+      import * as asserts from "https://deno.land/std/testing/asserts.ts";
+      import * as log from "https://deno.land/std/log/mod.ts"
 
       import { } from "./index.ts";
 
-      console.log(
-      bgBlue(white("0017")),
-      blue(""),
-      );
+      log.info("")
 
       Deno.test({
       name: \`
@@ -35,7 +32,7 @@ export class MarkTest {
 // 生成 algorithms/*/index.js
 export class MarkJS {
   //
-  constructor(data: any) {}
+  constructor(data: any) { }
 
   // write async
   write(path: string) {

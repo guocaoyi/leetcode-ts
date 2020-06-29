@@ -23,7 +23,7 @@
  * The median is (2 + 3)/2 = 2.5
  * ```
  */
-export type Submission = (nums1: number[], nums2: number[]) => number;
+export type Solution = (nums1: number[], nums2: number[]) => number;
 
 /**
  * 递归

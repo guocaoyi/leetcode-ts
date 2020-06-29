@@ -1,12 +1,9 @@
 import * as asserts from "https://deno.land/std/testing/asserts.ts";
-import { blue, bgBlue, white } from "https://deno.land/std/fmt/colors.ts";
+import * as log from "https://deno.land/std/log/mod.ts"
+
+log.info("")
 
 import { findMedianSortedArrays } from "./index.ts";
-
-console.log(
-  bgBlue(white("0004")),
-  blue("Median Of Two Sorted Arrays"),
-);
 
 Deno.test({
   name: `

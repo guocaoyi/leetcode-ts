@@ -17,7 +17,7 @@
  * - The input array will only contain `0` and `1`.
  * - The length of input array is a positive integer and will not exceed 10,000
  */
-export type Submission = (nums: Array<0 | 1>) => number;
+export type Solution = (nums: Array<0 | 1>) => number;
 
 /**
  * 指针

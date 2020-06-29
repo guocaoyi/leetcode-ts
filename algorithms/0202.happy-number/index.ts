@@ -25,16 +25,16 @@
  * - 要报所有的推导结果环境，一旦发现已经存在，即除了死循环，立即退出；
  * 一开始以为这题很简单，也没仔细考虑；使用了 Array.reduce() 和 While 控制语句完事；跑测试用例时才发现，第二条用例就没有通过。问题出在时间复杂度上，这里必须对死循环进行处理。
  */
-export type Submission = (n: number) => boolean;
+export type Solution = (n: number) => boolean;
 
 /**
  * @author yalda
  * @github https://github.com/guocaoyi/leetcode-ts
  * @time 2020.06.28 15:18
- * @runtime 92 ms, faster then 100.00% of TypeScript online submissions 
- * @memory 36.9 MB, less then 100.00% of TypeScript online submissions 
- * @runtime_cn 88 ms, faster then 25.00% of TypeScript online submissions 
- * @memory_cn 35.9 MB, less then 100.00% of TypeScript online submissions 
+ * @runtime 92 ms, faster then 100.00%
+ * @memory 36.9 MB, less then 100.00%
+ * @runtime_cn 88 ms, faster then 25.00%
+ * @memory_cn 35.9 MB, less then 100.00%
  */
 export const isHappy = (n: number): boolean => {
   let result: number = n;

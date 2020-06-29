@@ -1,6 +1,6 @@
 # LeetCode-TS
 
-LeetCode problems' submissions with TypeScript. Power by deno.lang
+LeetCode problems' solutions with TypeScript. Power by deno.lang
 
 ### Testing  
 ```TypeScript
@@ -8,6 +8,10 @@ deno test
 // or
 cd algorithms/0001.two-sum && deno test
 ```
+
+###### Testing Permission
+
+- -A, --allow-read
 
 > Author: Yalda
 >

@@ -16,7 +16,7 @@
  *
  * If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log n).
  */
-export type Submission = (str: number, nums: number[]) => number;
+export type Solution = (str: number, nums: number[]) => number;
 
 /**
  * Two Pointer
@@ -31,7 +31,9 @@ export const minSubArrayLen = (str: number, nums: number[]): number => {
     sum += nums[next++];
     if (sum >= str) {
       next - prev < mini && (mini = next - prev);
-      while ((sum -= nums[prev++]) >= str) {}
+      while ((sum -= nums[prev++]) >= str) {
+        //
+      }
     }
   }
   return mini;

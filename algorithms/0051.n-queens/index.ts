@@ -26,12 +26,12 @@
  * Explanation: There exist two distinct solutions to the 4-queens puzzle as shown above.
  * ```
  */
-export type Submission = (n: number) => string[][];
+export type Solution = (n: number) => string[][];
 
 /**
  * 回溯法
  */
 export const solveNQueens = (n: number): string[][] => {
   const board = new Array(n);
-  return null;
+  return [];
 };

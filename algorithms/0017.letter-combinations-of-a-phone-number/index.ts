@@ -29,17 +29,17 @@
  * 3. 商品详情页面下单时勾选规格值，根据 SKU 库存排除无货的规格值可选
  * 4. 电商营销场景组合优惠券场景
  */
-export type Submission = (digits: string) => string[];
+export type Solution = (digits: string) => string[];
 
 /**
  * 笛卡尔积
  * @author yalda
  * @github https://github.com/guocaoyi/leetcode-ts
  * @time 2020.06.28 12:10
- * @runtime 100 ms, faster then 100.00% of TypeScript
- * @memory 33.1 Mb, less then 100.00% of TypeScript
- * @runtime_cn 72 ms, faster then 31.25% of TypeScript
- * @memory_cn 32.4 MB, less then 100.00% of TypeScript
+ * @runtime 100 ms, faster then 100.00%
+ * @memory 33.1 Mb, less then 100.00%
+ * @runtime_cn 72 ms, faster then 31.25%
+ * @memory_cn 32.4 MB, less then 100.00%
  */
 export const letterCombinations = (digits: string): string[] => {
   if (digits === "") {
