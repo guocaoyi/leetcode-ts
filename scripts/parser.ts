@@ -95,7 +95,7 @@ export class ParserTS {
 }
 
 // parse html
-class ParseHtml { }
+class ParseHtml {}
 
 let str: string = fs.readFileSync("./test.md", { encoding: "utf8" });
 
@@ -202,8 +202,8 @@ const parser = new htmlparser2.Parser(
         return `[]()`;
       }
     },
-    onerror(e) { },
-    onend() { },
+    onerror(e) {},
+    onend() {},
   },
   { decodeEntities: true },
 );

@@ -1,9 +1,9 @@
 import * as asserts from "https://deno.land/std/testing/asserts.ts";
-import * as log from "https://deno.land/std/log/mod.ts"
+import * as log from "https://deno.land/std/log/mod.ts";
 
 import { addBinary } from "./index.ts";
 
-log.info("0067. Add Binary")
+log.info("0067. Add Binary");
 
 Deno.test({
   name: `

@@ -1,5 +1,5 @@
-import { readFileStrSync } from 'https://deno.land/std/fs/read_file_str.ts'
-import { } from "https://deno.land/std/path/"
+import { readFileStrSync } from "https://deno.land/std/fs/read_file_str.ts";
+import {} from "https://deno.land/std/path/";
 
 // 提纲
 export interface Question {
@@ -19,11 +19,11 @@ export interface Submission {
   info?: string; // 答题（说明、思路、总结）
   time: string; // 提交时间
   status?:
-  | "Accepted"
-  | "Time Limit Exceeded"
-  | "Error"
-  | "Failed"
-  | "Wrong Answer"; // 提交测试情况
+    | "Accepted"
+    | "Time Limit Exceeded"
+    | "Error"
+    | "Failed"
+    | "Wrong Answer"; // 提交测试情况
   runtime?: string; // 测试运行时（时间复杂度）
   memory?: string; // 测试内存占用（空间复杂度）
   case?: string; // 测试用例（入参）

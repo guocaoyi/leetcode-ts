@@ -12,7 +12,7 @@ Deno.test({
   `,
   fn(): void {
     const result = lengthOfLongestSubstring("abcabcbb");
-    asserts.assertEquals(result, 3);
+    asserts.assertEquals(3, result);
   },
 });
 
@@ -23,7 +23,7 @@ Deno.test({
   `,
   fn(): void {
     const result = lengthOfLongestSubstring("bbbbb");
-    asserts.assertEquals(result, 1);
+    asserts.assertEquals(1, result);
   },
 });
 
@@ -34,6 +34,17 @@ Deno.test({
   `,
   fn(): void {
     const result = lengthOfLongestSubstring("pwwkew");
-    asserts.assertEquals(result, 3);
+    asserts.assertEquals(3, result);
+  },
+});
+
+Deno.test({
+  name: `
+  Input: "abcdefghijklmnopqrstuvwxyz"
+  Output: 26
+  `,
+  fn(): void {
+    const result = lengthOfLongestSubstring("abcdefghijklmnopqrstuvwxyz");
+    asserts.assertEquals(26, result);
   },
 });

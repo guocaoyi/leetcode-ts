@@ -74,7 +74,7 @@ export class Fetcher<T> {
       data = await this.client.request(query);
     } catch (e) {
       // throw new Error("throw new Error()");
-      return Promise.reject("Fetcher#fetch")
+      return Promise.reject("Fetcher#fetch");
     } finally {
       return Promise.resolve(data);
     }

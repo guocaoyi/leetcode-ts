@@ -42,9 +42,9 @@ export const spiralOrder = (matrix: number[][]): number[] => {
   // 模拟边界
   for (
     let top = 0,
-    bottom = matrix.length - 1,
-    left = 0,
-    right = matrix[0] ? matrix[0].length - 1 : 0;
+      bottom = matrix.length - 1,
+      left = 0,
+      right = matrix[0] ? matrix[0].length - 1 : 0;
     top <= bottom && left <= right;
     top++, bottom--, left++, right--
   ) {

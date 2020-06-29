@@ -19,7 +19,7 @@
  *
  * ## Explanation:
  *
- * ![498](../../assets/images/498_diagonal_traverse.png)
+ * ![498](./assets/498_diagonal_traverse.png)
  *
  * ## Note
  *
@@ -29,38 +29,84 @@
 export type Solution = (matrix: number[][]) => number[];
 
 /**
- * @time
+ * 多指针解法
+ * @author yalda
+ * @github https://github.com/guocaoyi/leetcode-ts
+ * @date 2020.06.30 00:35:00
+ * @time O(n)
+ * @space O(1)
+ * @runtime 160 ms, faster then 100.00%
+ * @memory 43.3 MB, less then 100.00%
+ * @runtime_cn 160 ms, faster then 33.33%
+ * @memroy_cn 43.3 MB, less then 100.00%
  */
 export const findDiagonalOrder = (matrix: number[][]): number[] => {
-  const row: number = matrix.length;
   const result: number[] = [];
-  if (row === 0) {
-    return result;
-  }
+  const M = matrix.length; // row
+  const N = M > 0 ? matrix[0].length : 0; // col
 
-  // rows > 0
-  let columns: number = matrix[0].length;
-  let p: number[] = [0, 0]; //
-  let direction: boolean = true; // true:x向右上 false:向左下
+  type Tran = [number, number, boolean];
 
-  while (!(p[0] === row && p[1] === columns)) {
-    // 新注值
-    result.push(matrix[p[0]][p[1]]);
+  const toRight = (
+    row: number,
+    col: number,
+    direction: boolean,
+  ): Tran => [row, col + 1, !direction]; // →
+  const toBottom = (
+    row: number,
+    col: number,
+    direction: boolean,
+  ): Tran => [row + 1, col, !direction]; // ↓
+  const toUpperRight = (
+    row: number,
+    col: number,
+    direction: boolean,
+  ): Tran => [row - 1, col + 1, direction]; // ↗
+  const toBottomLeft = (
+    row: number,
+    col: number,
+    direction: boolean,
+  ): Tran => [row + 1, col - 1, direction]; // ↙
 
-    // 处理游标逻辑
-    if (direction) {
-      // 右上
-      if (p[0] - 1 < 0 || p[1] + 1 >= columns) {
-        // 越界
-      }
-      p[0] = p[0] - 1;
-      p[1] = p[1] + 1;
-    } else {
-      // 左下
-      p[0] = p[0] + 1;
-      p[1] = p[1] - 1;
+  let row = 0, col: number = 0;
+  let direction: boolean = true; // true: ↑ false: ↓
+  while (row < M && col < N) {
+    // push
+    result.push(matrix[row][col]);
+
+    if (row === 0 && col === 0) {
+      // out of N border ? ↓ : →
+      [row, col, direction] = col + 1 >= N
+        ? toBottom(row, col, direction)
+        : toRight(row, col, direction);
+    } else if (row === 0 && col > 0) {
+      // up ? (out of N border ? ↓ : →) : (out of M border ? → : ↙ )
+      [row, col, direction] = direction
+        ? (col + 1 >= N
+          ? toBottom(row, col, direction)
+          : toRight(row, col, direction))
+        : (row + 1 >= M
+          ? toRight(row, col, direction)
+          : toBottomLeft(row, col, direction));
+    } else if (row > 0 && col === 0) {
+      // up ? (out of M border ? → : ↓) : (out of M border ? → : ↓)
+      [row, col, direction] = direction
+        ? (col + 1 >= N
+          ? toBottom(row, col, direction)
+          : toUpperRight(row, col, direction))
+        : (row + 1 >= M
+          ? toRight(row, col, direction)
+          : toBottom(row, col, direction));
+    } else if (row > 0 && col > 0) {
+      // up ? (out of N border ? ↓ : ↗) : (out of M border ? → : ↙)
+      [row, col, direction] = direction
+        ? (col + 1 >= N
+          ? toBottom(row, col, direction)
+          : toUpperRight(row, col, direction))
+        : (row + 1 >= M
+          ? toRight(row, col, direction)
+          : toBottomLeft(row, col, direction));
     }
   }
-
   return result;
 };

@@ -1,7 +1,7 @@
 import * as asserts from "https://deno.land/std/testing/asserts.ts";
-import * as log from "https://deno.land/std/log/mod.ts"
+import * as log from "https://deno.land/std/log/mod.ts";
 
-log.info("")
+log.info("");
 
 import { findMedianSortedArrays } from "./index.ts";
 

@@ -32,7 +32,7 @@ export class MarkTest {
 // 生成 algorithms/*/index.js
 export class MarkJS {
   //
-  constructor(data: any) { }
+  constructor(data: any) {}
 
   // write async
   write(path: string) {

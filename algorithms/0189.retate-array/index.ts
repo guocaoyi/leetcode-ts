@@ -39,15 +39,15 @@ export type Solution = (nums: number[], k: number) => void;
  */
 export const rotate = (nums: number[], k: number): void => {
   let len = nums.length;
-  k = k % len
-  if (k === 0) return
+  k = k % len;
+  if (k === 0) return;
   for (let i = 0; i < k; i++) {
-    let pre: number = nums[len - 1]
-    let next: number
+    let pre: number = nums[len - 1];
+    let next: number;
     for (let j = 0; j < len; j++) {
-      next = nums[j]
-      nums[j] = pre
-      pre = next
+      next = nums[j];
+      nums[j] = pre;
+      pre = next;
     }
   }
 };
