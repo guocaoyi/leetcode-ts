@@ -45,6 +45,13 @@ export type Solution = (trips: number[][], capacity: number) => boolean;
 
 /**
  * 贪心算法
+ * @data
+ * @time
+ * @space
+ * @runtime
+ * @memory
+ * @runtime_cn
+ * @memory_cn
  */
 export const carPooling = (trips: number[][], capacity: number): boolean => {
   // 看行程上，是否有重合

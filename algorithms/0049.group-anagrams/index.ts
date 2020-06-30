@@ -25,9 +25,13 @@ export type Solution = (strs: string[]) => string[][];
 /**
  * 哈希存储
  * 对所有数组元素进行排序，按 Hash 存储，提出；主要使用了 String[] 的一些 API
- * @time 2019.08.11 12:45
- * @runtime 128 ms, faster then 63.90%
- * @memory 45.1 MB, less then 60.87%
+ * @date 2019.08.11 12:45
+ * @time
+ * @space
+ * @runtime
+ * @memory
+ * @runtime_cn
+ * @memory_cn
  */
 export const groupAnagrams = (strs: string[]): string[][] => {
   const map: any = {};

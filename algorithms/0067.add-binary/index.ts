@@ -25,9 +25,13 @@ export type Solution = (a: string, b: string) => string;
 
 /**
  * 逐位计算
+ * @date
  * @time
+ * @space
  * @runtime 84 ms > 19.59%
  * @memory 35.6 MB < 71.79%
+ * @runtime_cn
+ * @memory_cn
  */
 export const addBinary = (a: string, b: string): string => {
   const result: number[] = [];

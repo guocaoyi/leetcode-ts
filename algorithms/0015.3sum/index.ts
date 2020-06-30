@@ -33,9 +33,13 @@ export type Submission = (nums: number[]) => number[][];
  * 刚拿到这题第一个想法就是使用排列组合，很快写完。结果在遇到一个长3000的数组时，运行超时了，时间复杂度O(n!)。
  * n!/m!(n-m)! 差不多就是 44.95501亿次运算循环，这不管使用何种语言都会遇到超时的问题
  * 看了几个 Submission,他们的时间复杂度能做到 O(n^2)
- * @time 2019.05.20 18:00
- * @status Time Limit Exceeded
- * @case [82597,-9243,62390,83030,-97960,-26521...] (3000)
+ * @date 2019.05.20 18:00
+ * @time
+ * @space
+ * @runtime
+ * @memory
+ * @runtime_cn
+ * @memory_cm
  */
 export const threeSum = (nums: number[]): number[][] => {
   nums = nums.sort((a, b) => a - b);

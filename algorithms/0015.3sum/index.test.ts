@@ -2,7 +2,6 @@ import * as asserts from "https://deno.land/std/testing/asserts.ts";
 import * as log from "https://deno.land/std/log/mod.ts";
 import * as rj from "https://deno.land/std/fs/read_json.ts";
 import * as path from "https://deno.land/std/path/mod.ts";
-
 import { threeSum } from "./index.ts";
 
 log.info("15. 3 Sum");

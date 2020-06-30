@@ -30,13 +30,11 @@ export type Solution = (matrix: number[][]) => number[];
 
 /**
  * 多指针解法
- * @author yalda
- * @github https://github.com/guocaoyi/leetcode-ts
  * @date 2020.06.30 00:35:00
  * @time O(n)
  * @space O(1)
- * @runtime 160 ms, faster then 100.00%
- * @memory 43.3 MB, less then 100.00%
+ * @runtime 188 ms, faster then 100.00%
+ * @memory 44.4 MB, less then 100.00%
  * @runtime_cn 160 ms, faster then 33.33%
  * @memroy_cn 43.3 MB, less then 100.00%
  */

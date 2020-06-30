@@ -28,9 +28,9 @@
 export type Solution = (n: number) => boolean;
 
 /**
- * @author yalda
- * @github https://github.com/guocaoyi/leetcode-ts
- * @time 2020.06.28 15:18
+ * @date 2020.06.28 15:18
+ * @time
+ * @space
  * @runtime 92 ms, faster then 100.00%
  * @memory 36.9 MB, less then 100.00%
  * @runtime_cn 88 ms, faster then 25.00%

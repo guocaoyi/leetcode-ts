@@ -1,6 +1,5 @@
 import * as asserts from "https://deno.land/std/testing/asserts.ts";
 import * as log from "https://deno.land/std/log/mod.ts";
-
 import { lengthOfLongestSubstring } from "./index.ts";
 
 log.info("0003 Longest Substring Without Repeating Characters");

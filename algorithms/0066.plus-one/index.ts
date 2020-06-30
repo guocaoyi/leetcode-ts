@@ -27,9 +27,13 @@ export type Solution = (digits: number[]) => number[];
 /**
  * 进位制运算
  * 从各位开始计算
- * @time 2020.06.24 18:54
+ * @date 2020.06.24 18:54
+ * @time
+ * @space
  * @runtime 72 ms, faster than 50.00%
  * @memory 33.9 MB, less than 100.00%
+ * @runtime_cn
+ * @memory_cn
  */
 export const plusOne = (digits: number[]): number[] => {
   let integer = Number(digits.join(""));

@@ -38,9 +38,13 @@ export type Solution = (nums: number[]) => number;
 /**
  * Two Pointers
  * 使用左右两个指针进行逻辑处理
- * @time 2019.06.13
+ * @date 2019.06.13
+ * @time
+ * @space
  * @runtime 74 ms > 67.50%
  * @memory 37.7 MB < 87.50%
+ * @runtime_cn
+ * @memory_cn
  */
 export const pivotIndex = (nums: number[]): number => {
   const _len: number = nums.length;

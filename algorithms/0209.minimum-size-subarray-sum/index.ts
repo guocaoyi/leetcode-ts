@@ -20,8 +20,6 @@ export type Solution = (str: number, nums: number[]) => number;
 
 /**
  * Two Pointer
- * @author yalda
- * @github https://github.com/guocaoyi/lesstcode-ts
  * @date 2020.06.29 20:53
  * @time O(n)
  * @space O(1)

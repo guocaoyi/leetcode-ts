@@ -1,6 +1,5 @@
 import * as asserts from "https://deno.land/std/testing/asserts.ts";
 import * as log from "https://deno.land/std/log/mod.ts";
-
 import {
   myPow as myPow,
   myPow$1,

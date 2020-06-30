@@ -23,9 +23,13 @@ export type Solution = (nums: number[]) => number;
 
 /**
  * 这里已经没有优化空间了，想想其他方法
- * @time 2019.04.19
+ * @date 2019.04.19
+ * @time
+ * @space
  * @runtime 64 ms, faster then 81.78%
  * @memory 36.9 MB, less then 41.03%
+ * @runtime_cn
+ * @memory_cn
  */
 export const singleNumber = (nums: number[]): number => {
   const map: any = {};

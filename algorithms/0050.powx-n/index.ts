@@ -31,9 +31,11 @@ export type Solution = (x: number, n: number) => number;
 /**
  * 内置 API 完成
  * 这里偷懒，直接调用了全局对象 Math.pow 方法，Math#pow
- * @time 2020.06.29 12:32:00
- * @runtime 72 ms
- * @memory 33.6 MB
+ * @date 2020.06.29 12:32:00
+ * @time
+ * @space
+ * @runtime
+ * @memory
  * @runtime_cn 72 ms, less then 66.67%
  * @memory_cn 33.2 MB, less then 100.00%
  */
@@ -43,9 +45,11 @@ export const myPow = (x: number, n: number): number =>
 /**
  * 内置 API 完成
  * 这里偷懒，直接用了一元运算符 **
- * @time 2020.06.29 12:32:00
- * @runtime 72 ms
- * @memory 33.6 MB
+ * @date 2020.06.29 12:32:00
+ * @time
+ * @space
+ * @runtime
+ * @memory
  * @runtime_cn 68 ms, less then 83.33%
  * @memory_cn 33.1 MB, less then 100.00%
  */

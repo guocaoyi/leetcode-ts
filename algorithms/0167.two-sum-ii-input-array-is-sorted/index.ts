@@ -25,7 +25,9 @@ export type Solution = (numbers: number[], target: number) => number[];
 /**
  * 回溯法
  * 从第一个元素开始进行穷举，知道算出相等的 Target 值
- * @time 2020.06.29 12:15:00
+ * @date 2020.06.29 12:15:00
+ * @time
+ * @space
  * @runtime 108 ms, faster than 100.00% 
  * @memory 36.3 MB, less than 100.00%
  * @runtime_cn 136 ms, faster than 28.57%

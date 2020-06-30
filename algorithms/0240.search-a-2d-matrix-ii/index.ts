@@ -28,9 +28,13 @@ export type Solution = (matrix: number[][], target: number) => boolean;
 
 /**
  * 双层遍历
- * @time 2019.03.05
+ * @date 2019.03.05
+ * @time
+ * @space
  * @runtime 460 ms > 22.93%
- * @momery 37.1 MB < 100.00%
+ * @memory 37.1 MB < 100.00%
+ * @runtime_cn
+ * @memory_cn
  */
 export const searchMatrix = (matrix: number[][], target: number): boolean => {
   for (let i: number = 0; i < matrix.length; i++) {

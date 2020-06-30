@@ -29,9 +29,9 @@ export type Solution = (matrix: number[][]) => number[];
 
 /**
  * 多指针遍历
- * @author yalda
- * @github https://github.com/guocaoyi/leetcode-ts
- * @time 2020.06.24 15:39
+ * @date 2020.06.24 15:39
+ * @time
+ * @space
  * @param matrix number[][]
  * @runtime 64 ms, faster than 93.75%
  * @memory 32.4 MB, less than 100.00%

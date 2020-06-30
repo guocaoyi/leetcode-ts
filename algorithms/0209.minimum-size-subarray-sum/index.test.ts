@@ -1,11 +1,11 @@
 import * as asserts from "https://deno.land/std/testing/asserts.ts";
-import { bgBlue, white } from "https://deno.land/std/fmt/colors.ts";
+import * as log from "https://deno.land/std/log/mod.ts";
 import { minSubArrayLen } from "./index.ts";
 
-const title = `\n${bgBlue(white("209. Minimum size subarray sum"))}`;
+log.info("209. Minimum size subarray sum");
 
 Deno.test({
-  name: `${title}
+  name: `
   Input: s = 5, nums = []
   Output: 0
   `,

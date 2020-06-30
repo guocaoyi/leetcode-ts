@@ -21,9 +21,13 @@ export type Solution = (nums: Array<0 | 1>) => number;
 
 /**
  * 指针
- * @time 2019.06.21
+ * @date 2019.06.21
+ * @time
+ * @space
  * @runtime 112 ms > 68.79%
  * @memory 36.6 MB < 73,78%
+ * @runtime_cn
+ * @memory_cn
  */
 export const findMaxConsecutiveOnes = (nums: Array<0 | 1>): number => {
   let maxLength: number = 0;

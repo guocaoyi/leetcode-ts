@@ -30,6 +30,13 @@ export type Solution = (n: number) => string[][];
 
 /**
  * 回溯法
+ * @data
+ * @time
+ * @space
+ * @runtime
+ * @memory
+ * @runtime_cn
+ * @memory_cn
  */
 export const solveNQueens = (n: number): string[][] => {
   const board = new Array(n);

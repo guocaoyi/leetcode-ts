@@ -50,7 +50,7 @@ export type Solution = (nums: number[], val: number) => number;
 
 /**
  * 尾部判定
- * @time
+ * @date
  * @runtime 112 ms > 28.81%
  * @memory 33.8 MB < 30.90%
  */

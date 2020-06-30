@@ -33,9 +33,9 @@ export type Solution = (digits: string) => string[];
 
 /**
  * 笛卡尔积
- * @author yalda
- * @github https://github.com/guocaoyi/leetcode-ts
- * @time 2020.06.28 12:10
+ * @date 2020.06.28 12:10
+ * @time
+ * @space
  * @runtime 100 ms, faster then 100.00%
  * @memory 33.1 Mb, less then 100.00%
  * @runtime_cn 72 ms, faster then 31.25%
@@ -45,8 +45,8 @@ export const letterCombinations = (digits: string): string[] => {
   if (digits === "") {
     return [];
   }
-  // 拨号键盘
-  const keymap: any = {
+  // the phone keypad
+  const keypad: any = {
     2: ["a", "b", "c"],
     3: ["d", "e", "f"],
     4: ["g", "h", "i"],
@@ -57,7 +57,7 @@ export const letterCombinations = (digits: string): string[] => {
     9: ["w", "x", "y", "z"],
   };
 
-  const s = digits.split("").map((d) => keymap[d]);
+  const s = digits.split("").map((d) => keypad[d]);
   let result: any[] = [];
   let stack: any[] = [];
   let point = 0;

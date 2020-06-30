@@ -27,9 +27,10 @@
 export type Solution = (s: string) => number;
 
 /**
- * @author yalda
- * @github https://github.com/guocaoyi/leetcode-ts
- * @time 2020.06.28 12:47
+ * 遍历
+ * @date 2020.06.28 12:47
+ * @time
+ * @space
  * @runtime
  * @memory
  * @runtime_cn 100 ms, faster then 84.62%

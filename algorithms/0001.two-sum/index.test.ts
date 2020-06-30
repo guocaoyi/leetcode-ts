@@ -1,6 +1,5 @@
 import * as asserts from "https://deno.land/std/testing/asserts.ts";
 import * as log from "https:deno.land/std/log/mod.ts";
-import { bgBlue, white } from "https://deno.land/std/fmt/colors.ts";
 import {
   twoSum as twoSum,
   twoSum1,
@@ -8,12 +7,11 @@ import {
   twoSum3,
 } from "./index.ts";
 
-Deno.test(`${bgBlue(white("1. Two Sum"))}`, () => {});
+log.info("1. Two Sum");
 
-await Deno.test({
+Deno.test({
   name: `
   Given nums = [2, 7, 11, 15], target = 9,
-
   Because nums[0] + nums[1] = 2 + 7 = 9,
   return [0, 1].
   `,

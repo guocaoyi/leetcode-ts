@@ -31,7 +31,9 @@ export type Solution = (nums: number[], k: number) => void;
 
 /**
  * in-place
- * @time 2020.06.29 08:35
+ * @date 2020.06.29 08:35
+ * @time
+ * @space
  * @runtime 236 ms, faster then 100.00%
  * @memory 37.3 MB, less then 100.00%
  * @runtime_cn 328 ms, faster then 7.14%

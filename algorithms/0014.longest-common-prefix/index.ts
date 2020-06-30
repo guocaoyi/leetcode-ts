@@ -36,9 +36,13 @@ export type Solution = (strs: string[]) => string;
 /**
  * 单次遍历
  * 使用 `strs[0]` 作为初始前缀串，逐一遍历 `strs[]` 元素进行比较，如 `String.indexOf !== 0` 则自减长度 1，直至成立后继续访问后面的元素。
- * @time 2020.06.24
- * @runtime 68ms, faster then 94.19%
- * @memory 33.8MB, less then 100.00%
+ * @date 2020.06.24
+ * @time
+ * @space
+ * @runtime 68 ms, faster then 94.19%
+ * @memory 33.8 MB, less then 100.00%
+ * @runtime_cn
+ * @memory_cn
  */
 export const longestCommonPrefix = (strs: string[]): string => {
   if (strs && strs.length > 0) {

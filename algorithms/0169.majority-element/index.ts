@@ -22,9 +22,13 @@ export type Solution = (nums: number[]) => number;
 
 /**
  * 通用解法
- * @time 2019.03.01
+ * @date 2019.03.01
+ * @time
+ * @space
  * @runtime 68ms < 87.42%
  * @memory 37.2MB > 88.35%
+ * @runtime_cn
+ * @memory_cn
  */
 export const majorityElement = (nums: number[]): number => {
   let map: any = {};
