@@ -9,9 +9,9 @@ Deno.test({
   Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
   Output:
   [
-    ["ate","eat","tea"],
-    ["nat","tan"],
-    ["bat"]
+    ["ate", "eat", "tea"],
+    ["nat", "tan"],
+    ["bat"],
   ]
   `,
   fn(): void {

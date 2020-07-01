@@ -25,17 +25,17 @@ export type Solution = (strs: string[]) => string[][];
 /**
  * 哈希存储
  * 对所有数组元素进行排序，按 Hash 存储，提出；主要使用了 String[] 的一些 API
- * @date 2019.08.11 12:45
- * @time
- * @space
- * @runtime
- * @memory
- * @runtime_cn
- * @memory_cn
+ * @date 2020/06/30 13:07:38
+ * @time O(n log n)
+ * @space O(n)
+ * @runtime 208 ms, faster then 37.50%
+ * @memory 47 Mb, less then 100.00%
+ * @runtime_cn 140 ms, faster then 37.50%
+ * @memory_cn 46.4 Mb, less then 100.00%
  */
 export const groupAnagrams = (strs: string[]): string[][] => {
   const map: any = {};
-  strs.forEach((str: string) => {
+  strs.sort().forEach((str: string) => {
     const origin: string = str
       .split("")
       .sort()

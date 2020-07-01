@@ -41,10 +41,10 @@ export type Solution = (nums: number[]) => number;
  * @date 2019.06.13
  * @time
  * @space
- * @runtime 74 ms > 67.50%
- * @memory 37.7 MB < 87.50%
- * @runtime_cn
- * @memory_cn
+ * @runtime
+ * @memory
+ * @runtime_cn 74 ms, faster then 67.50%
+ * @memory_cn 37.7 MB, less then 87.50%
  */
 export const pivotIndex = (nums: number[]): number => {
   const _len: number = nums.length;

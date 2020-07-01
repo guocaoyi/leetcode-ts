@@ -69,8 +69,9 @@ Deno.test({
     const result: string[][] = solveNQueens(1);
     asserts.assertEquals(
       [
-        ["Q"]
-      ]
-      , result);
+        ["Q"],
+      ],
+      result,
+    );
   },
 });

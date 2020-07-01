@@ -24,10 +24,10 @@ export type Solution = (nums: number[]) => number;
  * @date
  * @time
  * @space
- * @runtime 112ms > 88.09%
- * @memory 39MB < 58.18%
- * @runtime_cn
- * @memory_cn
+ * @runtime
+ * @memory
+ * @runtime_cn 112 ms, faster then 88.09%
+ * @memory_cn 39 MB, less then 58.18%
  */
 export const arrayPairSum = (nums: number[]): number => {
   nums = nums.sort((prev: number, next: number) => prev - next);
