@@ -31,10 +31,10 @@ export type Solution = (n: number) => boolean;
  * @date 2020.06.28 15:18
  * @time
  * @space
- * @runtime 92 ms, faster then 100.00%
- * @memory 36.9 MB, less then 100.00%
- * @runtime_cn 88 ms, faster then 25.00%
- * @memory_cn 35.9 MB, less then 100.00%
+ * @runtime 92 ms, faster than 100.00%
+ * @memory 36.9 MB, less than 100.00%
+ * @runtime_cn 88 ms, faster than 25.00%
+ * @memory_cn 35.9 MB, less than 100.00%
  */
 export const isHappy = (n: number): boolean => {
   let result: number = n;

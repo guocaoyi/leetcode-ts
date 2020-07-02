@@ -34,10 +34,10 @@ export type Solution = (nums: number[], k: number) => void;
  * @date 2020.06.29 08:35
  * @time
  * @space
- * @runtime 236 ms, faster then 100.00%
- * @memory 37.3 MB, less then 100.00%
- * @runtime_cn 328 ms, faster then 7.14%
- * @memory_cn 36.6 MB, less then 100%
+ * @runtime 236 ms, faster than 100.00%
+ * @memory 37.3 MB, less than 100.00%
+ * @runtime_cn 328 ms, faster than 7.14%
+ * @memory_cn 36.6 MB, less than 100%
  */
 export const rotate = (nums: number[], k: number): void => {
   let len = nums.length;

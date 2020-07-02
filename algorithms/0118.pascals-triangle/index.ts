@@ -32,8 +32,8 @@ export type Solution = (numRows: number) => number[][];
  * @space
  * @runtime
  * @memory
- * @runtime_cn 44 ms, faster then 99.04%
- * @memory_cn 33.9 MB, less then 41.52%
+ * @runtime_cn 44 ms, faster than 99.04%
+ * @memory_cn 33.9 MB, less than 41.52%
  */
 export const pascalTriangle = (numRows: number): number[][] => {
   if (numRows === 0) {

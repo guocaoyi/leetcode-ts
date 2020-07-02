@@ -39,8 +39,8 @@ export type Solution = (strs: string[]) => string;
  * @date 2020.06.24
  * @time
  * @space
- * @runtime 68 ms, faster then 94.19%
- * @memory 33.8 MB, less then 100.00%
+ * @runtime 68 ms, faster than 94.19%
+ * @memory 33.8 MB, less than 100.00%
  * @runtime_cn
  * @memory_cn
  */

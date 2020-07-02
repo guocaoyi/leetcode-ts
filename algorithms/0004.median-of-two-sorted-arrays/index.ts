@@ -32,8 +32,8 @@ export type Solution = (nums1: number[], nums2: number[]) => number;
  * @space
  * @runtime
  * @memory
- * @runtime_cn 128 ms, faster then 76.00%
- * @memory_cn 42.2 MB, less then 100.00%
+ * @runtime_cn 128 ms, faster than 76.00%
+ * @memory_cn 42.2 MB, less than 100.00%
  */
 export const findMedianSortedArrays = (
   nums1: number[],

@@ -26,8 +26,8 @@ export type Solution = (nums: number[]) => number;
  * @date 2019.04.19
  * @time
  * @space
- * @runtime 64 ms, faster then 81.78%
- * @memory 36.9 MB, less then 41.03%
+ * @runtime 64 ms, faster than 81.78%
+ * @memory 36.9 MB, less than 41.03%
  * @runtime_cn
  * @memory_cn
  */

@@ -33,8 +33,8 @@ export type Solution = (s: string) => number;
  * @space
  * @runtime
  * @memory
- * @runtime_cn 100 ms, faster then 84.62%
- * @memory_cn 42.6 MB, less then 100.00%
+ * @runtime_cn 100 ms, faster than 84.62%
+ * @memory_cn 42.6 MB, less than 100.00%
  */
 export const lengthOfLongestSubstring = (s: string): number => {
   let maxSub: string = "";

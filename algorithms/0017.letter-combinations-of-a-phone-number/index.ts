@@ -36,10 +36,10 @@ export type Solution = (digits: string) => string[];
  * @date 2020.06.28 12:10
  * @time
  * @space
- * @runtime 100 ms, faster then 100.00%
- * @memory 33.1 Mb, less then 100.00%
- * @runtime_cn 72 ms, faster then 31.25%
- * @memory_cn 32.4 MB, less then 100.00%
+ * @runtime 100 ms, faster than 100.00%
+ * @memory 33.1 Mb, less than 100.00%
+ * @runtime_cn 72 ms, faster than 31.25%
+ * @memory_cn 32.4 MB, less than 100.00%
  */
 export const letterCombinations = (digits: string): string[] => {
   if (digits === "") {

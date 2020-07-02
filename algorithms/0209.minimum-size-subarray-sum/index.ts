@@ -23,10 +23,10 @@ export type Solution = (str: number, nums: number[]) => number;
  * @date 2020.06.29 20:53
  * @time O(n)
  * @space O(1)
- * @runtime 72 ms, faster then 100.00%
- * @memory 37.9 MB, less then 100.00%
- * @runtime_cn 88 ms, faster then 75.00%
- * @memory_cn 37.3 MB, less then 100.00%
+ * @runtime 72 ms, faster than 100.00%
+ * @memory 37.9 MB, less than 100.00%
+ * @runtime_cn 88 ms, faster than 75.00%
+ * @memory_cn 37.3 MB, less than 100.00%
  */
 export const minSubArrayLen = (s: number, nums: number[]): number => {
   let minLen: number = nums.length + 1;

@@ -33,8 +33,8 @@ export type Solution = (nums: number[]) => number;
  * @date 2020.06.30 8:20:00
  * @time
  * @space
- * @runtime 76 ms, faster then 100.00%
- * @memory 34 MB, less then 100.00%
+ * @runtime 76 ms, faster than 100.00%
+ * @memory 34 MB, less than 100.00%
  * @runtime_cn
  * @memory_cn
  */

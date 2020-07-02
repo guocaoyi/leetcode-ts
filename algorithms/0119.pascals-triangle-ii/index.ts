@@ -21,10 +21,10 @@ export type Solution = (numRows: number) => number[][];
  * @data 2020/07/01 08:21:16
  * @time O(1)
  * @space O(n)
- * @runtime 68 ms, faster then 100.00%
- * @memory 36.8 MB, less then 100.00%
- * @runtime_cn 84 ms, faster then 16.67%
- * @memory_cn 35.8 MB, less then 100.00%
+ * @runtime 68 ms, faster than 100.00%
+ * @memory 36.8 MB, less than 100.00%
+ * @runtime_cn 84 ms, faster than 16.67%
+ * @memory_cn 35.8 MB, less than 100.00%
  */
 export const getRow = (numRows: number): number[] => {
   const triangle: number[][] = [[1]];
@@ -43,10 +43,10 @@ export const getRow = (numRows: number): number[] => {
  * @data 2020/07/01 08:20:00
  * @time O(1)
  * @space O(n)
- * @runtime 55 ms, faster then 100.00%
- * @memory 33.3 MB, less then 100.00%
- * @runtime_cn 72 ms, faster then 66.67%
- * @memory_cn 32.1 MB, less then 100.00%
+ * @runtime 55 ms, faster than 100.00%
+ * @memory 33.3 MB, less than 100.00%
+ * @runtime_cn 72 ms, faster than 66.67%
+ * @memory_cn 32.1 MB, less than 100.00%
  */
 export const getRow1 = (rowIndex: number): number[] => {
   const rows: number[][] = [

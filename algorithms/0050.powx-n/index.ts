@@ -36,8 +36,8 @@ export type Solution = (x: number, n: number) => number;
  * @space
  * @runtime
  * @memory
- * @runtime_cn 72 ms, less then 66.67%
- * @memory_cn 33.2 MB, less then 100.00%
+ * @runtime_cn 72 ms, less than 66.67%
+ * @memory_cn 33.2 MB, less than 100.00%
  */
 export const myPow = (x: number, n: number): number =>
   Number(Math.pow(x, n).toFixed(5));
@@ -50,8 +50,8 @@ export const myPow = (x: number, n: number): number =>
  * @space
  * @runtime
  * @memory
- * @runtime_cn 68 ms, less then 83.33%
- * @memory_cn 33.1 MB, less then 100.00%
+ * @runtime_cn 68 ms, less than 83.33%
+ * @memory_cn 33.1 MB, less than 100.00%
  */
 export const myPow$1 = (x: number, n: number): number =>
   Number((x ** n).toFixed(5));

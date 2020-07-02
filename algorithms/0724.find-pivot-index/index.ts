@@ -43,8 +43,8 @@ export type Solution = (nums: number[]) => number;
  * @space
  * @runtime
  * @memory
- * @runtime_cn 74 ms, faster then 67.50%
- * @memory_cn 37.7 MB, less then 87.50%
+ * @runtime_cn 74 ms, faster than 67.50%
+ * @memory_cn 37.7 MB, less than 87.50%
  */
 export const pivotIndex = (nums: number[]): number => {
   const _len: number = nums.length;

@@ -28,10 +28,10 @@ export type Solution = (strs: string[]) => string[][];
  * @date 2020/06/30 13:07:38
  * @time O(n log n)
  * @space O(n)
- * @runtime 208 ms, faster then 37.50%
- * @memory 47 Mb, less then 100.00%
- * @runtime_cn 140 ms, faster then 37.50%
- * @memory_cn 46.4 Mb, less then 100.00%
+ * @runtime 208 ms, faster than 37.50%
+ * @memory 47 Mb, less than 100.00%
+ * @runtime_cn 140 ms, faster than 37.50%
+ * @memory_cn 46.4 Mb, less than 100.00%
  */
 export const groupAnagrams = (strs: string[]): string[][] => {
   const map: any = {};

@@ -33,10 +33,10 @@ export type Solution = (matrix: number[][]) => number[];
  * @date 2020.06.30 00:35:00
  * @time O(n)
  * @space O(1)
- * @runtime 188 ms, faster then 100.00%
- * @memory 44.4 MB, less then 100.00%
- * @runtime_cn 160 ms, faster then 33.33%
- * @memroy_cn 43.3 MB, less then 100.00%
+ * @runtime 188 ms, faster than 100.00%
+ * @memory 44.4 MB, less than 100.00%
+ * @runtime_cn 160 ms, faster than 33.33%
+ * @memroy_cn 43.3 MB, less than 100.00%
  */
 export const findDiagonalOrder = (matrix: number[][]): number[] => {
   const result: number[] = [];

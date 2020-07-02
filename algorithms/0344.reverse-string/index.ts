@@ -46,8 +46,8 @@ export const reverseString = (s: string[]): void => {
  * @date 2019.06
  * @time O(n)
  * @space O(1)
- * @runtime 116 ms, faster then  81.07%
- * @memory 46.8 MB, less then 52.47%
+ * @runtime 116 ms, faster than  81.07%
+ * @memory 46.8 MB, less than 52.47%
  * @runtime_cn
  * @memory_cn
  */
@@ -66,8 +66,8 @@ export const reverseString$1 = (s: string[]): void => {
  * @date 2020.06.24 17:01
  * @time O(n)
  * @space O(1)
- * @runtime 108 ms, faster then 75.86%
- * @memory 42.8 MB, less then 100.00%
+ * @runtime 108 ms, faster than 75.86%
+ * @memory 42.8 MB, less than 100.00%
  * @runtime_cn
  * @memory_cn
  */
@@ -83,8 +83,8 @@ export const reverseString$2 = (s: string[]): void => {
  * @date 2020.06.24 17:10
  * @time O(n)
  * @space O(1)
- * @runtime 104 ms, faster then 82.76%
- * @memory 42.6 MB, less then 100.00%
+ * @runtime 104 ms, faster than 82.76%
+ * @memory 42.6 MB, less than 100.00%
  * @runtime_cn
  * @memory_cn
  */

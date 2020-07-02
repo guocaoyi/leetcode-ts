@@ -40,8 +40,8 @@ export type Solution = (matrix: number[][], target: number) => boolean;
  * @space
  * @runtime
  * @memory
- * @runtime_cn 64 ms, faster then 58.68%
- * @memory_cn 35.4 MB, less then 7.41%
+ * @runtime_cn 64 ms, faster than 58.68%
+ * @memory_cn 35.4 MB, less than 7.41%
  */
 export const searchMatrix = (matrix: number[][], target: number): boolean => {
   for (let i = 0; i < matrix.length; i++) {
