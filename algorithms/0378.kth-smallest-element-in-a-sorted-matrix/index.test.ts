@@ -12,9 +12,10 @@ Deno.test({
   `,
   fn(): void {
     const result: number = kthSmallest([
-      [1, 2, 3], [4, 5, 6], [7, 8, 9]],
-      1
-    );
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9],
+    ], 1);
     asserts.assertEquals(1, result);
   },
 });
@@ -33,9 +34,10 @@ Deno.test({
       [
         [1, 5, 9],
         [10, 11, 13],
-        [12, 13, 15]
+        [12, 13, 15],
       ],
-      8);
+      8,
+    );
     asserts.assertEquals(13, result);
   },
 });

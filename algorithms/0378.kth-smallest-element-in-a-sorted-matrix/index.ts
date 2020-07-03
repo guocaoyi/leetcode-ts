@@ -22,11 +22,11 @@ return 13.
 
 You may assume k is always valid, 1 ≤ k ≤ n2.
  */
-export type Solution = (matrix: number[][], k: number) => number
+export type Solution = (matrix: number[][], k: number) => number;
 
 /**
  * 解构每行数组，排序后取值
- * @data 2020/07/02 19:18:11
+ * @date 2020/07/02 19:18:11
  * @time O(n log n)
  * @space O(n)
  * @runtime 128 ms, faster than 100.00%
@@ -35,7 +35,7 @@ export type Solution = (matrix: number[][], k: number) => number
  * @memory_cn 40.8 MB, less than 100.00%
  */
 export const kthSmallest = (matrix: number[][], k: number): number => {
-  const array: number[] = []
+  const array: number[] = [];
   matrix.forEach((rows: number[]) => array.push(...rows));
-  return array.sort((pre: number, next: number) => pre - next)[k - 1]
+  return array.sort((pre: number, next: number) => pre - next)[k - 1];
 };

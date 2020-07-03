@@ -18,7 +18,7 @@ export type Solution = (numRows: number) => number[][];
 
 /**
  * enumeration
- * @data 2020/07/01 08:21:16
+ * @date 2020/07/01 08:21:16
  * @time O(1)
  * @space O(n)
  * @runtime 68 ms, faster than 100.00%
@@ -40,7 +40,7 @@ export const getRow = (numRows: number): number[] => {
 
 /**
  * enumeration
- * @data 2020/07/01 08:20:00
+ * @date 2020/07/01 08:20:00
  * @time O(1)
  * @space O(n)
  * @runtime 55 ms, faster than 100.00%

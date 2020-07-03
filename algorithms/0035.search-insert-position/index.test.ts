@@ -1,30 +1,52 @@
-/**
- *  
- */
-export type Solution = (nums: number[], target: number) => number
+import * as asserts from "https://deno.land/std/testing/asserts.ts";
+import * as log from "https://deno.land/std/log/mod.ts";
+import {
+  searchInsert as searchInsert,
+  searchInsert1,
+} from "./index.ts";
 
-/**
- * 
- * @date 2020/07/03 00:10:10
- * @time O(n)
- * @space O(1)
- * @runtime
- * @memory 
- * @runtime_cn 72 ms, faster than 60.71% 
- * @memory_cn 34.9 MB, less than 100.00%
- */
-export const searchInsert = (nums: number[], target: number): number => {
-  let result: number = nums.length
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] < target) {
-      continue;
-    } else if (nums[i] === target) {
-      result = i
-      break;
-    } else {
-      result = i
-      break;
-    }
-  }
-  return result
-};
+log.info("0017. Letter Combinations of a Phone Number #letterCombinations");
+
+Deno.test({
+  name: `
+  Input: [1, 3, 5, 6], 5
+  Output: 2
+  `,
+  fn(): void {
+    const result: number = searchInsert([1, 3, 5, 6], 5);
+    asserts.assertEquals(2, result);
+  },
+});
+
+Deno.test({
+  name: `
+  Input: [1, 3, 5, 6], 2
+  Output: 1
+  `,
+  fn(): void {
+    const result: number = searchInsert([1, 3, 5, 6], 2);
+    asserts.assertEquals(1, result);
+  },
+});
+
+Deno.test({
+  name: `
+  Input: [1, 3, 5, 6], 7
+  Output: 4
+  `,
+  fn(): void {
+    const result: number = searchInsert([1, 3, 5, 6], 7);
+    asserts.assertEquals(4, result);
+  },
+});
+
+Deno.test({
+  name: `
+  Input: [1, 3, 5, 6], 0
+  Output: 0
+  `,
+  fn(): void {
+    const result: number = searchInsert([1, 3, 5, 6], 0);
+    asserts.assertEquals(0, result);
+  },
+});

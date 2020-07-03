@@ -15,7 +15,7 @@ export type Solution = (s: string) => boolean;
 
 /**
  * 
- * @data
+ * @date
  * @time
  * @space
  * @runtime
@@ -35,4 +35,4 @@ export const canPermutePalindrome = (s: string): boolean => {
   return counter <= 1;
 };
 
-canPermutePalindrome("tactcoa")
+canPermutePalindrome("tactcoa");

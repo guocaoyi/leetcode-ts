@@ -45,7 +45,7 @@ export type Solution = (trips: number[][], capacity: number) => boolean;
 
 /**
  * 贪心算法
- * @data
+ * @date
  * @time
  * @space
  * @runtime

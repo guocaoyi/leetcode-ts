@@ -30,7 +30,7 @@ export type Solution = (n: number) => string[][];
 
 /**
  * 回溯法
- * @data
+ * @date
  * @time
  * @space
  * @runtime
