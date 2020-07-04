@@ -60,3 +60,37 @@ export const longestValidParentheses = (s: string): number => {
   }
   return maxLen;
 };
+
+/**
+ * @time
+ * @space
+ */
+export const longestValidParentheses1 = (s: string): number => {
+  let len: number = s.length;
+  let stack: { index: number; char: string }[] = [];
+  let tip = new Array(len);
+  for (let i = 0; i < len; i++) {
+    stack.push({ index: i, char: s.charAt(i) });
+    let len = stack.length;
+    if (len >= 2) {
+      let sum = stack[len - 2].char + stack[len - 1].char;
+      if ((sum === "()" || sum === "{}" || sum === "[]")) {
+        let pre = stack.pop();
+        let next = stack.pop();
+        tip[pre?.index as number] = 1;
+        tip[next?.index as number] = 1;
+      }
+    }
+  }
+  let maxLen = 0;
+  let Len = 0;
+  for (let i = 0; i < tip.length; i++) {
+    if (tip[i] === 1) {
+      Len += 1;
+      maxLen = Math.max(maxLen, Len);
+    } else {
+      Len = 0;
+    }
+  }
+  return maxLen;
+};
