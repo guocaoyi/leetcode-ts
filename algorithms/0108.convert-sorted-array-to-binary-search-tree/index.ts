@@ -19,19 +19,19 @@
  *  -10  5
  * ```
  */
-export type Solution = (nums: number[]) => TreeNode | null
+export type Solution = (nums: number[]) => TreeNode | null;
 
 /**
  * Definition for a binary tree node.
  */
 export class TreeNode {
-  val: number
-  left: TreeNode | null
-  right: TreeNode | null
+  val: number;
+  left: TreeNode | null;
+  right: TreeNode | null;
   constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-    this.val = (val === undefined ? 0 : val)
-    this.left = (left === undefined ? null : left)
-    this.right = (right === undefined ? null : right)
+    this.val = (val === undefined ? 0 : val);
+    this.left = (left === undefined ? null : left);
+    this.right = (right === undefined ? null : right);
   }
 }
 
@@ -40,18 +40,18 @@ export class TreeNode {
  * @date 2020/07/03 20:21:19
  * @time O(1)
  * @space O(1)
- * @runtime 80 ms, faster then 100.00%
- * @memory 40.3 MB, less then 100.00%
- * @runtime_cn 76 ms, faster then 100.00%
- * @memroy_cn 38 MB, less then 100.00%
+ * @runtime 80 ms, faster than 100.00%
+ * @memory 40.3 MB, less than 100.00%
+ * @runtime_cn 76 ms, faster than 100.00%
+ * @memroy_cn 38 MB, less than 100.00%
  */
 export const sortedArrayToBST = (nums: number[]): TreeNode | null => {
-  if (!nums.length) { return null }
+  if (!nums.length) return null;
 
-  const root = Math.ceil((nums.length - 1) / 2)
-  const result = new TreeNode(nums[root])
-  result.left = sortedArrayToBST(nums.slice(0, root))
-  result.right = sortedArrayToBST(nums.slice(root + 1))
+  const root = Math.ceil((nums.length - 1) / 2);
+  const result = new TreeNode(nums[root]);
+  result.left = sortedArrayToBST(nums.slice(0, root));
+  result.right = sortedArrayToBST(nums.slice(root + 1));
 
-  return result
+  return result;
 };
