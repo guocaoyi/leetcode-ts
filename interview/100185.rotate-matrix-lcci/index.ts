@@ -38,11 +38,10 @@
  * ]
  * ```
  */
-export type Solution = (matrix: number[][]) => void
+export type Solution = (matrix: number[][]) => void;
 
 /**
  * Do not return anything, modify matrix in-place instead.
  */
 export const rotate = (matrix: number[][]): void => {
-
 };

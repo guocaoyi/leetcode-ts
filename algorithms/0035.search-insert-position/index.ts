@@ -50,7 +50,7 @@ export const searchInsert = (nums: number[], target: number): number => {
 
 /**
  * 分治法：二分搜索
- * @date 2020/07/03 00:10:10
+ * @date
  * @time O(log n)
  * @space O(1)
  * @runtime

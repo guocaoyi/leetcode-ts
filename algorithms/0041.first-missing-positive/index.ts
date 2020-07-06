@@ -32,7 +32,6 @@ export type Solution = (nums: number[]) => number;
 export const firstMissingPositive = (nums: number[]): number => {
   let counter = 1;
   nums.sort((pre: number, next: number) => pre - next);
-  console.info("nums>", nums);
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] > counter) {
       counter++;

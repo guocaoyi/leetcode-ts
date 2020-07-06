@@ -61,5 +61,3 @@ export const findShortestSubArray = (nums: number[]): number => {
   ) => pre.gap - next.gap);
   return (isNaN(degreeMapArray[0].gap) ? 0 : degreeMapArray[0].gap) + 1;
 };
-
-console.info(findShortestSubArray([1, 2]));
