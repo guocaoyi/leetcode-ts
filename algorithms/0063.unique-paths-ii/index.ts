@@ -40,8 +40,8 @@ export type Solution = (obstacleGrid: number[][]) => number;
  * @space O(1)
  * @runtime
  * @memory
- * @runtime_cn
- * @memory_cn
+ * @runtime_cn out of time
+ * @memory_cn out of time
  */
 export const uniquePathsWithObstacles = (obstacleGrid: number[][]): number => {
   let counter: number = 0;
