@@ -43,7 +43,7 @@ export class TreeNode {
  * @runtime 80 ms, faster than 100.00%
  * @memory 40.3 MB, less than 100.00%
  * @runtime_cn 76 ms, faster than 100.00%
- * @memroy_cn 38 MB, less than 100.00%
+ * @memory_cn 38 MB, less than 100.00%
  */
 export const sortedArrayToBST = (nums: number[]): TreeNode | null => {
   if (!nums.length) return null;

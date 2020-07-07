@@ -41,7 +41,7 @@ export type Solution = (obstacleGrid: number[][]) => number;
  * @runtime
  * @memory
  * @runtime_cn
- * @memroy_cn
+ * @memory_cn
  */
 export const uniquePathsWithObstacles = (obstacleGrid: number[][]): number => {
   let counter: number = 0;
@@ -71,37 +71,38 @@ export const uniquePathsWithObstacles = (obstacleGrid: number[][]): number => {
  * @runtime
  * @memory
  * @runtime_cn 60 ms, faster than 100.00%
- * @memroy_cn  33.1 MB, less than 100.00%
+ * @memory_cn  33.1 MB, less than 100.00%
  */
 export const uniquePathsWithObstacles$1 = (
   obstacleGrid: number[][],
 ): number => {
   let m: number = obstacleGrid.length; // row
-  let n: number = obstacleGrid[0]?.length // col
+  let n: number = obstacleGrid[0]?.length; // col
   if (!Number.isInteger(m) || !Number.isInteger(n)) {
-    return 0
+    return 0;
   }
 
   // 最右下角一位
-  obstacleGrid[m - 1][n - 1] = obstacleGrid[m - 1] && obstacleGrid[m - 1][n - 1] === 0 ? 1 : 0
+  obstacleGrid[m - 1][n - 1] =
+    obstacleGrid[m - 1] && obstacleGrid[m - 1][n - 1] === 0 ? 1 : 0;
 
   // 最下边一行
   for (let i = m - 1, j = n - 2; j >= 0; j--) {
-    obstacleGrid[i][j] = obstacleGrid[i][j] === 1 ? 0 : obstacleGrid[i][j + 1]
+    obstacleGrid[i][j] = obstacleGrid[i][j] === 1 ? 0 : obstacleGrid[i][j + 1];
   }
   // 最右边一列
   for (let i = m - 2, j = n - 1; i >= 0; i--) {
-    obstacleGrid[i][j] = obstacleGrid[i][j] === 1 ? 0 : obstacleGrid[i + 1][j]
+    obstacleGrid[i][j] = obstacleGrid[i][j] === 1 ? 0 : obstacleGrid[i + 1][j];
   }
 
-  // 
+  //
   for (let i = m - 2; i >= 0; i--) {
     for (let j = n - 2; j >= 0; j--) {
       //  == 1 则为 0
       if (obstacleGrid[i][j] === 1) {
-        obstacleGrid[i][j] = 0
+        obstacleGrid[i][j] = 0;
       } else {
-        obstacleGrid[i][j] = obstacleGrid[i + 1][j] + obstacleGrid[i][j + 1]
+        obstacleGrid[i][j] = obstacleGrid[i + 1][j] + obstacleGrid[i][j + 1];
       }
     }
   }

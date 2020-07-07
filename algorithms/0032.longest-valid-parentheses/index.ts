@@ -29,7 +29,7 @@ export type Solution = (s: string) => number;
  * @runtime
  * @memory
  * @runtime_cn 104 ms, faster than 23.8%
- * @memroy_cn 40.1 MB, faster than 100.00%
+ * @memory_cn 40.1 MB, faster than 100.00%
  */
 export const longestValidParentheses = (s: string): number => {
   let len: number = s.length;

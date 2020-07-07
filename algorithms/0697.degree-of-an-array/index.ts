@@ -26,7 +26,7 @@ export type Solution = (nums: number[]) => number;
  * @runtime 80 ms, faster than 100.00%
  * @memory 41.1 MB, less than 100.00%
  * @runtime_cn 80 ms, faster than 100.00%
- * @memroy_cn 41.1 MB, less than 100.00%
+ * @memory_cn 41.1 MB, less than 100.00%
  */
 export const findShortestSubArray = (nums: number[]): number => {
   const map: { [T: number]: number } = {};
