@@ -30,10 +30,10 @@ export type Solution = () => (dictionary: string[], sentence: string) => number;
  */
 export const respace = (dictionary: string[], sentence: string): number => {
   dictionary.forEach((dic: string) => {
-    let reg = new RegExp(dic, 'g')
+    let reg = new RegExp(dic, "g");
     if (sentence.match(reg)) {
-      sentence = sentence.replace(reg, '')
+      sentence = sentence.replace(reg, "");
     }
-  })
-  return sentence.length
+  });
+  return sentence.length;
 };

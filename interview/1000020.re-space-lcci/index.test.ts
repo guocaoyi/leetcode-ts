@@ -17,7 +17,7 @@ Deno.test({
   fn(): void {
     const result: number = respace(
       ["looked", "just", "like", "her", "brother"],
-      "jesslookedjustliketimherbrother"
+      "jesslookedjustliketimherbrother",
     );
     asserts.assertEquals(7, result);
   },
@@ -48,7 +48,7 @@ Deno.test({
   `,
   fn(): void {
     const result: number = respace(
-      ["hello", 'world'],
+      ["hello", "world"],
       "jesslookedjustliketimherbrother",
     );
     asserts.assertEquals(31, result);
