@@ -21,6 +21,7 @@
  * ```
  * 
  * ## Thinkings
+ *
  * 排列组合
  * 刚拿到这题第一个想法就是使用排列组合，很快写完。结果在遇到一个长3000的数组时，运行超时了，时间复杂度O(n!)。
  * n!/m!(n-m)! 差不多就是 44.95501亿次运算循环，这不管使用何种语言都会遇到超时的问题
@@ -39,7 +40,7 @@ export type Submission = (nums: number[]) => number[][];
  * @runtime
  * @memory
  * @runtime_cn
- * @memory_cm
+ * @memory_cn
  */
 export const threeSum = (nums: number[]): number[][] => {
   nums = nums.sort((a, b) => a - b);

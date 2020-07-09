@@ -15,18 +15,15 @@ export interface Question {
 
 // 提交案例
 export interface Submission {
-  name: string; // 标题（所用方法）
+  name: string; // 标题（所用方法|算法模型|标签）
   info?: string; // 答题（说明、思路、总结）
-  time: string; // 提交时间
-  status?:
-    | "Accepted"
-    | "Time Limit Exceeded"
-    | "Error"
-    | "Failed"
-    | "Wrong Answer"; // 提交测试情况
-  runtime?: string; // 测试运行时（时间复杂度）
-  memory?: string; // 测试内存占用（空间复杂度）
-  case?: string; // 测试用例（入参）
+  date: string; // 提交时间
+  time: string; // 算法时间复杂度
+  space: string; // 算法空间复杂度
+  runtime?: string; // LeetCode 测试用例耗时
+  memory?: string; // LeetCode 测试内存占用
+  runtime_cn?: string; // LeetCode(中国) 测试用例耗时
+  memory_cn?: string; // LeetCode(中国) 测试内存占用
   code: string; // 代码
 }
 

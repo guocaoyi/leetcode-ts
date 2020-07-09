@@ -44,4 +44,5 @@ export type Solution = (matrix: number[][]) => void;
  * Do not return anything, modify matrix in-place instead.
  */
 export const rotate = (matrix: number[][]): void => {
+  let n: number = matrix.length;
 };
