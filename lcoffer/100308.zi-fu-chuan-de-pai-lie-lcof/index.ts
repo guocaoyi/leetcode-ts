@@ -21,5 +21,6 @@ export type Solution = (s: string) => string[];
  */
 export const permutation = (s: string): string[] => {
   let arr: string[] = s.split("").sort();
+  // 排列组合
   return [];
 };

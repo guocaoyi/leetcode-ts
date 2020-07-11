@@ -29,11 +29,32 @@ export type Solution = () => (dictionary: string[], sentence: string) => number;
  * @space
  */
 export const respace = (dictionary: string[], sentence: string): number => {
-  dictionary.forEach((dic: string) => {
-    let reg = new RegExp(dic, "g");
-    if (sentence.match(reg)) {
-      sentence = sentence.replace(reg, "");
-    }
-  });
+  dictionary
+    .sort((pre: string, next: string) => next.length - pre.length)
+    .forEach((dic: string) => {
+      let reg = new RegExp(dic, "g");
+      if (sentence.match(reg)) {
+        sentence = sentence.replace(reg, "");
+        console.info(sentence);
+      }
+    });
   return sentence.length;
+};
+
+respace(
+  ["looked", "just", "like", "her", "brother"],
+  "jesslbrotheroobrotherkedjustlbrotherijustjbrotherustjherustjushebrotherrtjustjustjherustjuherstjustjustjustketimherbrother",
+);
+
+export const respace1 = (dictionary: string[], sentence: string): number => {
+  let cache: number[] = [0];
+  for (let i = 1; i <= sentence.length; i++) {
+    cache[i] = cache[i - 1] + 1;
+    for (let d of dictionary) {
+      if (sentence.slice(i - d.length, i) === d) {
+        cache[i] = Math.min(cache[i], cache[i - d.length]);
+      }
+    }
+  }
+  return cache[cache.length - 1];
 };

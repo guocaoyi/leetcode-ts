@@ -54,3 +54,35 @@ Deno.test({
     asserts.assertEquals(31, result);
   },
 });
+
+Deno.test({
+  name: `
+  Input:
+  dictionary = ["looked", "just", "like", "her", "brother"]
+  sentence = "jesslbrotheroobrotherkedjustlbrotherijustjbrotherustjherustjushebrotherrtjustjustjherustjuherstjustjustjustketimherbrother"
+  Output: 27
+  `,
+  fn(): void {
+    const result: number = respace(
+      ["looked", "just", "like", "her", "brother"],
+      "jesslbrotheroobrotherkedjustlbrotherijustjbrotherustjherustjushebrotherrtjustjustjherustjuherstjustjustjustketimherbrother",
+    );
+    asserts.assertEquals(27, result);
+  },
+});
+
+Deno.test({
+  name: `
+  Input:
+  dictionary = ["abc", "abca"]
+  sentence = "abcabcabcabcabc"
+  Output: 0
+  `,
+  fn(): void {
+    const result: number = respace(
+      ["abc", "abca"],
+      "abcabcabcabcabc",
+    );
+    asserts.assertEquals(0, result);
+  },
+});

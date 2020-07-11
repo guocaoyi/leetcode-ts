@@ -41,13 +41,15 @@ export abstract class AMinStack {
 }
 
 /**
-* Your MinStack object will be instantiated and called as such:
-* var obj = new MinStack()
-* obj.push(x)
-* obj.pop()
-* var param_3 = obj.top()
-* var param_4 = obj.getMin()
-*/
+ * Use Array
+ * @date 2020/07/10 19:30:14
+ * @time
+ * @space
+ * @runtime
+ * @memory
+ * @runtime_cn 932 ms, faster than 9.52%
+ * @memory_cn 41.7 MB, less than 100.00%
+ */
 export class MinStack {
   #stack: number[]
   #size: number
@@ -85,7 +87,16 @@ export class MinStack {
 }
 
 
-class MinStack1 {
+/**
+ * @date
+ * @time
+ * @space
+ * @runtime
+ * @memory
+ * @runtime_cn 136 ms, faster than 61.90%
+ * @memory_cn 42.5 MB, less than 100.00%
+ */
+export class MinStack1 {
   #stack: number[]
   #min: number
 
@@ -96,13 +107,16 @@ class MinStack1 {
 
   // 入栈
   push(x: number): void {
+    // 更新最小值
     this.#stack.push(x)
     this.#min = Math.min(this.#min, x)
   }
 
   // 出栈
   pop(): void {
+    // 更新最小值
     this.#stack.pop()
+    this.#min = Math.min(...this.#stack)
   }
 
   // 栈顶
