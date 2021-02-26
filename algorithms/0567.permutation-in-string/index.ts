@@ -18,15 +18,15 @@
  * - The input strings only contain lower case letters.
  * - The length of both given strings is in range [1, 10,000].
  */
-export type Solution = (s1: string, s2: string) => boolean
+export type Solution = (s1: string, s2: string) => boolean;
 
 /**
  * @time
  * @space
  */
 export const checkInclusion = (s1: string, s2: string): boolean => {
-  return false
+  return false;
 };
 
 // 排列组合所有字符串组合；然后查找
-// 
+//

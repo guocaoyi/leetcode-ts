@@ -11,7 +11,7 @@ Deno.test({
   Explanation: transactions = [buy, sell, cooldown, buy, sell]
   `,
   fn(): void {
-    const result: number = maxProfit([1, 2, 3, 0, 2])
+    const result: number = maxProfit([1, 2, 3, 0, 2]);
     asserts.assertEquals(3, result);
   },
 });
@@ -23,7 +23,7 @@ Deno.test({
   Explanation: transactions = [buy, sell, cooldown, buy, sell]
   `,
   fn(): void {
-    const result: number = maxProfit([1, 2, 3, 0, 2, 7, 1, 9])
+    const result: number = maxProfit([1, 2, 3, 0, 2, 7, 1, 9]);
     asserts.assertEquals(11, result);
   },
 });
@@ -35,8 +35,7 @@ Deno.test({
   Explanation: transactions = [buy, sell, cooldown, buy, sell]
   `,
   fn(): void {
-    const result: number = maxProfit([1, 99, 1, 99, 1, 99, 1, 99])
+    const result: number = maxProfit([1, 99, 1, 99, 1, 99, 1, 99]);
     asserts.assertEquals(11, result);
   },
 });
-

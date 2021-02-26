@@ -58,8 +58,9 @@ Deno.test({
     asserts.assertEquals(
       [
         [1, 2],
-        [2, 1]
+        [2, 1],
       ],
-      result);
+      result,
+    );
   },
 });

@@ -14,18 +14,21 @@ Deno.test({
   [null,null,null,null,-3,null,0,-2]
   `,
   fn(): void {
-    const result: any[] = []
+    const result: any[] = [];
 
-    const minStack = new MinStack()
-    result.push(minStack)
-    result.push(minStack.push(-2))
-    result.push(minStack.push(0))
-    result.push(minStack.push(-3))
-    result.push(minStack.getMin())
-    result.push(minStack.pop())
-    result.push(minStack.top())
-    result.push(minStack.getMin())
+    const minStack = new MinStack();
+    result.push(minStack);
+    result.push(minStack.push(-2));
+    result.push(minStack.push(0));
+    result.push(minStack.push(-3));
+    result.push(minStack.getMin());
+    result.push(minStack.pop());
+    result.push(minStack.top());
+    result.push(minStack.getMin());
 
-    asserts.assertEquals([minStack, undefined, undefined, undefined, -3, undefined, 0, -2], result)
+    asserts.assertEquals(
+      [minStack, undefined, undefined, undefined, -3, undefined, 0, -2],
+      result,
+    );
   },
 });

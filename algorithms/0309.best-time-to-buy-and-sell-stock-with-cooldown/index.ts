@@ -16,7 +16,7 @@
  * Explanation: transactions = [buy, sell, cooldown, buy, sell]
  * ```
  */
-export type Solution = (prices: number[]) => number
+export type Solution = (prices: number[]) => number;
 
 /**
  * @date
@@ -24,7 +24,7 @@ export type Solution = (prices: number[]) => number
  * @space
  */
 export const maxProfit = (prices: number[]): number => {
-  return 3
+  return 3;
 };
 
 // [1,2,3,0,2] 多次买卖
@@ -33,9 +33,8 @@ export const maxProfit = (prices: number[]): number => {
 // 3-4、3-5
 // 4-5
 
-
 // [1,2,3,0,2,7,1,9]
 // 1-2 4-5 7-8、1-3 5-6、1-4 6-8、1-5、
 
-// 每次走 三个台阶 or 
-11
+// 每次走 三个台阶 or
+11;

@@ -28,10 +28,10 @@ export type Solution = (nums: number[]) => number[][];
 export const permute = (nums: number[]): number[][] => {
   const result: number[][] = [];
   // 1 -> n
-  // 
+  //
   const loop = () => {
     // 回溯
-  }
+  };
 
   return result;
 };

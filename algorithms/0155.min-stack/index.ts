@@ -34,10 +34,10 @@
  * Methods `pop`, `top` and `getMin` operations will always be called on non-empty stacks.
  */
 export abstract class AMinStack {
-  abstract push(x: number): void
-  abstract pop(): void
-  abstract top(): number
-  abstract getMin(): number
+  abstract push(x: number): void;
+  abstract pop(): void;
+  abstract top(): number;
+  abstract getMin(): number;
 }
 
 /**
@@ -51,41 +51,40 @@ export abstract class AMinStack {
  * @memory_cn 41.7 MB, less than 100.00%
  */
 export class MinStack {
-  #stack: number[]
-  #size: number
+  #stack: number[];
+  #size: number;
 
   constructor() {
-    this.#stack = []
-    this.#size = 0
+    this.#stack = [];
+    this.#size = 0;
   }
 
   // 入栈
   push(x: number): void {
-    this.#stack.push(x)
-    this.#size++
+    this.#stack.push(x);
+    this.#size++;
   }
 
   // 出栈
   pop(): void {
-    const result = this.#stack.pop()
-    !(typeof result === 'undefined') && this.#size--
+    const result = this.#stack.pop();
+    !(typeof result === "undefined") && this.#size--;
   }
 
   // 栈顶
   top(): number {
-    return this.#stack[this.#size - 1]
+    return this.#stack[this.#size - 1];
   }
 
   // 栈中最小
   getMin(): number {
-    let min: number = this.top()
+    let min: number = this.top();
     for (let i = this.#size - 1; i >= 0; i--) {
-      min = Math.min(min, this.#stack[i])
+      min = Math.min(min, this.#stack[i]);
     }
-    return min
+    return min;
   }
 }
-
 
 /**
  * @date
@@ -97,36 +96,36 @@ export class MinStack {
  * @memory_cn 42.5 MB, less than 100.00%
  */
 export class MinStack1 {
-  #stack: number[]
-  #min: number
+  #stack: number[];
+  #min: number;
 
   constructor() {
-    this.#stack = []
-    this.#min = Number.MAX_SAFE_INTEGER
+    this.#stack = [];
+    this.#min = Number.MAX_SAFE_INTEGER;
   }
 
   // 入栈
   push(x: number): void {
     // 更新最小值
-    this.#stack.push(x)
-    this.#min = Math.min(this.#min, x)
+    this.#stack.push(x);
+    this.#min = Math.min(this.#min, x);
   }
 
   // 出栈
   pop(): void {
     // 更新最小值
-    this.#stack.pop()
-    this.#min = Math.min(...this.#stack)
+    this.#stack.pop();
+    this.#min = Math.min(...this.#stack);
   }
 
   // 栈顶
   top(): number {
     let len = this.#stack.length;
-    return this.#stack[len - 1]
+    return this.#stack[len - 1];
   }
 
   // 栈中最小
   getMin(): number {
-    return this.#min
+    return this.#min;
   }
 }
