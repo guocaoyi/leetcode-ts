@@ -12,8 +12,8 @@ The matching should cover the entire input string (not partial).
 
 Note:
 
-- `s` could be empty and contains only lowercase letters `a-z`.
-- `p` could be empty and contains only lowercase letters `a-z`, and characters like `?` or `*`.
+- `s` could be empty and contains only lowercase letters `a-z`.
+- `p` could be empty and contains only lowercase letters `a-z`, and characters like `?` or `*`.
 
 ## Example
 
@@ -36,14 +36,14 @@ Input:
 s = "cb"
 p = "?a"
 Output: false
-Explanation: '?' matches 'c', but the second letter is 'a', which does not match 'b'.
+Explanation: '?' matches 'c', but the second letter is 'a', which does not match 'b'.
 ```
 ```bash
 Input:
 s = "adceb"
 p = "*a*b"
 Output: true
-Explanation: The first '*' matches the empty sequence, while the second '*' matches the substring "dce".
+Explanation: The first '*' matches the empty sequence, while the second '*' matches the substring "dce".
 ```
 ```bash
 Input:
@@ -60,8 +60,8 @@ export type Solution = (s: string, p: string) => boolean;
  * @space
  */
 export const isMatch = (s: string, p: string): boolean => {
-  let pp: string[] = ["a", "*", "?", "b"];
-  return false;
+  const pp: string[] = ["a", "*", "?", "b"];
+  return pp !== [];
 };
 
 isMatch("acdcb", "");

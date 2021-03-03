@@ -34,11 +34,11 @@ export type Solution = (s: string) => number;
  * @runtime
  * @memory
  * @runtime_cn 100 ms, faster than 84.62%
- * @memory_cn 42.6 MB, less than 100.00%
+ * @memory_cn 42.6MB, less than 100.00%
  */
 export const lengthOfLongestSubstring = (s: string): number => {
-  let maxSub: string = "";
-  let currentSub: string = "";
+  let maxSub = "";
+  let currentSub = "";
 
   const arr: string[] = s.split("");
   arr.forEach((s: string) => {
@@ -47,7 +47,7 @@ export const lengthOfLongestSubstring = (s: string): number => {
       if (currentSub.length >= maxSub.length) {
         maxSub = currentSub;
       }
-      let [lStr, rStr] = currentSub.split(s);
+      const [lStr, rStr] = currentSub.split(s);
       currentSub = rStr || "";
       currentSub += s;
     } else {

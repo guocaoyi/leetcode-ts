@@ -46,20 +46,20 @@ export const letterCombinations = (digits: string): string[] => {
     return [];
   }
   // the phone keypad
-  const keypad: any = {
-    2: ["a", "b", "c"],
-    3: ["d", "e", "f"],
-    4: ["g", "h", "i"],
-    5: ["j", "k", "l"],
-    6: ["m", "n", "o"],
-    7: ["p", "q", "r", "s"],
-    8: ["t", "u", "v"],
-    9: ["w", "x", "y", "z"],
+  const keypad: { [k: string]: string[] } = {
+    "2": ["a", "b", "c"],
+    "3": ["d", "e", "f"],
+    "4": ["g", "h", "i"],
+    "5": ["j", "k", "l"],
+    "6": ["m", "n", "o"],
+    "7": ["p", "q", "r", "s"],
+    "8": ["t", "u", "v"],
+    "9": ["w", "x", "y", "z"],
   };
 
   const s = digits.split("").map((d) => keypad[d]);
-  let result: any[] = [];
-  let stack: any[] = [];
+  const result: string[] = [];
+  const stack: string[] = [];
   let point = 0;
 
   const loop = () => {

@@ -31,7 +31,6 @@ export type Solution = (n: number, k: number) => number;
  * @space
  */
 export const findKthNumber = (n: number, k: number): number => {
-  let digets = String(n).length; // 位数
   const array: number[] = [];
   for (let i = 1; i <= n; i++) {
     array.push(i);

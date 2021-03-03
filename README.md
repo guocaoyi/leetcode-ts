@@ -2,7 +2,8 @@
 
 LeetCode problems' solutions with TypeScript. Power by deno.lang
 
-### Testing  
+### Testing
+
 ```TypeScript
 deno test
 // or
@@ -14,23 +15,20 @@ cd algorithms/0001.two-sum && deno test
 - -A, --allow-read
 
 > Author: Yalda
->
+
 > Github: [leetcode-ts](https://github.com/guocaoyi/leetcode-ts/)
->
+
 > Online Book: [www.yalda.cn/leetcode-ts](https://www.yalda.cn/leetcode-ts)
 
 ## Topics
 
-[Array](./TOPICS.md)¹²,
-[Dynamic Programming](./TOPICS.md)⁴,
-[Math](./TOPICS.md)³,
-[String](./TOPICS.md)¹,
-[Tree](./TOPICS.md/#Tree)¹,
+[Array](./TOPICS.md)¹², [Dynamic Programming](./TOPICS.md)⁴,
+[Math](./TOPICS.md)³, [String](./TOPICS.md)¹, [Tree](./TOPICS.md/#Tree)¹,
 
 ## Algorithms
 
-| \#                                                                            | Title                                          | Topics                                |                 Difficulty                 |
-|:------------------------------------------------------------------------------|:-----------------------------------------------|:--------------------------------------|:------------------------------------------:|
+| #                                                                             | Title                                          | Topics                                |                 Difficulty                 |
+| :---------------------------------------------------------------------------- | :--------------------------------------------- | :------------------------------------ | :----------------------------------------: |
 | [1](algorithms/0001.two-sum/README.md)                                        | two-sum                                        | String                                |   <span class='dif-tag easy'>Easy</span>   |
 | [3](algorithms/0003.longest-substring-without-repeating-characters/README.md) | longest-substring-without-repeating-characters | Array,Dynamic Programming,Math,String |   <span class='dif-tag easy'>Easy</span>   |
 | [4](algorithms/0004.median-of-two-sorted-arrays/README.md)                    | median-of-two-sorted-arrays                    | String                                |   <span class='dif-tag hard'>Hard</span>   |

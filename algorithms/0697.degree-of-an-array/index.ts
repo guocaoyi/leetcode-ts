@@ -33,31 +33,30 @@ export const findShortestSubArray = (nums: number[]): number => {
   nums.forEach((num: number) => {
     num in map ? map[num] += 1 : map[num] = 1;
   });
-  let vals = Object.values(map);
+  const vals = Object.values(map);
   vals.sort((pre: number, next: number) => pre - next);
-  let degree = vals[vals.length - 1];
-  let degreeSet: Set<number> = new Set();
-  let degreeMap: { [T: number]: { start: number; end: number; gap?: number } } =
-    {};
-  (Object.entries(map) as any).forEach((v: number[]) => {
-    if (v[1] === degree) {
+  const degreeSet = new Set<number>();
+  type Degree = { start: number; end: number; gap?: number };
+  const degreeMap: { [T: number]: Degree } = {};
+  (Object.entries(map)).forEach((v: number[]) => {
+    if (v[1] === vals[vals.length - 1]) {
       degreeSet.add(Number(v[0]));
     }
   });
   nums.forEach((num: number, i: number) => {
     if (degreeSet.has(num)) {
       if (num in degreeMap) {
-        let v = degreeMap[num];
+        const v = degreeMap[num];
         degreeMap[num] = { start: v.start, end: i, gap: i - v.start };
       } else {
         degreeMap[num] = { start: i, end: NaN };
       }
     }
   });
-  let degreeMapArray: any[] = Object.values(degreeMap);
-  degreeMapArray.sort((
-    pre: { start: number; end: number; gap: number },
-    next: { start: number; end: number; gap: number },
-  ) => pre.gap - next.gap);
-  return (isNaN(degreeMapArray[0].gap) ? 0 : degreeMapArray[0].gap) + 1;
+  const degreeMapArray: Degree[] = Object.values<Degree>(degreeMap);
+  degreeMapArray.sort((pre: Degree, next: Degree) =>
+    (pre?.gap ?? 0) - (next?.gap ?? 0)
+  );
+  return degreeMapArray[0]?.gap ?? 0;
+  // return (isNaN(degreeMapArray[0]?.gap) ? 0 : degreeMapArray[0].gap) + 1;
 };

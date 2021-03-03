@@ -66,8 +66,8 @@ export const findDiagonalOrder = (matrix: number[][]): number[] => {
     direction: boolean,
   ): Tran => [row + 1, col - 1, direction]; // ↙
 
-  let row = 0, col: number = 0;
-  let direction: boolean = true; // true: ↑ false: ↓
+  let row = 0, col = 0;
+  let direction = true; // true: ↑ false: ↓
   while (row < M && col < N) {
     // push
     result.push(matrix[row][col]);

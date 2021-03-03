@@ -32,9 +32,9 @@ export type Solution = (nums: number[]) => number;
  * @memory_cn
  */
 export const singleNumber = (nums: number[]): number => {
-  const map: any = {};
+  const map: { [k: number]: number } = {};
   const length: number = nums.length;
-  for (let i: number = 0; i < length; i++) {
+  for (let i = 0; i < length; i++) {
     if (nums[i] in map && map[nums[i]] == 1) {
       // map 已经存在 n
       delete map[nums[i]];

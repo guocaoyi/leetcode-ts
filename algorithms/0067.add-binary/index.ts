@@ -35,8 +35,8 @@ export type Solution = (a: string, b: string) => string;
  */
 export const addBinary = (a: string, b: string): string => {
   const result: number[] = [];
-  let fix: number = 0;
-  for (let p = a.split(""), n = b.split(""); p.length > 0 || n.length > 0;) {
+  let fix = 0;
+  for (const p = a.split(""), n = b.split(""); p.length > 0 || n.length > 0;) {
     let sum = Number(p.pop() || "0") + Number(n.pop() || "0") + fix;
     if (sum <= 1) {
       fix = 0;

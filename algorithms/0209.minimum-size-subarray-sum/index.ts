@@ -30,7 +30,7 @@ export type Solution = (str: number, nums: number[]) => number;
  */
 export const minSubArrayLen = (s: number, nums: number[]): number => {
   let minLen: number = nums.length + 1;
-  let sum: number = 0;
+  let sum = 0;
   const subArray: number[] = [];
   let i = 0; // 游标
   while (subArray.length <= nums.length && i <= nums.length) {
@@ -39,7 +39,7 @@ export const minSubArrayLen = (s: number, nums: number[]): number => {
       subArray.length < minLen && (minLen = subArray.length);
 
       // sum >= s -> subArray.shift
-      let front = subArray.shift();
+      const front = subArray.shift();
       sum -= (front as number);
     } else {
       // sum < s -> subArray.push

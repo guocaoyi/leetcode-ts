@@ -14,7 +14,7 @@ Deno.test({
   [null,null,null,null,-3,null,0,-2]
   `,
   fn(): void {
-    const result: any[] = [];
+    const result: MinStack[] = [];
 
     const minStack = new MinStack();
     result.push(minStack);

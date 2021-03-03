@@ -31,7 +31,7 @@ export type Solution = (nums: number[]) => number;
  */
 export const arrayPairSum = (nums: number[]): number => {
   nums = nums.sort((prev: number, next: number) => prev - next);
-  let result: number = 0;
+  let result = 0;
   for (let i = 0; i < nums.length; i += 2) {
     result += nums[i];
   }

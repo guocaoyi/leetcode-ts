@@ -48,7 +48,7 @@ export const longestCommonPrefix = (strs: string[]): string => {
   if (strs && strs.length > 0) {
     let prefix: string = strs[0]; // 使用 strs[0] 作为初始前缀串
     for (let i = 1; i < strs.length; i++) {
-      let subStr = strs[i];
+      const subStr = strs[i];
       while (subStr.indexOf(prefix) !== 0) {
         // 不存在前缀子串
         prefix = prefix.slice(0, prefix.length - 1);

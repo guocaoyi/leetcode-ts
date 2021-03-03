@@ -37,18 +37,50 @@
  */
 export type Solution = (p: TreeNode | null, q: TreeNode | null) => boolean;
 
-export class TreeNode {
-  val: number;
+export class TreeNode<T = number> {
+  val: T | null;
   left: TreeNode | null;
   right: TreeNode | null;
-  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-    this.val = (val === undefined ? 0 : val);
-    this.left = (left === undefined ? null : left);
-    this.right = (right === undefined ? null : right);
+  constructor(val?: T, left?: TreeNode, right?: TreeNode) {
+    this.val = val ?? null;
+    this.left = left ?? null;
+    this.right = right ?? null;
   }
 }
 
 export const isSameTree = (p: TreeNode | null, q: TreeNode | null): boolean => {
+  // 遍历 Tree 节点，然后比较节点的值
+  // recursive
+  const inOrderedTreeEquals = (
+    pNode: TreeNode | null,
+    nNode: TreeNode | null,
+    cb: (pNode: TreeNode | null, nNode: TreeNode | null) => boolean,
+  ) => {
+    // 退出条件，树遍历完（left&right === null）；或者不相等
+    const equies = cb(pNode, nNode);
+    if (equies) {
+      return;
+    }
+    if (
+      pNode?.left === null || pNode?.right === null || nNode?.left === null ||
+      nNode?.left === null
+    ) {
+      inOrderedTreeEquals(pNode?.left ?? null, nNode?.left ?? null, cb);
+      inOrderedTreeEquals(pNode?.right ?? null, nNode?.right ?? null, cb);
+    }
+  };
+
+  inOrderedTreeEquals(
+    p,
+    q,
+    (pNode: TreeNode | null, nNode: TreeNode | null) => {
+      if (pNode?.val !== null && nNode?.val !== null) {
+        //
+      }
+      return pNode?.val === nNode?.val;
+    },
+  );
+
   if (p !== null && q !== null) {
     return p?.val === q?.val &&
       isSameTree(p?.left as TreeNode | null, q?.left as TreeNode | null) &&

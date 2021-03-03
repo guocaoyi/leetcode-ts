@@ -46,7 +46,7 @@ export const threeSum = (nums: number[]): number[][] => {
   nums = nums.sort((a, b) => a - b);
   const result: number[][] = [];
   const cacheSet: Set<string> = new Set();
-  for (let a: number = 0; a < nums.length; a++) {
+  for (let a = 0; a < nums.length; a++) {
     const bSet: Set<number> = new Set([]);
     for (let b: number = a + 1; b < nums.length; b++) {
       if (bSet.has(nums[b])) {
@@ -64,7 +64,9 @@ export const threeSum = (nums: number[]): number[][] => {
         }
 
         if (nums[a] + nums[b] + nums[c] === 0) {
-          let key = [nums[a], nums[b], nums[c]].sort((a, b) => a - b).join("");
+          const key = [nums[a], nums[b], nums[c]].sort((a, b) => a - b).join(
+            "",
+          );
           if (cacheSet.has(key)) {
             continue;
           } else {

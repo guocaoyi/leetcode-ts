@@ -18,9 +18,9 @@
  * ```bash
  * Input:
  * [
- *   [0,0,0],
- *   [0,1,0],
- *   [0,0,0]
+ *    [0,0,0],
+ *    [0,1,0],
+ *    [0,0,0]
  * ]
  * Output: 2
  * Explanation:
@@ -44,8 +44,8 @@ export type Solution = (obstacleGrid: number[][]) => number;
  * @memory_cn out of time
  */
 export const uniquePathsWithObstacles = (obstacleGrid: number[][]): number => {
-  let counter: number = 0;
-  const loop = (i: number, j: number, m: number, n: number): any => {
+  let counter = 0;
+  const loop = (i: number, j: number, m: number, n: number): number | void => {
     if (obstacleGrid[i][j] === 0) {
       if (i >= m - 1 && j >= n - 1) {
         return counter++;
@@ -76,8 +76,8 @@ export const uniquePathsWithObstacles = (obstacleGrid: number[][]): number => {
 export const uniquePathsWithObstacles$1 = (
   obstacleGrid: number[][],
 ): number => {
-  let m: number = obstacleGrid.length; // row
-  let n: number = obstacleGrid[0]?.length; // col
+  const m: number = obstacleGrid.length; // row
+  const n: number = obstacleGrid[0]?.length; // col
   if (!Number.isInteger(m) || !Number.isInteger(n)) {
     return 0;
   }

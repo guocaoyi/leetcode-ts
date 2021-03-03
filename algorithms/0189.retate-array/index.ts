@@ -40,7 +40,7 @@ export type Solution = (nums: number[], k: number) => void;
  * @memory_cn 36.6 MB, less than 100%
  */
 export const rotate = (nums: number[], k: number): void => {
-  let len = nums.length;
+  const len = nums.length;
   k = k % len;
   if (k === 0) return;
   for (let i = 0; i < k; i++) {

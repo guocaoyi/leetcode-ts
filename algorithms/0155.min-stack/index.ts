@@ -120,7 +120,7 @@ export class MinStack1 {
 
   // 栈顶
   top(): number {
-    let len = this.#stack.length;
+    const len = this.#stack.length;
     return this.#stack[len - 1];
   }
 

@@ -36,26 +36,26 @@ export type Solution = (digits: number[]) => number[];
  * @memory_cn
  */
 export const plusOne = (digits: number[]): number[] => {
-  let integer = Number(digits.join(""));
+  const integer = Number(digits.join(""));
   if (Number(digits.join("")) < Number.MAX_SAFE_INTEGER) {
     return String(integer + 1).split("").map((s) => Number(s));
   }
 
-  let p: number = digits.length - 1;
-  let last_computed_is_carry: boolean = false;
+  let p = digits.length - 1;
+  let lastComputedIsCarry = false;
   while (p >= 0) {
-    let d: number = digits[p] + 1;
+    const d = digits[p] + 1;
     if (d === 10) {
       digits[p] = 0;
-      last_computed_is_carry = true;
+      lastComputedIsCarry = true;
     } else {
       digits[p] = d;
-      last_computed_is_carry = false;
+      lastComputedIsCarry = false;
       break;
     }
     p -= 1;
   }
-  if (last_computed_is_carry) {
+  if (lastComputedIsCarry) {
     digits = [1].concat(digits);
   }
   return digits;

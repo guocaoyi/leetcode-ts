@@ -31,7 +31,7 @@ export type Solution = (nums: number[]) => number;
  * @memory_cn
  */
 export const majorityElement = (nums: number[]): number => {
-  let map: any = {};
+  const map: { [k: number]: number } = {};
   nums.forEach((n) => {
     if (n in map) {
       map[n]++;
@@ -40,12 +40,12 @@ export const majorityElement = (nums: number[]): number => {
     }
   });
   let maximum = 0;
-  let maxKey: any;
+  let maxKey: number = maximum;
 
-  for (let k in map) {
+  for (const k in map) {
     if (map[k] >= maximum) {
       maximum = map[k];
-      maxKey = k;
+      maxKey = Number(k);
     }
   }
   return maxKey;

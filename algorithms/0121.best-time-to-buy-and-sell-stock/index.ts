@@ -34,7 +34,7 @@ export type Solution = (prices: number[]) => number;
  */
 export const maxProfit = (prices: number[]): number => {
   let rMax: number = prices[prices.length - 1];
-  let maxDiff: number = 0;
+  let maxDiff = 0;
   for (let i = prices.length - 1; i >= 0; i--) {
     rMax = Math.max(prices[i], rMax);
     maxDiff = Math.max(rMax - prices[i], maxDiff);

@@ -55,7 +55,7 @@ export type Solution = (nums: number[], val: number) => number;
  * @memory 33.8 MB < 30.90%
  */
 export const removeElement = (nums: number[], val: number): number => {
-  for (let p: number = 0; p < nums.length; p++) {
+  for (let p = 0; p < nums.length; p++) {
     while (nums[nums.length - 1] === val) {
       nums.length--;
     }

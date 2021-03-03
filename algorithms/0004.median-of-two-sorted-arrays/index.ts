@@ -40,8 +40,8 @@ export const findMedianSortedArrays = (
   nums2: number[],
 ): number => {
   const findKth = (nums1: number[], nums2: number[], k: number): number => {
-    let m: number = nums1.length;
-    let n: number = nums2.length;
+    const m: number = nums1.length;
+    const n: number = nums2.length;
     if (m > n) {
       return findKth(nums2, nums1, k);
     }
@@ -51,13 +51,13 @@ export const findMedianSortedArrays = (
     if (k === 1) {
       return Math.min(nums1[0], nums2[0]);
     }
-    let pa = Math.floor(k / 2) < m ? Math.floor(k / 2) : m;
-    let pb = k - pa;
+    const pa = Math.floor(k / 2) < m ? Math.floor(k / 2) : m;
+    const pb = k - pa;
     if (nums1[pa - 1] < nums2[pb - 1]) {
-      let t1 = nums1.slice(pa);
+      const t1 = nums1.slice(pa);
       return findKth(t1, nums2, k - pa);
     } else if (nums1[pa - 1] > nums2[pb - 1]) {
-      let t2 = nums2.slice(pb);
+      const t2 = nums2.slice(pb);
       //nums2.splice(0,pb);
       return findKth(nums1, t2, k - pb);
     } else {
@@ -65,9 +65,9 @@ export const findMedianSortedArrays = (
     }
   };
 
-  let m = nums1.length;
-  let n = nums2.length;
-  let tol = m + n;
+  const m = nums1.length;
+  const n = nums2.length;
+  const tol = m + n;
   if (tol / 2 - Math.floor(tol / 2) > 0.1) {
     return findKth(nums1, nums2, Math.floor(tol / 2) + 1);
   } else {

@@ -1,9 +1,6 @@
 import * as asserts from "https://deno.land/std/testing/asserts.ts";
 import * as log from "https://deno.land/std/log/mod.ts";
-import {
-  searchInsert as searchInsert,
-  searchInsert1,
-} from "./index.ts";
+import { searchInsert as searchInsert, searchInsert1 } from "./index.ts";
 
 log.info("0017. Letter Combinations of a Phone Number #letterCombinations");
 

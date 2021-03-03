@@ -36,7 +36,7 @@ export type Solution = (heightMap: number[][]) => number;
  * @param heightMap 
  */
 export const trapRainWater = (heightMap: number[][]): number => {
-  let result: number = 0;
+  const result = 0;
 
   return result;
 };

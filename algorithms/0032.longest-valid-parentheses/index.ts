@@ -32,17 +32,17 @@ export type Solution = (s: string) => number;
  * @memory_cn 40.1 MB, faster than 100.00%
  */
 export const longestValidParentheses = (s: string): number => {
-  let len: number = s.length;
-  let stack: { index: number; char: string }[] = [];
-  let tip = new Array(len);
+  const len: number = s.length;
+  const stack: { index: number; char: string }[] = [];
+  const tip = new Array(len);
   for (let i = 0; i < len; i++) {
     stack.push({ index: i, char: s.charAt(i) });
-    let len = stack.length;
+    const len = stack.length;
     if (len >= 2) {
-      let sum = stack[len - 2].char + stack[len - 1].char;
+      const sum = stack[len - 2].char + stack[len - 1].char;
       if ((sum === "()" || sum === "{}" || sum === "[]")) {
-        let pre = stack.pop();
-        let next = stack.pop();
+        const pre = stack.pop();
+        const next = stack.pop();
         tip[pre?.index as number] = 1;
         tip[next?.index as number] = 1;
       }
@@ -66,17 +66,17 @@ export const longestValidParentheses = (s: string): number => {
  * @space
  */
 export const longestValidParentheses1 = (s: string): number => {
-  let len: number = s.length;
-  let stack: { index: number; char: string }[] = [];
-  let tip = new Array(len);
+  const len: number = s.length;
+  const stack: { index: number; char: string }[] = [];
+  const tip = new Array(len);
   for (let i = 0; i < len; i++) {
     stack.push({ index: i, char: s.charAt(i) });
-    let len = stack.length;
+    const len = stack.length;
     if (len >= 2) {
-      let sum = stack[len - 2].char + stack[len - 1].char;
+      const sum = stack[len - 2].char + stack[len - 1].char;
       if ((sum === "()" || sum === "{}" || sum === "[]")) {
-        let pre = stack.pop();
-        let next = stack.pop();
+        const pre = stack.pop();
+        const next = stack.pop();
         tip[pre?.index as number] = 1;
         tip[next?.index as number] = 1;
       }

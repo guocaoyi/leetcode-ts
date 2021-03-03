@@ -26,7 +26,7 @@ export type Sulution = (height: number[]) => number;
  */
 export const trap = (height: number[]): number => {
   // find every element's right max highest val
-  const maxHighestOfIndex = new Array();
+  const maxHighestOfIndex: number[] = [];
   for (let i = 0; i < height.length; i++) {
     let maxHighest = 0;
     for (let j = i; j < height.length; j++) {
@@ -37,9 +37,9 @@ export const trap = (height: number[]): number => {
 
   let rainTrapping = 0;
   for (let i = 1; i < height.length - 1; i++) {
-    let minHigh = Math.min(height[i - 1], maxHighestOfIndex[i]);
+    const minHigh = Math.min(height[i - 1], maxHighestOfIndex[i]);
     if (minHigh > height[i]) {
-      let g = minHigh - height[i];
+      const g = minHigh - height[i];
       height[i] += g;
       rainTrapping += g;
     }

@@ -42,7 +42,7 @@ export type Solution = (prices: number[]) => number;
  * @space
  */
 export const maxProfit = (prices: number[]): number => {
-  let maxSell = Math.floor(prices.length / 2);
+  const maxSell = Math.floor(prices.length / 2);
   for (let i = 1; i <= maxSell; i++) {
     // 背包算法
   }

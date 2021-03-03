@@ -37,8 +37,8 @@ export type Solution = (matrix: number[][], target: number) => boolean;
  * @memory_cn
  */
 export const searchMatrix = (matrix: number[][], target: number): boolean => {
-  for (let i: number = 0; i < matrix.length; i++) {
-    for (let j: number = 0; j < matrix[i].length; j++) {
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
       if (matrix[i][j] === target) {
         return true;
       }

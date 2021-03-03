@@ -3,7 +3,7 @@
  *
  * Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
  *
- * Note: A leaf is a node with no children.
+ * Note: A leaf is a node with no children.
  *
  * ## Example
  *
@@ -42,7 +42,7 @@ export class TreeNode {
  * @memory_cn 38.6 MB, less than 100.00%
  */
 export const hasPathSum = (root: TreeNode | null, sum: number): boolean => {
-  let s: number = 0;
+  let s = 0;
   const loop = (root: TreeNode | null): boolean => {
     s += root?.val || 0;
     if (root?.left === null && root.right === null) {

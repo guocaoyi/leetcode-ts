@@ -8,7 +8,7 @@
  * - Open brackets must be closed by the same type of brackets.
  * - Open brackets must be closed in the correct order.
  * 
- * Note that an empty string is also considered valid.
+ * Note that an empty string is also considered valid.
  * 
  * ## Example
  * 
@@ -46,13 +46,13 @@ export type Solution = (s: string) => boolean;
  * @memory_cn 36.3 MB, less than 100.00%
  */
 export const isValid = (s: string): boolean => {
-  let len = s.length;
+  const len = s.length;
   if (len % 2 !== 0) return false;
-  let stack: string[] = [];
+  const stack: string[] = [];
   for (let i = 0; i < len; i++) {
     stack.push(s.charAt(i));
-    let len = stack.length;
-    let sum = stack[len - 2] + stack[len - 1];
+    const len = stack.length;
+    const sum = stack[len - 2] + stack[len - 1];
     if (len >= 2 && (sum === "()" || sum === "{}" || sum === "[]")) {
       stack.pop();
       stack.pop();

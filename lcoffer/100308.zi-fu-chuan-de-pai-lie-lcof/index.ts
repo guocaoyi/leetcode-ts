@@ -17,10 +17,10 @@
 export type Solution = (s: string) => string[];
 
 /**
- * 
+ * 思路 1：排列组合
+ * 思路 2：排列组合
  */
 export const permutation = (s: string): string[] => {
-  let arr: string[] = s.split("").sort();
-  // 排列组合
-  return [];
+  const arr: string[] = s.split("").sort();
+  return arr;
 };

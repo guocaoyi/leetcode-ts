@@ -25,12 +25,12 @@ export type Solution = (nums: number[], target: number) => number[];
  * @space
  * @runtime
  * @memory
- * @runtime_cn 120 ms < 40.065%
+ * @runtime_cn 120 ms, faster then 40.065%
  * @memory_cn N/A
  */
 export const twoSum = (nums: number[], target: number): number[] => {
   let result: number[] = [];
-  for (let i: number = 0; i < nums.length; i++) {
+  for (let i = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; j++) {
       if (nums[i] + nums[j] == target) {
         result = [i, j];
@@ -48,11 +48,11 @@ export const twoSum = (nums: number[], target: number): number[] => {
  * @space
  * @runtime
  * @memory
- * @runtime_cn 80 ms < 59.00%
+ * @runtime_cn 80 ms, faster then 59.00%
  * @memory_cn N/A
  */
 export const twoSum1 = (nums: number[], target: number): number[] => {
-  const map: any = {};
+  const map: { [k: number]: number } = {};
   nums.forEach((i, k) => (map[i] = k));
   let result: number[] = [];
   for (let i = 0; i < nums.length; i++) {
@@ -72,11 +72,11 @@ export const twoSum1 = (nums: number[], target: number): number[] => {
  * @space
  * @runtime
  * @memory
- * @runtime_cn 56 ms < 100.00%
+ * @runtime_cn 56 ms, faster then 100.00%
  * @memory_cn N/A
  */
 export const twoSum2 = (nums: number[], target: number): number[] => {
-  const map: any = {};
+  const map: { [k: number]: number } = {};
   const length: number = nums.length;
   let result: number[] = [];
   for (let i = 0; i < length; i++) {
@@ -99,15 +99,15 @@ export const twoSum2 = (nums: number[], target: number): number[] => {
  * @space
  * @runtime
  * @memory
- * @runtime_cn 52 ms < 100%
+ * @runtime_cn 52 ms, faster then 100%
  * @memory_cn N/A
  */
 export const twoSum3 = (nums: number[], target: number): number[] => {
-  const map: { number: number } | any = {};
+  const map: { [k: number]: number } = {};
   const length = nums.length;
   let result: number[] = [];
   for (let i = 0; i < length; i++) {
-    const x = target - nums[i];
+    const x: number = target - nums[i];
     if (x in map && map[x] != i) {
       result = [map[x], i];
       break;

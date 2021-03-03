@@ -38,11 +38,11 @@ export type Solution = (n: number) => boolean;
  */
 export const isHappy = (n: number): boolean => {
   let result: number = n;
-  let cache: Set<number> = new Set([]);
+  const cache = new Set<number>();
 
-  let happify = (n: number): any => {
-    let sum: number = 0;
-    let len = String(n).length;
+  const happify = (n: number): number => {
+    let sum = 0;
+    const len = String(n).length;
     for (let i = 0; i < len; i++) {
       sum += (n % 10) ** 2;
       n = (n - n % 10) / 10;
@@ -55,7 +55,6 @@ export const isHappy = (n: number): boolean => {
     if (cache.has(result)) {
       return false;
     }
-
     cache.add(result);
   }
   return true;

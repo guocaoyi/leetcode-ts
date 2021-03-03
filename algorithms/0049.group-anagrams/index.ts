@@ -34,7 +34,7 @@ export type Solution = (strs: string[]) => string[][];
  * @memory_cn 46.4 Mb, less than 100.00%
  */
 export const groupAnagrams = (strs: string[]): string[][] => {
-  const map: any = {};
+  const map: { [k: string]: string[] } = {};
   strs.sort().forEach((str: string) => {
     const origin: string = str
       .split("")
