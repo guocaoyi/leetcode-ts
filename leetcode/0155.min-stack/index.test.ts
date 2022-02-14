@@ -26,6 +26,15 @@ Deno.test({
     result.push(minStack.top());
     result.push(minStack.getMin());
 
-    asserts.assertEquals([minStack, undefined, undefined, undefined, -3, undefined, 0, -2], result);
+    asserts.assertEquals([
+      minStack,
+      undefined,
+      undefined,
+      undefined,
+      -3,
+      undefined,
+      0,
+      -2,
+    ], result);
   },
 });

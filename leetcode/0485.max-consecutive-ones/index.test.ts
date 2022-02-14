@@ -45,7 +45,18 @@ Deno.test({
   Output: 10
   `,
   fn(): void {
-    const result: number = findMaxConsecutiveOnes([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
+    const result: number = findMaxConsecutiveOnes([
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+    ]);
     asserts.assertEquals(10, result);
   },
 });
@@ -56,7 +67,18 @@ Deno.test({
   Output: 1
   `,
   fn(): void {
-    const result: number = findMaxConsecutiveOnes([1, 0, 0, 0, 0, 0, 0, 0, 0, 1]);
+    const result: number = findMaxConsecutiveOnes([
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+    ]);
     asserts.assertEquals(1, result);
   },
 });

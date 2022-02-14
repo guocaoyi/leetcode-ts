@@ -47,7 +47,9 @@ Deno.test({
   Explanation: The longest valid parentheses substring is "()((((((((((()()()))))))))))"
   `,
   fn(): void {
-    const result: number = longestValidParentheses("()((((((((((()()()))))))))))");
+    const result: number = longestValidParentheses(
+      "()((((((((((()()()))))))))))",
+    );
     asserts.assertEquals(28, result);
   },
 });
@@ -60,7 +62,7 @@ Deno.test({
   `,
   fn(): void {
     const result: number = longestValidParentheses(
-      "()(((((((((((())()())))))))))))))))))))))()((((((((((()()()))))))))))"
+      "()(((((((((((())()())))))))))))))))))))))()((((((((((()()()))))))))))",
     );
     asserts.assertEquals(30, result);
   },

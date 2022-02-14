@@ -22,7 +22,7 @@ Deno.test({
         [10, 11, 16, 20],
         [23, 30, 34, 50],
       ],
-      3
+      3,
     );
     asserts.assertEquals(result, true);
   },
@@ -46,7 +46,7 @@ Deno.test({
         [10, 11, 16, 20],
         [23, 30, 34, 50],
       ],
-      13
+      13,
     );
     asserts.assertEquals(result, false);
   },

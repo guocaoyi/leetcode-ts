@@ -31,8 +31,7 @@ export class TreeBasicNode<T = number> {
 }
 
 export class TreeNode<T = number> extends TreeBasicNode {
-  private inRetravelNode(n: TreeNode<T> | null) {
-  }
+  private inRetravelNode(n: TreeNode<T> | null) {}
   private inRetravelTree(cb?: (v) => void) {
     this.inRetravelNode(this.left);
     cb(this.val);
@@ -61,14 +60,16 @@ export class TreeNode<T = number> extends TreeBasicNode {
   }
 
   // 中序|先序|后序
-  fromArray(arr: any[], type: "in" | "pre" | "post" = "in") {
-  }
+  fromArray(arr: any[], type: "in" | "pre" | "post" = "in") {}
 
   equalsTo(n: TreeNode<T> | null): boolean {
     return false;
   }
 }
 
+/**
+ * tree
+ */
 export class Tree<T = number> {
   // 对比两个树是否相当
   static isEquals<U>(

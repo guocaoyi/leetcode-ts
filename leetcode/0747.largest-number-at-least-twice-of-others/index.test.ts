@@ -45,7 +45,19 @@ Deno.test({
   Output: -1
   `,
   fn(): void {
-    const result: number = dominantIndex([1, 1, 1, 1, 1, 1, 1, 1, 1, 999, 1000]);
+    const result: number = dominantIndex([
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      999,
+      1000,
+    ]);
     asserts.assertEquals(-1, result);
   },
 });

@@ -34,7 +34,8 @@ export class Compiler {
   constructor() {
     let data: Submission = {
       name: `Submission \*\*`,
-      time: new Date().toISOString().replace(/\-/g, "/").replace(/T/, " ").replace(/\..+/, ""),
+      time: new Date().toISOString().replace(/\-/g, "/").replace(/T/, " ")
+        .replace(/\..+/, ""),
       code: "```typescript\nconst solution = () => {};\n```",
     };
   }
@@ -50,7 +51,7 @@ export class Compiler {
       "code.ts",
       file,
       ts.ScriptTarget.ES5,
-      true
+      true,
     );
     this.parseSourse(sourseFile);
     return this;
@@ -94,7 +95,9 @@ export class Compiler {
     let [title, ...comment] = (commNode.comment || "").split("\n");
     info.title = title;
     info.comment = comment.join("\n");
-    commNode.getChildren().forEach((n: any) => (info[n.tagName.text] = n.comment));
+    commNode.getChildren().forEach((
+      n: any,
+    ) => (info[n.tagName.text] = n.comment));
     return info;
   }
 

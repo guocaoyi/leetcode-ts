@@ -49,7 +49,9 @@ Deno.test({
   Return 0.
   `,
   fn(): void {
-    const result: number = trapRainWater([[1], [2], [3], [4], [5], [6], [7], [8], [9]]);
+    const result: number = trapRainWater([[1], [2], [3], [4], [5], [6], [7], [
+      8,
+    ], [9]]);
     asserts.assertEquals(0, result);
   },
 });

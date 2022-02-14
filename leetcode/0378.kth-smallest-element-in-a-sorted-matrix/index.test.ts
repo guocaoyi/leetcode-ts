@@ -17,7 +17,7 @@ Deno.test({
         [4, 5, 6],
         [7, 8, 9],
       ],
-      1
+      1,
     );
     asserts.assertEquals(1, result);
   },
@@ -39,7 +39,7 @@ Deno.test({
         [10, 11, 13],
         [12, 13, 15],
       ],
-      8
+      8,
     );
     asserts.assertEquals(13, result);
   },

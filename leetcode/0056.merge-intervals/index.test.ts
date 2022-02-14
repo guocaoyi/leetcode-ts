@@ -22,7 +22,7 @@ Deno.test({
         [8, 10],
         [15, 18],
       ],
-      result
+      result,
     );
   },
 });

@@ -3,7 +3,9 @@
   "deno.lint": true,
   "deno.unstable": true,
   "deno.suggest.completeFunctionCalls": true,
-  "prettier.printWidth": 100,
+  "prettier.printWidth": 80,
   "prettier.singleQuote": false,
-  "prettier.semi": true
+  "prettier.semi": true,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "all"
 }

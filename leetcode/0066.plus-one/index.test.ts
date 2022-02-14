@@ -47,8 +47,48 @@ Deno.test({
   Explanation: The array represents the integer 6145390195186705543.
   `,
   fn(): void {
-    const result = plusOne([6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 3]);
-    asserts.assertEquals(result, [6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 4]);
+    const result = plusOne([
+      6,
+      1,
+      4,
+      5,
+      3,
+      9,
+      0,
+      1,
+      9,
+      5,
+      1,
+      8,
+      6,
+      7,
+      0,
+      5,
+      5,
+      4,
+      3,
+    ]);
+    asserts.assertEquals(result, [
+      6,
+      1,
+      4,
+      5,
+      3,
+      9,
+      0,
+      1,
+      9,
+      5,
+      1,
+      8,
+      6,
+      7,
+      0,
+      5,
+      5,
+      4,
+      4,
+    ]);
   },
 });
 
@@ -59,10 +99,34 @@ Deno.test({
   Explanation: The array represents the integer 99999999999999999999999.
   `,
   fn(): void {
-    const result = plusOne([9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9]);
+    const result = plusOne([
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
     asserts.assertEquals(
       result,
-      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     );
   },
 });

@@ -75,7 +75,8 @@ export class MarkRootMD {
       str += `### ${name}\n\n`;
       str += `\t${info}\n\n`;
       const { time, status, runtime, memory } = s;
-      str += `|Time|Status|Runtime|Memory|\\n|:--:|:----:|:-----:|:----:|\\n|${time}|${status}|${runtime}|${memory}|\\n`;
+      str +=
+        `|Time|Status|Runtime|Memory|\\n|:--:|:----:|:-----:|:----:|\\n|${time}|${status}|${runtime}|${memory}|\\n`;
       const { code } = s;
       str += `\`\`\`typescript\\n${code}\\n\\n\`\`\``;
     });

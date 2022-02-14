@@ -94,7 +94,7 @@ Deno.test({
   fn(): void {
     const result = minSubArrayLen(
       99,
-      [100, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+      [100, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     );
     asserts.assertEquals(1, result);
   },
@@ -109,7 +109,7 @@ Deno.test({
   fn(): void {
     const result = minSubArrayLen(
       99,
-      [1, 98, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+      [1, 98, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     );
     asserts.assertEquals(2, result);
   },
