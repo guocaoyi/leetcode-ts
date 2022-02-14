@@ -1,6 +1,5 @@
 /**
  * 面试题 16.11. Diving Board LCCI
- * 
  */
 export type Solutio = (shorter: number, longer: number, k: number) => number[];
 

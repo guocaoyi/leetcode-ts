@@ -1,0 +1,9 @@
+{
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": true,
+  "deno.suggest.completeFunctionCalls": true,
+  "prettier.printWidth": 100,
+  "prettier.singleQuote": false,
+  "prettier.semi": true
+}

@@ -1,5 +1,5 @@
-import * as asserts from "https://deno.land/std/testing/asserts.ts";
-import * as log from "https://deno.land/std/log/mod.ts";
+import * as asserts from "https://deno.land/std@0.125.0/testing/asserts.ts";
+import * as log from "https://deno.land/std@0.125.0/log/mod.ts";
 import {
   divingBoard as divingBoard1,
   divingBoard$1 as divingBoard,

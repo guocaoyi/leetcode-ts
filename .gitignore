@@ -1,5 +1,4 @@
 ## folder
-.vscode
 .deploy_git
 _book
 node_modules
@@ -13,3 +12,5 @@ node_modules
 !**/gitbook/**/*.js
 **/yarn-lock.json
 **/package-lock.json
+
+## deno & compiler

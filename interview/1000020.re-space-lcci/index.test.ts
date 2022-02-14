@@ -1,5 +1,5 @@
-import * as asserts from "https://deno.land/std/testing/asserts.ts";
-import * as log from "https://deno.land/std/log/mod.ts";
+import * as asserts from "https://deno.land/std@0.125.0/testing/asserts.ts";
+import * as log from "https://deno.land/std@0.125.0/log/mod.ts";
 import { respace as respace } from "./index.ts";
 
 log.info("面试题 17.13. Re-Space LCCI");
@@ -29,10 +29,7 @@ Deno.test({
   Output:  0
   `,
   fn(): void {
-    const result: number = respace(
-      ["a"],
-      "aaaaaaaaaaaaaaaaaaaa",
-    );
+    const result: number = respace(["a"], "aaaaaaaaaaaaaaaaaaaa");
     asserts.assertEquals(0, result);
   },
 });
@@ -77,10 +74,7 @@ Deno.test({
   Output: 0
   `,
   fn(): void {
-    const result: number = respace(
-      ["abc", "abca"],
-      "abcabcabcabcabc",
-    );
+    const result: number = respace(["abc", "abca"], "abcabcabcabcabc");
     asserts.assertEquals(0, result);
   },
 });

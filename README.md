@@ -1,31 +1,26 @@
-# LeetCode-TS
+# Algorithms use TypeScript
 
-LeetCode problems' solutions with TypeScript. Power by deno.lang
+Algorithms problems' solutions with TypeScript, includes algorithms\
+data-structure \ interviews \ leetcode \ lcoffer problems.
 
-### Testing
-
-```TypeScript
-deno test
-// or
-cd algorithms/0001.two-sum && deno test
-```
-
-###### Testing Permission
-
-- -A, --allow-read
-
-> Author: Yalda
-
-> Github: [leetcode-ts](https://github.com/guocaoyi/leetcode-ts/)
-
-> Online Book: [www.yalda.cn/leetcode-ts](https://www.yalda.cn/leetcode-ts)
+> Power by [deno.lang](https://deno.lang)
 
 ## Topics
 
 [Array](./TOPICS.md)¹², [Dynamic Programming](./TOPICS.md)⁴,
 [Math](./TOPICS.md)³, [String](./TOPICS.md)¹, [Tree](./TOPICS.md/#Tree)¹,
 
-## Algorithms
+## Problems
+
+### Algorithms
+
+### Data Structures
+
+### Interview Problems
+
+### LC Offer
+
+### LeetCode
 
 | #                                                                             | Title                                          | Topics                                |                 Difficulty                 |
 | :---------------------------------------------------------------------------- | :--------------------------------------------- | :------------------------------------ | :----------------------------------------: |
@@ -42,3 +37,20 @@ cd algorithms/0001.two-sum && deno test
 | [240](algorithms/0240.search-a-2d-matrix-ii/README.md)                        | search-a-2d-matrix-ii                          | String                                |   <span class='dif-tag easy'>Easy</span>   |
 | [344](algorithms/0344.reverse-string/README.md)                               | reverse-string                                 | String                                |   <span class='dif-tag easy'>Easy</span>   |
 | [724](algorithms/0724.find-pivot-index/README.md)                             | find-pivot-inde                                | String                                |   <span class='dif-tag hard'>Hard</span>   |
+
+## Testing
+
+```bash
+deno test // all
+deno test ./leetcode/0001.two-sum // scope
+```
+
+### Testing Permission
+
+- -A, --allow-read
+
+> Author: Yalda
+>
+> Github: [leetcode-ts](https://github.com/guocaoyi/leetcode-ts/)
+>
+> Online Book: [www.yalda.cn/leetcode-ts](https://www.yalda.cn/leetcode-ts)

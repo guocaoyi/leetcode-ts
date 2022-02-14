@@ -1,5 +1,5 @@
-import * as asserts from "https://deno.land/std/testing/asserts.ts";
-import * as log from "https://deno.land/std/log/mod.ts";
+import * as asserts from "https://deno.land/std@0.125.0/testing/asserts.ts";
+import * as log from "https://deno.land/std@0.125.0/log/mod.ts";
 import { canPermutePalindrome } from "./index.ts";
 
 log.info("100184 Palindrome Permutation LCCI");

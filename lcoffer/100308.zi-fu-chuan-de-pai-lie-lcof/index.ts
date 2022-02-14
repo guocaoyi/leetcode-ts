@@ -11,7 +11,7 @@
  * ```
  *
  * ## Constraints
- * 
+ *
  * - `1 <= s 的长度 <= 8`
  */
 export type Solution = (s: string) => string[];
