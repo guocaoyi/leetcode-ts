@@ -1,5 +1,6 @@
 /**
- * 翻转数组（reverse a array, 0 extra memory）
+ * array reverse
+ * @description reverse a array, 0 extra memory
  */
 export const reverse = (
   arr: Array<number | string>,

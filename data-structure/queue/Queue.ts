@@ -1,4 +1,4 @@
-import { LinkedList, LinkedListNode } from "../linked-list/LinkedList";
+import { LinkedList, LinkedListNode } from "../linked-list/LinkedList.ts";
 
 /**
  * 队列（Queue）

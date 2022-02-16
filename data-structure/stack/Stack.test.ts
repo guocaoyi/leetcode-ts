@@ -1,1 +1,1 @@
-import { Stack } from "./Stack";
+import { Stack } from "./Stack.ts";

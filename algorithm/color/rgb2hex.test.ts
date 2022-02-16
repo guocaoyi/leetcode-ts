@@ -1,4 +1,4 @@
-import { rgb2hex } from "./rgb2hex";
+import { rgb2hex } from "./rgb2hex.ts";
 
 describe("rgb2hex", () => {
   it("rgb(255,255,255) > #ffffff", () => {
