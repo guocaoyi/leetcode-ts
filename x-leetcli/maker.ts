@@ -92,7 +92,7 @@ export class MarkTopics {
 }
 
 /**
- * @author gcy[yalda]
+ * @author yalda
  * @date 2019.08
  */
 export default {

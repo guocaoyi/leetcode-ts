@@ -2,8 +2,8 @@
 export type Solution = (s: string) => string;
 
 /**
- * @param s
+ * @author yalda
  */
 export function longestPalindrome(s: string): string {
-  return "";
+  return s;
 }

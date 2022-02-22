@@ -21,7 +21,7 @@ class Submission implements ISub {
 
 /**
  * 解析器
- * @author gcy[yalda]
+ * @author yalda
  * @date 2019.08
  */
 export class ParserTS {

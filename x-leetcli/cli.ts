@@ -3,7 +3,7 @@ import { writeFileStrSync } from "https://deno.land/std@0.125.0/fs/mod.ts";
 /**
  * 1:保障 github 上的浏览正常
  * 2:保障 www.yalda.cn/leetcode-ts 上的浏览正常
- * @author gcy
+ * @author yalda
  * @date 2019.08
  */
 export class Leet {

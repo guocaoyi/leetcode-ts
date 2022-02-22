@@ -1,7 +1,9 @@
 import * as asserts from "https://deno.land/std@0.125.0/testing/asserts.ts";
 import * as log from "https:deno.land/std@0.125.0/log/mod.ts";
 
-import { twoSum as twoSum, twoSum1, twoSum2, twoSum3 } from "./index.ts";
+import * as solutions from "./index.ts";
+
+const twoSum = solutions.twoSum;
 
 log.info("1. Two Sum");
 

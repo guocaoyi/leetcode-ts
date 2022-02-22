@@ -1,6 +1,9 @@
 import * as asserts from "https://deno.land/std@0.125.0/testing/asserts.ts";
 import * as log from "https://deno.land/std@0.125.0/log/mod.ts";
-import { findMedianSortedArrays } from "./index.ts";
+
+import * as solutions from "./index.ts";
+
+const findMedianSortedArrays = solutions.findMedianSortedArrays;
 
 log.info("3. Longest Substring without Repeating Characters");
 

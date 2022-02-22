@@ -50,7 +50,7 @@ fragment questionSummaryFields on QuestionNode {
 
 /**
  * fetcher
- * @author gcy[yalda]
+ * @author yalda
  * @date 2019.08
  */
 export class Fetcher<T> {
